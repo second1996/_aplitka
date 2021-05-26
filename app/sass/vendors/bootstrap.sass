@@ -1,0 +1,49 @@
+@import '../helpers/helpers'
+
+/* ==========================================================================
+	 Import Bootstrap components
+	 ========================================================================== */
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss'
+@import 'node_modules/bootstrap/scss/_transitions.scss'
+@import 'node_modules/bootstrap/scss/_modal.scss'
+@import 'node_modules/bootstrap/scss/_dropdown.scss'
+@import 'node_modules/bootstrap/scss/_nav.scss'
+
+
+/* ==========================================================================
+	 Bootstrap Grid
+	 ========================================================================== */
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl
+	padding-left: 24px
+	padding-right: 24px
+	+media-breakpoint-down(xs)
+		padding-left: 16px
+		padding-right: 16px
+
+[class*="col"]
+	min-width: 0 // Fix Swiper width in Bootstrap columns
+
+.row-items-40
+	> [class*="col"]
+		margin-bottom: 40px
+		+media-breakpoint-down(xs)
+			margin-bottom: 32px
+
+.row-items-32
+	> [class*="col"]
+		margin-bottom: 32px
+		+media-breakpoint-down(xs)
+			margin-bottom: 24px
+
+.row-items-24
+	> [class*="col"]
+		margin-bottom: 24px
+		+media-breakpoint-down(xs)
+			margin-bottom: 16px
+
+.row-items-16
+	> [class*="col"]
+		margin-bottom: 16px
+		+media-breakpoint-down(xs)
+			margin-bottom: 8px

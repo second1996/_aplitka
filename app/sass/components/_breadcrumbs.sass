@@ -1,0 +1,26 @@
+/* ==========================================================================
+	 Page breadcrumbs
+	 ========================================================================== */
+.breadcrumbs
+	margin-top: 8px
+	&-list
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		> li
+			display: inline-flex
+			align-items: center
+			color: #000
+			&:not(:last-child)::after
+				content: '/'
+				display: inline-block
+				vertical-align: middle
+				margin: 0 16px
+				+font-size(xxs)
+			> a
+				color: #000
+				&:hover
+					color: blue
+			> a,
+			> span
+				+font-size(xxs)

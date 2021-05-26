@@ -1,0 +1,59 @@
+/* ==========================================================================
+	 Base customize for modal
+	 ========================================================================== */
+.modal
+	padding-right: 0!important
+	padding-left: 0!important
+	&.fade
+		.modal-dialog
+			transform: scale(0.95)
+	&.show
+		.modal-dialog
+			transform: none
+
+	&-backdrop
+		background-color: #000
+		&.show
+			opacity: 0.4
+
+	.modal-dialog
+		max-width: 340px
+		margin-left: auto
+		margin-right: auto
+		padding-left: 8px
+		padding-right: 8px
+
+	.modal-dialog-lg
+		max-width: 875px
+		+media-breakpoint-up(md)
+			.modal-header
+				padding: 40px 24px
+				justify-content: center
+				.title
+					text-align: center
+		.modal-body
+			.btn-submit
+				max-width: 260px
+				+media-breakpoint-down(xs)
+					max-width: 100%
+	.modal-content
+		border-radius: 16px
+		border: none
+		box-shadow: none
+
+	.modal-header
+		padding: 24px
+		border-bottom: 0
+		.title
+			margin-bottom: 0
+			padding-right: 20px
+		.btn-close
+			position: absolute
+			top: 18px
+			right: 18px
+
+	.modal-body
+		padding: 8px 24px 32px
+		.btn-submit
+			width: 100%
+

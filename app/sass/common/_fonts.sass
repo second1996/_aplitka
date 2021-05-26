@@ -1,0 +1,10 @@
+@mixin font($font_name, $font_style, $font_weight, $font_file)
+	@font-face
+		font-family: $font_name
+		font-style: $font_style
+		font-weight: $font_weight
+		font-display: swap
+		src: url('../fonts/#{$font_file}.woff') format('woff'), url('../fonts/#{$font_file}.woff2') format('woff2')
+
+@include font('Manrope', normal, 400, 'Manrope-Regular')
+@include font('Manrope', normal, 700, 'Manrope-Bold')

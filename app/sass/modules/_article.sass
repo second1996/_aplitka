@@ -1,0 +1,40 @@
+article, .article
+
+	h1, h2, h3, h4, h5, h6,
+	p,
+	img,
+	ul,
+	ol,
+	blockquote, table
+		margin-bottom: 24px
+		+media-breakpoint-down(md)
+			margin-bottom: 16px
+
+	b,
+	strong
+		font-weight: $w-bold
+
+	p,
+	ul > li,
+	ul > li > a
+		+font-size(xs)
+		+media-breakpoint-down(sm)
+			font-size: 13px
+			line-height: 20px
+
+	a
+		color: blue
+		&:hover
+			text-decoration: underline
+
+	ul
+		> li
+			position: relative
+			display: flex
+			padding-top: 8px
+			+media-breakpoint-down(xs)
+				padding-top: 0
+			&:not(:last-child)
+				margin-bottom: 8px
+				+media-breakpoint-down(xs)
+					margin-bottom: 16px

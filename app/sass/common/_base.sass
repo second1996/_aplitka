@@ -1,0 +1,108 @@
+@import '../helpers/helpers'
+
+::selection
+	background-color: #000
+	color: $white
+
+// html, body
+// 	overflow-x: hidden
+
+body
+	overflow-x: hidden
+	position: relative
+	min-width: 320px
+	color: #000
+	font-family: $userfont
+	font-size: 15px
+	line-height: 24px
+	&.lock-scroll
+		overflow: hidden
+		height: 100%
+
+*
+	box-sizing: border-box
+
+figure
+	margin: 0
+
+ul
+	list-style: none
+	margin: 0
+	padding: 0
+
+a
+	position: relative
+	color: #000
+	transition: $trs
+	&:hover
+		color: blue
+		text-decoration: none
+
+img
+	display: inline-block
+	max-width: 100%
+	height: auto
+
+h1
+	font-size: 34px
+	font-weight: $w-bold
+	line-height: 40px
+
+h2
+	font-size: 27px
+	font-weight: $w-bold
+	line-height: 32px
+
+h3
+	font-size: 22px
+	font-weight: $w-bold
+	line-height: 32px
+
+h4
+	font-size: 18px
+	font-weight: $w-bold
+	line-height: 24px
+
+h5, h6
+	font-size: 12px
+	font-weight: $w-bold
+	line-height: 16px
+
+hr
+	display: block
+	width: 100%
+	height: 1px
+	margin: 30px 0
+	background-color: $border
+	border: 0
+
+.icon
+	display: inline-block
+	width: 1em
+	height: 1em
+	stroke-width: 0
+	stroke: currentColor
+	fill: currentColor
+
+.preloader
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 9
+	background-color: rgba($white, 0.8)
+	&-spinner
+		width: 32px
+		height: 32px
+		position: absolute
+		left: 50%
+		top: 50%
+		margin-left: -16px
+		margin-top: -16px
+		box-sizing: border-box
+		border: 3px solid #000
+		border-radius: 50%
+		border-top-color: $trsp
+		transform-origin: 50%
+		animation: spinner 1s infinite linear
