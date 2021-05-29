@@ -1,0 +1,437 @@
+.header
+
+	&-top
+		padding-top: 10px
+		padding-bottom: 16px
+
+		.hours
+			display: flex
+			&-icon
+				flex: 0 0 auto
+				color: $text-300
+				font-size: 18px
+			&-text
+				margin-left: 10px
+				p
+					margin-bottom: 0
+
+		.navigation
+			&-list
+				display: inline-flex
+				> li
+					display: inline-flex
+					align-items: center
+					&:not(:last-child)
+						margin-right: 32px
+					> a
+						padding-top: 6px
+						padding-bottom: 6px
+						color: $text-300
+						font-size: 15px
+						line-height: 1
+						&:hover
+							color: $orange
+					&.project
+						> a
+							display: inline-flex
+							align-items: center
+							color: $orange
+							.icon
+								width: 17px
+								height: 17px
+								margin-right: 8px
+							span
+								+font-size(sm)
+							&:hover
+								color: $text-200
+					&.has-dropdown
+						position: relative
+						&::after
+							content: ''
+							display: inline-block
+							width: 16px
+							height: 16px
+							margin-left: 4px
+							background: url('../images/icons/dropdown-arrow.svg') no-repeat center/16px
+							transform-origin: 50% 50%
+							transition: transform .3s ease
+						&:hover
+							&::after
+								transform: rotate(180deg)
+							> a
+								color: $orange
+							> ul
+								pointer-events: auto
+								visibility: visible
+								opacity: 1
+								transform: none
+						> ul
+							pointer-events: none
+							position: absolute
+							top: 100%
+							left: -25px
+							z-index: 9
+							width: 200px
+							padding: 16px
+							box-shadow: $box-shadow-2
+							background-color: $white
+							visibility: hidden
+							opacity: 0
+							transform: translate3d(0, 10px, 0)
+							transition: $trs
+							&::before
+								content: ''
+								position: absolute
+								top: -15px
+								left: 50px
+								display: block
+								border: 8px solid $trsp
+								border-bottom: 8px solid $white
+							> li
+								&:not(:last-child)
+									margin-bottom: 8px
+								> a
+									+font-size(sm)
+
+	&-middle
+
+		.logotype
+			a
+				display: inline-block
+			img
+				display: inline-block
+				max-width: 200px
+
+		.stores
+			.dropdown.show
+				.stores-btn
+					background-color: $orange
+					color: $white
+					&::after
+						border-left-color: $orange
+			&-btn
+				height: 40px
+				padding: 0 6px 0 12px
+				background-color: $bg
+				color: $orange
+				&::after
+					content: ''
+					position: absolute
+					top: 0
+					bottom: 0
+					left: 100%
+					border: 20px solid $trsp
+					border-left-color: $bg
+					transition: border .3s ease
+				svg
+					width: 22px
+					height: 22px
+					margin-left: 6px
+
+		.search
+			margin-left: 32px
+			&-form
+				display: flex
+				align-items: center
+				height: 56px
+				border-bottom: 1px solid $border
+				&-input
+					flex: 1 1 auto
+					height: 100%
+					padding-left: 0
+					padding-right: 14px
+					border: 0
+					background-color: $trsp
+					&:focus
+						box-shadow: none
+				&-btn
+					flex: 0 0 auto
+					height: 100%
+					padding-left: 6px
+					padding-right: 6px
+					color: $text-300
+					&:hover
+						color: $orange
+					svg
+						width: 22px
+						height: 22px
+
+		.contacts
+			margin-left: 26px
+			.phone
+				display: flex
+				align-items: center
+				> a
+					display: inline-flex
+					align-items: center
+					color: $text-200
+					+font-size(md)
+					> i:first-child
+						margin-left: 4px
+					.viber,
+					.whatsapp
+						user-select: none
+						flex: 0 0 auto
+						display: inline-block
+						margin-top: -2px
+						background-repeat: no-repeat
+						background-size: 100%
+						background-position: center
+						font-style: normal
+					.viber
+						width: 24px
+						height: 24px
+						background-image: url('../images/icons/viber.svg')
+					.whatsapp
+						width: 24px
+						height: 24px
+						background-image: url('../images/icons/whatsapp.svg')
+					&:hover
+						color: $orange
+					&:not(:last-child)
+						margin-right: 6px
+						&::after
+							content: ','
+							display: inline-block
+							color: $text-400
+			.mail
+				> a
+					color: $text-300
+					+font-size(sm)
+					&:hover
+						color: $orange
+
+		.callback
+			margin-left: 8px
+			&-phone
+				> a
+					color: $text-200
+					+font-size(md)
+					&:hover
+						color: $orange
+			&-btn
+				height: auto
+				padding-left: 0
+				padding-right: 0
+				&:hover
+					span
+						color: $orange
+						border-bottom-color: $orange
+				svg
+					width: 16px
+					height: 16px
+					margin-right: 8px
+					fill: $orange
+				span
+					border-bottom: 1px dashed $text-400
+					color: $text-300
+					+font-size(sm)
+					transition: $trs
+
+		.cart
+			margin-left: 20px
+			&-link
+				display: flex
+				align-items: center
+				&:hover
+					.cart-icon
+						color: $orange
+			&-icon
+				color: $text-200
+				font-size: 32px
+				transition: color .3s ease
+			&-content
+				margin-left: 12px
+				&-total
+					color: $orange
+					+font-size(md)
+				&-quantity
+					color: $text-300
+					+font-size(xs)
+
+	&-bottom
+		padding-top: 32px
+		padding-bottom: 24px
+
+		// Navigation customize
+		.navigation
+			&-list
+				position: relative
+				display: flex
+				align-items: center
+				justify-content: space-between
+				> li
+					margin-right: 32px
+					&:hover
+						> a
+							color: $orange
+							&::after
+								opacity: 1
+						.megamenu
+							pointer-events: auto
+							visibility: visible
+							opacity: 1
+							transform: none
+					> a
+						position: relative
+						display: inline-block
+						color: $text-200
+						+font-size(sm)
+						white-space: nowrap
+						&:hover
+							color: $orange
+						&::after
+							content: ''
+							position: absolute
+							left: 0
+							right: 0
+							bottom: -6px
+							z-index: 102
+							height: 1px
+							background-color: $orange
+							opacity: 0
+							transition: opacity .35s ease
+					&.more
+						margin-right: 0
+						&._is-toggled
+							.more-btn
+								color: $orange
+							> ul
+								pointer-events: auto
+								visibility: visible
+								opacity: 1
+								transform: translateY(0)
+						.more-btn
+							position: relative
+							height: auto
+							padding-left: 0
+							padding-right: 0
+							color: $text-200
+							+font-size(sm)
+							&:hover
+								color: $orange
+						> ul
+							pointer-events: none
+							position: absolute
+							top: 100%
+							right: 0
+							z-index: 19
+							max-width: 320px
+							min-width: 230px
+							margin-top: 12px
+							padding: 15px 20px
+							box-shadow: $box-shadow-2
+							background-color: $white
+							visibility: hidden
+							opacity: 0
+							transform: translateY(-12px)
+							transition: $trs
+							> li
+								> a
+									display: block
+									padding-top: 6px
+									padding-bottom: 6px
+									color: $text-200
+									+font-size(sm)
+									&:hover
+										color: $orange
+
+		// Megamenu customize
+		.megamenu
+			pointer-events: none
+			position: absolute
+			top: 100%
+			left: 0
+			right: 0
+			z-index: 101
+			padding-bottom: 32px
+			background-color: $white
+			visibility: hidden
+			opacity: 0
+			transform: translateY(10px)
+			transition: $trs
+			.container
+				padding-left: 0
+				padding-right: 0
+			&-grid
+				display: flex
+				flex-wrap: wrap
+				margin-left: -8px
+				margin-right: -8px
+			&-col
+				display: flex
+				flex: 0 0 16.66667%
+				max-width: 16.66667%
+				flex-direction: column
+				padding-left: 8px
+				padding-right: 8px
+			&-item
+				margin-top: 32px
+				.category
+					> a
+						display: inline-block
+						+font-size(xs)
+						font-weight: $w-bold
+						text-transform: uppercase
+						letter-spacing: 0.1em
+				.subcategories
+					margin-top: 10px
+					> li
+						> a
+							display: inline-block
+							padding-top: 4px
+							padding-bottom: 4px
+							+font-size(sm)
+
+		// Brands customize
+		.brands
+			display: flex
+			align-items: center
+			margin-top: 20px
+			&-all
+				display: inline-flex
+				align-items: center
+				margin-right: 32px
+				color: $orange
+				font-size: 11px
+				font-weight: $w-bold
+				line-height: 1
+				letter-spacing: 0.1em
+				text-transform: uppercase
+				white-space: nowrap
+				&:hover
+					color: $text-200
+				.icon
+					margin-left: 8px
+			&-title
+				padding-right: 12px
+				color: $text-300
+				font-size: 11px
+				font-weight: $w-bold
+				line-height: 1
+				letter-spacing: 0.1em
+				text-transform: uppercase
+			&-list
+				display: flex
+				width: 100%
+				align-items: center
+				justify-content: space-between
+				margin-left: -4px
+				margin-right: -4px
+				> li
+					position: relative
+					> a
+						display: inline-block
+						padding-left: 4px
+						padding-right: 4px
+						color: $text-300
+						font-size: 13px
+						font-weight: $w-bold
+						line-height: 1
+						white-space: nowrap
+						&:hover
+							color: $orange
+					> ul
+						display: none
+
+

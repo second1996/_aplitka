@@ -1,0 +1,48 @@
+/* ==========================================================================
+	 Popover customize
+	 ========================================================================== */
+.popover
+	border-radius: 0
+	border: 0
+	box-shadow: $box-shadow
+	background-color: $white
+	&[x-placement="left-start"]
+		.arrow
+			// right: 6%
+	&[x-placement="right-start"]
+		.arrow
+			// left: 5%
+	.arrow
+		top: auto !important
+		bottom: 100%
+		margin: 0
+		width: 20px
+		height: 20px
+		&::before
+			border: 10px solid $trsp
+			border-bottom-color: $white
+		&::after
+			display: none
+
+
+/* ==========================================================================
+	 Brands header popover
+	 ========================================================================== */
+.popover-brands
+	max-width: 870px
+	margin-top: 24px
+	.popover-body
+		padding: 20px 12px
+		ul
+			width: 100%
+			display: flex
+			flex-wrap: wrap
+			> li
+				flex: 0 0 25%
+				padding-left: 12px
+				padding-right: 12px
+				> a
+					display: inline-block
+					padding-top: 4px
+					padding-bottom: 4px
+

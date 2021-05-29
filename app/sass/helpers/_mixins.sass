@@ -1,6 +1,6 @@
 // Font sizes mixin
 @mixin font-size($size)
-	@if $size == 'xl'
+	@if $size == 'xxl'
 		font-size: 34px
 		line-height: 40px
 		+media-breakpoint-down(lg)
@@ -10,7 +10,7 @@
 			font-size: 22px
 			line-height: 32px
 
-	@else if $size == 'lg'
+	@else if $size == 'xl'
 		font-size: 27px
 		line-height: 32px
 		+media-breakpoint-down(lg)
@@ -20,24 +20,27 @@
 			font-size: 20px
 			line-height: 24px
 
-	@else if $size == 'md'
+	@else if $size == 'lg'
 		font-size: 22px
-		line-height: 32px
+		line-height: 24px
 		+media-breakpoint-down(lg)
 			font-size: 18px
-			line-height: 24px
 
-	@else if $size == 'sm'
+	@else if $size == 'md'
 		font-size: 18px
 		line-height: 24px
 		+media-breakpoint-down(lg)
 			font-size: 16px
 			line-height: 22px
 
-	@else if $size == 'xs'
+	@else if $size == 'sm'
 		font-size: 15px
 		line-height: 24px
 
-	@else if $size == 'xxs'
+	@else if $size == 'xs'
 		font-size: 13px
+		line-height: 16px
+
+	@else if $size == 'xxs'
+		font-size: 11px
 		line-height: 16px

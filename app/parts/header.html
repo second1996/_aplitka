@@ -12,3 +12,452 @@
 	<link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
+
+	<header class="header">
+
+		<div class="header-top">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col hours">
+						<div class="hours-icon">
+							<svg class="icon icon-clock"><use xlink:href="images/symbol-defs.svg#clock"></use></svg>
+						</div>
+						<div class="hours-text text-300 text-xs">
+							<p>Режим работы: Пн–Вс, с 10:00 до 19:00</p>
+							<p>Прием заказов круглосуточно</p>
+						</div>
+					</div><!-- /.hours -->
+					<div class="col-auto navigation">
+						<ul class="navigation-list">
+							<li class="project">
+								<a href="#">
+									<svg class="icon icon-cube"><use xlink:href="images/symbol-defs.svg#cube"></use></svg>
+									<span>Записаться на 3D проект</span>
+								</a>
+							</li>
+							<li class="has-dropdown">
+								<a href="#">Для клиента</a>
+								<ul>
+									<li><a href="#">Доставка и оплата</a></li>
+									<li><a href="#">Доставка и оплата</a></li>
+								</ul>
+							</li>
+							<li class="has-dropdown">
+								<a href="#">О компании</a>
+								<ul>
+									<li><a href="#">Доставка и оплата</a></li>
+									<li><a href="#">Доставка и оплата</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Доставка</a></li>
+							<li><a href="#">Оплата</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div><!-- /.navigation -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.header-top -->
+
+		<div class="header-middle">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-auto logotype">
+						<a href="index.html" rel="home">
+							<img src="images/logotype.png" alt="Интернет-магазин Aplitka">
+						</a>
+					</div><!-- /.logotype -->
+					<div class="col-auto stores">
+						<div class="dropdown dropdown-stores">
+							<button type="button" class="stores-btn btn" id="dropdownStoresMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<span>Где купить</span>
+								<svg class="icon icon-location"><use xlink:href="images/symbol-defs.svg#location"></use></svg>
+							</button>
+							<div class="dropdown-menu" aria-labelledby="dropdownStoresMenu">
+								<div class="dropdown-stores-item">
+									<svg class="icon icon-location"><use xlink:href="./images/symbol-defs.svg#location"></use></svg>
+									<div class="content">
+										<span>Волоколамское шоссе</span>
+										<p>г. Москва, инд.: 125371, ул. Волоколамское шоссе, д. 116, стр. 1</p>
+										<p>Без выходных<br> с 10:00 до 19:00</p>
+									</div>
+								</div><!-- /.dropdown-stores-item -->
+								<div class="dropdown-stores-item">
+									<svg class="icon icon-location"><use xlink:href="./images/symbol-defs.svg#location"></use></svg>
+									<div class="content">
+										<span>Калужское шоссе</span>
+										<p>г. Москва, инд.: 108841, ул. Калужское шоссе, д. 4, стр. 9</p>
+										<p>Без выходных<br> с 10:00 до 18:00</p>
+									</div>
+								</div><!-- /.dropdown-stores-item -->
+							</div><!-- /.dropdown-menu -->
+						</div><!-- /.dropdown -->
+					</div><!-- /.stores -->
+					<div class="col search">
+						<form class="search-form form">
+							<input type="text" class="search-form-input form-control" placeholder="Marazzi" required>
+							<button type="submit" class="search-form-btn btn">
+								<svg class="icon icon-search"><use xlink:href="images/symbol-defs.svg#search"></use></svg>
+							</button>
+						</form>
+					</div><!-- /.search -->
+					<div class="col-auto contacts">
+						<div class="phone">
+							<a href="tel:+79262255096">+7 (926) 225-50-96 <i class="whatsapp"></i><i class="viber"></i></a>
+						</div>
+						<div class="mail">
+							<a href="mailto:zakaz@aplitka.ru">zakaz@aplitka.ru</a>
+						</div>
+					</div><!-- /.contacts -->
+					<div class="col-auto callback">
+						<div class="callback-phone">
+							<a href="tel:+74952255096">+7 (495) 225-50-96</a>
+						</div>
+						<button type="button" class="callback-btn btn">
+							<svg class="icon icon-support"><use xlink:href="images/symbol-defs.svg#support"></use></svg>
+							<span>Перезвоните мне</span>
+						</button>
+					</div><!-- /.callback -->
+					<div class="col-auto cart">
+						<a href="#" class="cart-link">
+							<div class="cart-icon">
+								<svg class="icon icon-cart"><use xlink:href="images/symbol-defs.svg#cart"></use></svg>
+							</div>
+							<div class="cart-content">
+								<div class="cart-content-total">360 000 ₽</div>
+								<div class="cart-content-quantity">5 товаров</div>
+							</div>
+						</a>
+					</div><!-- /.cart -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.header-middle -->
+
+		<div class="header-bottom">
+			<div class="container">
+				<div class="navigation">
+					<ul class="navigation-list" role="navigation">
+						<li>
+							<a href="#">Плитка</a>
+							<div class="megamenu">
+								<div class="container">
+									<div class="megamenu-grid">
+										<div class="megamenu-col">
+											<div class="megamenu-item">
+												<div class="category">
+													<a href="page-shop-category.html">Тип помещения</a>
+												</div>
+												<ul class="subcategories">
+													<li><a href="#">Для ванной</a></li>
+													<li><a href="#">Для кухни</a></li>
+													<li><a href="#">Для туалет</a></li>
+													<li><a href="#">Для фартука</a></li>
+													<li><a href="#">Для бассейна</a></li>
+													<li><a href="#">Для ступеней</a></li>
+													<li><a href="#">Для ванной</a></li>
+													<li><a href="#">Для кухни</a></li>
+													<li><a href="#">Для туалет</a></li>
+													<li><a href="#">Для фартука</a></li>
+													<li><a href="#">Для бассейна</a></li>
+													<li><a href="#">Для ступеней</a></li>
+												</ul>
+											</div><!-- /.megamenu-item-->
+										</div><!-- /.megamenu-col-->
+										<div class="megamenu-col">
+											<div class="megamenu-item">
+												<div class="category">
+													<a href="page-shop-category.html">Тип помещения</a>
+												</div>
+												<ul class="subcategories">
+													<li><a href="#">Для ванной</a></li>
+													<li><a href="#">Для кухни</a></li>
+													<li><a href="#">Для туалет</a></li>
+													<li><a href="#">Для фартука</a></li>
+													<li><a href="#">Для бассейна</a></li>
+													<li><a href="#">Для ступеней</a></li>
+												</ul>
+											</div><!-- /.megamenu-item-->
+											<div class="megamenu-item">
+												<div class="category">
+													<a href="page-shop-category.html">Тип помещения</a>
+												</div>
+												<ul class="subcategories">
+													<li><a href="#">Для ванной</a></li>
+													<li><a href="#">Для кухни</a></li>
+													<li><a href="#">Для туалет</a></li>
+													<li><a href="#">Для фартука</a></li>
+													<li><a href="#">Для бассейна</a></li>
+													<li><a href="#">Для ступеней</a></li>
+												</ul>
+											</div><!-- /.megamenu-item-->
+										</div><!-- /.megamenu-col-->
+										<div class="megamenu-col">
+											<div class="megamenu-item">
+												<div class="category">
+													<a href="page-shop-category.html">Тип помещения</a>
+												</div>
+												<ul class="subcategories">
+													<li><a href="#">Для ванной</a></li>
+													<li><a href="#">Для кухни</a></li>
+													<li><a href="#">Для туалет</a></li>
+													<li><a href="#">Для фартука</a></li>
+													<li><a href="#">Для бассейна</a></li>
+													<li><a href="#">Для ступеней</a></li>
+													<li><a href="#">Для ванной</a></li>
+													<li><a href="#">Для кухни</a></li>
+													<li><a href="#">Для туалет</a></li>
+													<li><a href="#">Для фартука</a></li>
+													<li><a href="#">Для бассейна</a></li>
+													<li><a href="#">Для ступеней</a></li>
+												</ul>
+											</div><!-- /.megamenu-item-->
+										</div><!-- /.megamenu-col-->
+										<div class="megamenu-col">
+											<div class="megamenu-item">
+												<div class="category">
+													<a href="page-shop-category.html">Тип помещения</a>
+												</div>
+												<ul class="subcategories">
+													<li><a href="#">Для ванной</a></li>
+													<li><a href="#">Для кухни</a></li>
+													<li><a href="#">Для туалет</a></li>
+													<li><a href="#">Для фартука</a></li>
+													<li><a href="#">Для бассейна</a></li>
+													<li><a href="#">Для ступеней</a></li>
+													<li><a href="#">Для ванной</a></li>
+													<li><a href="#">Для кухни</a></li>
+													<li><a href="#">Для туалет</a></li>
+													<li><a href="#">Для фартука</a></li>
+													<li><a href="#">Для бассейна</a></li>
+													<li><a href="#">Для ступеней</a></li>
+												</ul>
+											</div><!-- /.megamenu-item-->
+										</div><!-- /.megamenu-col-->
+										<div class="megamenu-col">
+											<div class="megamenu-item">
+												<div class="category">
+													<a href="page-shop-category.html">Тип помещения</a>
+												</div>
+												<ul class="subcategories">
+													<li><a href="#">Для ванной</a></li>
+													<li><a href="#">Для кухни</a></li>
+													<li><a href="#">Для туалет</a></li>
+													<li><a href="#">Для фартука</a></li>
+													<li><a href="#">Для бассейна</a></li>
+													<li><a href="#">Для ступеней</a></li>
+												</ul>
+											</div><!-- /.megamenu-item-->
+											<div class="megamenu-item">
+												<div class="category">
+													<a href="page-shop-category.html">Тип помещения</a>
+												</div>
+												<ul class="subcategories">
+													<li><a href="#">Для ванной</a></li>
+													<li><a href="#">Для кухни</a></li>
+													<li><a href="#">Для туалет</a></li>
+													<li><a href="#">Для фартука</a></li>
+													<li><a href="#">Для бассейна</a></li>
+													<li><a href="#">Для ступеней</a></li>
+												</ul>
+											</div><!-- /.megamenu-item-->
+										</div><!-- /.megamenu-col-->
+										<div class="megamenu-col">
+											<div class="megamenu-item">
+												<div class="category">
+													<a href="page-shop-category.html">Тип помещения</a>
+												</div>
+												<ul class="subcategories">
+													<li><a href="#">Для ванной</a></li>
+													<li><a href="#">Для кухни</a></li>
+													<li><a href="#">Для туалет</a></li>
+													<li><a href="#">Для фартука</a></li>
+													<li><a href="#">Для бассейна</a></li>
+													<li><a href="#">Для ступеней</a></li>
+													<li><a href="#">Для ванной</a></li>
+													<li><a href="#">Для кухни</a></li>
+													<li><a href="#">Для туалет</a></li>
+													<li><a href="#">Для фартука</a></li>
+													<li><a href="#">Для бассейна</a></li>
+													<li><a href="#">Для ступеней</a></li>
+												</ul>
+											</div><!-- /.megamenu-item-->
+										</div><!-- /.megamenu-col-->
+									</div><!-- /.megamenu-grid -->
+								</div><!-- /.container -->
+							</div><!-- /.megamenu -->
+						</li>
+						<li>
+							<a href="#">Плитка для ванной</a>
+							<div class="megamenu">
+								<div class="container">
+									<div class="megamenu-grid">
+										<div class="megamenu-col">
+											<div class="megamenu-item">
+												<div class="category">
+													<a href="page-shop-category.html">Тип помещения</a>
+												</div>
+												<ul class="subcategories">
+													<li><a href="#">Для ванной</a></li>
+													<li><a href="#">Для кухни</a></li>
+													<li><a href="#">Для туалет</a></li>
+													<li><a href="#">Для фартука</a></li>
+													<li><a href="#">Для бассейна</a></li>
+													<li><a href="#">Для ступеней</a></li>
+													<li><a href="#">Для ванной</a></li>
+													<li><a href="#">Для кухни</a></li>
+													<li><a href="#">Для туалет</a></li>
+													<li><a href="#">Для фартука</a></li>
+													<li><a href="#">Для бассейна</a></li>
+													<li><a href="#">Для ступеней</a></li>
+												</ul>
+											</div><!-- /.megamenu-item-->
+										</div><!-- /.megamenu-col-->
+										<div class="megamenu-col">
+											<div class="megamenu-item">
+												<div class="category">
+													<a href="page-shop-category.html">Тип помещения</a>
+												</div>
+												<ul class="subcategories">
+													<li><a href="#">Для ванной</a></li>
+													<li><a href="#">Для кухни</a></li>
+													<li><a href="#">Для туалет</a></li>
+													<li><a href="#">Для фартука</a></li>
+													<li><a href="#">Для бассейна</a></li>
+													<li><a href="#">Для ступеней</a></li>
+												</ul>
+											</div><!-- /.megamenu-item-->
+											<div class="megamenu-item">
+												<div class="category">
+													<a href="page-shop-category.html">Тип помещения</a>
+												</div>
+												<ul class="subcategories">
+													<li><a href="#">Для ванной</a></li>
+													<li><a href="#">Для кухни</a></li>
+													<li><a href="#">Для туалет</a></li>
+													<li><a href="#">Для фартука</a></li>
+													<li><a href="#">Для бассейна</a></li>
+													<li><a href="#">Для ступеней</a></li>
+												</ul>
+											</div><!-- /.megamenu-item-->
+										</div><!-- /.megamenu-col-->
+										<div class="megamenu-col">
+											<div class="megamenu-item">
+												<div class="category">
+													<a href="page-shop-category.html">Тип помещения</a>
+												</div>
+												<ul class="subcategories">
+													<li><a href="#">Для ванной</a></li>
+													<li><a href="#">Для кухни</a></li>
+													<li><a href="#">Для туалет</a></li>
+													<li><a href="#">Для фартука</a></li>
+													<li><a href="#">Для бассейна</a></li>
+													<li><a href="#">Для ступеней</a></li>
+													<li><a href="#">Для ванной</a></li>
+													<li><a href="#">Для кухни</a></li>
+													<li><a href="#">Для туалет</a></li>
+													<li><a href="#">Для фартука</a></li>
+													<li><a href="#">Для бассейна</a></li>
+													<li><a href="#">Для ступеней</a></li>
+												</ul>
+											</div><!-- /.megamenu-item-->
+										</div><!-- /.megamenu-col-->
+									</div><!-- /.megamenu-grid -->
+								</div><!-- /.container -->
+							</div><!-- /.megamenu -->
+						</li>
+						<li><a href="#">Плитка для кухни</a></li>
+						<li><a href="#">Керамогранит</a></li>
+						<li><a href="#">Мозаика</a></li>
+						<li><a href="#">Ступени</a></li>
+						<li><a href="#">Натуральный камень</a></li>
+						<li><a href="#">Керамическая плитка</a></li>
+						<li><a href="#">Сантехника</a></li>
+						<li class="more">
+							<button class="more-btn btn">Ещё...</button>
+							<ul>
+								<li><a href="#">Плитка</a></li>
+								<li><a href="#">Натуральный камень</a></li>
+								<li><a href="#">Сантехника</a></li>
+								<li><a href="#">Плитка</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div><!-- /.navigation -->
+				<div class="brands">
+					<a href="#" class="brands-all">
+						<span>Все производители</span>
+						<svg class="icon icon-arrow-small"><use xlink:href="images/symbol-defs.svg#arrow-small"></use></svg>
+					</a>
+					<span class="brands-title">Бренды:</span>
+					<ul class="brands-list">
+						<li>
+							<a href="#" data-toggle="brand-popover">0-9</a>
+							<ul>
+								<li><a href="#">ABK</a></li>
+								<li><a href="#">ABSOLUT CERAMICA</a></li>
+								<li><a href="#">ADEX</a></li>
+								<li><a href="#">ALELUIA CERAMICAS</a></li>
+								<li><a href="#">ALMERA CERAMICA</a></li>
+								<li><a href="#">ATLAS CONCORDE RUSSIA</a></li>
+								<li><a href="#">Eurotile Ceramica RUSSIA</a></li>
+								<li><a href="#">Mykonos Ceramica</a></li>
+								<li><a href="#">Kutahya Seramik</a></li>
+								<li><a href="#">LOVE CERAMIC TILES</a></li>
+							</ul>
+						</li>
+						<li><a href="#">A</a></li>
+						<li><a href="#">B</a></li>
+						<li><a href="#">C</a></li>
+						<li><a href="#">D</a></li>
+						<li><a href="#">E</a></li>
+						<li><a href="#">F</a></li>
+						<li><a href="#">G</a></li>
+						<li><a href="#">H</a></li>
+						<li><a href="#">I</a></li>
+						<li><a href="#">J</a></li>
+						<li><a href="#">K</a></li>
+						<li><a href="#">L</a></li>
+						<li><a href="#">M</a></li>
+						<li><a href="#">N</a></li>
+						<li><a href="#">O</a></li>
+						<li><a href="#">P</a></li>
+						<li><a href="#">Q</a></li>
+						<li><a href="#">R</a></li>
+						<li><a href="#">S</a></li>
+						<li>
+							<a href="#" data-toggle="brand-popover">T</a>
+							<ul>
+								<li><a href="#">ABK</a></li>
+								<li><a href="#">ABSOLUT CERAMICA</a></li>
+								<li><a href="#">ADEX</a></li>
+								<li><a href="#">Eurotile Ceramica RUSSIA</a></li>
+								<li><a href="#">Mykonos Ceramica</a></li>
+								<li><a href="#">Kutahya Seramik</a></li>
+							</ul>
+						</li>
+						<li><a href="#">U</a></li>
+						<li><a href="#">V</a></li>
+						<li><a href="#">W</a></li>
+						<li><a href="#">X</a></li>
+						<li><a href="#" data-toggle="brand-popover">Y</a></li>
+						<li><a href="#" data-toggle="brand-popover">Z</a>
+							<ul>
+								<li><a href="#">ABK</a></li>
+								<li><a href="#">ABSOLUT CERAMICA</a></li>
+								<li><a href="#">ADEX</a></li>
+							</ul></li>
+						<li>
+							<a href="#" data-toggle="brand-popover">А-Я</a>
+							<ul>
+								<li><a href="#">ABK</a></li>
+								<li><a href="#">Eurotile Ceramica RUSSIA</a></li>
+								<li><a href="#">Mykonos Ceramica</a></li>
+								<li><a href="#">Kutahya Seramik</a></li>
+								<li><a href="#">ADEX</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div><!-- /.brands -->
+			</div><!-- /.container -->
+		</div><!-- /.header-bottom -->
+
+	</header>

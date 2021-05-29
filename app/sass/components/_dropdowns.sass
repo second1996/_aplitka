@@ -1,0 +1,55 @@
+/* ==========================================================================
+	 Dropdown
+	 ========================================================================== */
+.dropdown
+	&.show
+		.btn-dropdown
+			color: $text-200
+			&::after
+				transform: scaleY(-1)
+
+	&-menu
+		position: relative
+		margin-top: 16px
+		padding: 20px 16px
+		border-radius: 0
+		border: 0
+		box-shadow: $box-shadow
+		&::before
+			content: ''
+			position: absolute
+			top: -20px
+			left: 14px
+			display: block
+			border: 10px solid $trsp
+			border-bottom: 10px solid $white
+
+
+/* ==========================================================================
+	 Stores header dropdown
+	 ========================================================================== */
+.dropdown-stores
+	.dropdown-menu
+		width: 290px
+		margin-left: 68%
+	&-item
+		position: relative
+		display: flex
+		&:not(:last-child)
+			margin-bottom: 24px
+		.icon
+			flex: 0 0 auto
+			width: 24px
+			height: 24px
+			margin-right: 10px
+			color: $orange
+		.content
+			span
+				display: block
+				font-weight: $w-bold
+			p
+				margin-top: 8px
+				margin-bottom: 0
+				font-size: 14px
+				line-height: 20px
+
