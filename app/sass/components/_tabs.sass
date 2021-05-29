@@ -1,0 +1,28 @@
+/* ==========================================================================
+	 Base customize for tabs
+	 ========================================================================== */
+.nav-tabs
+	margin-bottom: 8px
+	border-bottom: 0
+	.nav-link
+		margin-right: 32px
+		margin-bottom: 0
+		padding: 0 0 10px
+		border-radius: 0
+		border: 0
+		border-bottom: 1px solid $trsp
+		color: $text-200
+		font-weight: $w-bold
+		letter-spacing: 0.1em
+		text-transform: uppercase
+		+font-size(xs)
+		&:hover
+			color: $text-300
+			border-color: $text-400
+		&.active
+			pointer-events: none
+			color: $orange
+			border-bottom-color: $orange
+
+.tab-content
+	margin-top: 32px

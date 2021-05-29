@@ -1,0 +1,82 @@
+@import '../helpers/helpers'
+
+/* ==========================================================================
+	 Import Swiper
+	 ========================================================================== */
+@import 'node_modules/swiper/swiper.scss'
+@import 'node_modules/swiper/components/pagination/pagination.scss'
+@import 'node_modules/swiper/components/scrollbar/scrollbar.scss'
+
+
+/* ==========================================================================
+	 Base customize for Swiper
+	 ========================================================================== */
+.swiper-slider
+	position: relative
+	.swiper-slide
+		height: auto
+
+
+/* ==========================================================================
+	 Navigation customize
+	 ========================================================================== */
+.btn.swiper-button-prev,
+.btn.swiper-button-next
+	position: absolute
+	top: calc(50% - 16px)
+	z-index: 3
+	width: 40px
+	height: 40px
+	margin-top: -20px
+	padding-left: 0
+	padding-right: 0
+	background-color: $orange
+	color: $white
+	&:hover,
+	&:focus
+		background-color: $bg
+		color: $orange
+	&:active
+		background-color: darken($bg, 5%)
+	.icon
+		width: 26px
+		height: 26px
+		transition: fill .3s ease
+	&.swiper-button-disabled
+		visibility: hidden
+		opacity: 0
+.btn.swiper-button-prev
+	left: 0
+.btn.swiper-button-next
+	right: 0
+	.icon
+		transform: scaleX(-1)
+
+
+/* ==========================================================================
+	 Pagination customize
+	 ========================================================================== */
+.swiper-dots
+	margin-top: 20px
+
+.swiper-pagination
+	position: relative
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	justify-content: center
+	width: 100%
+	&-bullet
+		width: 8px
+		height: 8px
+		margin-left: 8px
+		margin-right: 8px
+		border-radius: 0
+		border: 1px solid #DFE3E8
+		background-color: $white
+		opacity: 1
+		transition: border .3s ease
+		&-active
+			border-color: $text-300
+		&:hover:not(.swiper-pagination-bullet-active)
+			border-color: $text-400

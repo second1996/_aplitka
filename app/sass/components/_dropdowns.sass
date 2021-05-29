@@ -2,12 +2,6 @@
 	 Dropdown
 	 ========================================================================== */
 .dropdown
-	&.show
-		.btn-dropdown
-			color: $text-200
-			&::after
-				transform: scaleY(-1)
-
 	&-menu
 		position: relative
 		margin-top: 16px
@@ -32,6 +26,10 @@
 	.dropdown-menu
 		width: 290px
 		margin-left: 68%
+
+	.link-arrow
+		margin-left: 34px
+
 	&-item
 		position: relative
 		display: flex

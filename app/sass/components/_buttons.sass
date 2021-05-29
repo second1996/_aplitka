@@ -29,6 +29,34 @@
 
 
 /* ==========================================================================
+	Corner button
+	========================================================================== */
+.btn.btn-corner
+	height: 40px
+	margin-right: 20px
+	padding: 0 6px 0 12px
+	background-color: $bg
+	color: $orange
+	&:hover
+		background-color: darken($bg, 3%)
+		&::after
+			border-left-color: darken($bg, 3%)
+	&:focus
+		background-color: darken($bg, 5%)
+		&::after
+			border-left-color: darken($bg, 5%)
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		right: -40px
+		border: 20px solid $trsp
+		border-left-color: $bg
+		transition: border .3s ease
+
+
+/* ==========================================================================
 	Go up button
 	========================================================================== */
 .go-up
@@ -63,3 +91,4 @@
 			width: 12px
 			height: 12px
 			margin-left: 4px
+

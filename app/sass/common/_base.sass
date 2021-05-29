@@ -1,8 +1,8 @@
 @import '../helpers/helpers'
 
 ::selection
-	background-color: $text-200
-	color: $white
+	background-color: $bg
+	color: $text-200
 
 // html, body
 // 	overflow-x: hidden
@@ -43,29 +43,25 @@ img
 	height: auto
 
 h1
-	font-size: 34px
-	font-weight: $w-bold
-	line-height: 40px
+	+font-size(xxl)
+	font-weight: $w-regular
 
 h2
 	font-size: 27px
-	font-weight: $w-bold
-	line-height: 32px
+	+font-size(xl)
+	font-weight: $w-regular
 
 h3
-	font-size: 22px
-	font-weight: $w-bold
-	line-height: 32px
+	+font-size(lg)
+	font-weight: $w-regular
 
 h4
-	font-size: 18px
-	font-weight: $w-bold
-	line-height: 24px
+	+font-size(md)
+	font-weight: $w-regular
 
 h5, h6
-	font-size: 12px
-	font-weight: $w-bold
-	line-height: 16px
+	+font-size(sm)
+	font-weight: $w-regular
 
 hr
 	display: block
