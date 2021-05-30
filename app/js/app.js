@@ -108,4 +108,29 @@ $(document).ready(function() {
 		}, 300)
 	})
 
+
+	/**
+	*-------------------------------------------------------------------------------------------------------------------------------------------
+	* Products attributes height
+	*-------------------------------------------------------------------------------------------------------------------------------------------
+	*/
+	window.calcProductCardAttributes = function() {
+		$('.card-product').each(function(index, el) {
+			const li = $(el).find('.card-attributes > ul > li')
+			const shadow = $(el).find('.card-shadow')
+			let countHeight = 0
+
+			if (li.length >= 3) {
+				li.each(function(index, el) {
+					if (index >= 3) {
+						$(el).addClass('hidden')
+						countHeight += $(el).outerHeight()
+					}
+				})
+			}
+			$(el).css('margin-bottom', '-' + countHeight + 'px')
+		})
+	}
+	calcProductCardAttributes()
+
 })

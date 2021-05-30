@@ -100,5 +100,36 @@
 		padding-right: 16px
 
 
+// Section: Stores contacts
+.h-stores
+	&-item
+		.number
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 32px
+			height: 32px
+			margin-bottom: 16px
+			background-color: $bg
+			color: $orange
+			+font-size(xs)
+		.title
+			margin-bottom: 16px
+		.adress,
+		.phone,
+		.email
+			margin-bottom: 8px
+			a
+				display: inline-block
+		.phone
+			> a
+				font-weight: $w-bold
+		.location
+			margin-top: 8px
+			> a
+				color: $orange
+				&:hover
+					color: $text-200
+
 
 

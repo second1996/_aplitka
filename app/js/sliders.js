@@ -40,6 +40,40 @@ $(document).ready(function() {
 	})
 
 
-	
+	/**
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	 * Products slider for each section
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	*/
+	$('.products-slider').each(function (index, element) {
+		let id = index;
+
+		$(element).addClass(`products-slider-${id}`)
+
+		new Swiper(`.products-slider-${id} .swiper-container`, {
+			observer: true,
+			observeParents: true,
+			slidesPerView: 2,
+			spaceBetween: 16,
+			navigation: {
+				prevEl: `.products-slider-${id} .products-slider-nav .swiper-button-prev`,
+				nextEl: `.products-slider-${id} .products-slider-nav .swiper-button-next`,
+			},
+			pagination: {
+				el: `.products-slider-${id} .products-slider-dots .swiper-pagination`,
+				type: 'bullets',
+				clickable: true,
+			},
+			breakpoints: {
+				576: {
+					slidesPerView: 3,
+					spaceBetween: 24,
+				},
+				768: {
+					slidesPerView: 4,
+				},
+			}
+		})
+	})
 
 })

@@ -5,7 +5,7 @@
 	display: inline-flex
 	align-items: center
 	justify-content: center
-	height: 48px
+	height: 40px
 	padding-left: 40px
 	padding-right: 40px
 	border-radius: 0
@@ -29,10 +29,21 @@
 
 
 /* ==========================================================================
+	Themes buttons
+	========================================================================== */
+.btn.btn-secondary
+	background-color: $bg
+	color: $orange
+	&:hover
+		background-color: darken($bg, 3%)
+	&:focus
+		background-color: darken($bg, 5%)
+
+
+/* ==========================================================================
 	Corner button
 	========================================================================== */
 .btn.btn-corner
-	height: 40px
 	margin-right: 20px
 	padding: 0 6px 0 12px
 	background-color: $bg
@@ -54,6 +65,45 @@
 		border: 20px solid $trsp
 		border-left-color: $bg
 		transition: border .3s ease
+
+
+/* ==========================================================================
+	 Add to cart button
+	 ========================================================================== */
+.btn-purchase
+	padding-left: 16px
+	padding-right: 16px
+	white-space: normal
+	text-align: left
+	&._added
+		.before-added
+			display: none
+		.after-added
+			display: flex
+			align-items: center
+			.icon
+				flex: 0 0 auto
+				fill: $orange
+				width: 16px
+				height: 16px
+			span
+				margin-left: 12px
+				color: $text-200
+				+font-size(xs)
+				font-weight: $w-regular
+				+media-breakpoint-down(md)
+					margin-left: 6px
+					font-size: 12px
+				> a
+					color: $orange
+					font-weight: $w-bold
+					&:hover
+						text-decoration: underline
+	&:not(._added)
+		.before-added
+			display: block
+		.after-added
+			display: none
 
 
 /* ==========================================================================

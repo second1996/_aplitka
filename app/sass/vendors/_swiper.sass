@@ -16,6 +16,26 @@
 	.swiper-slide
 		height: auto
 
+.brands-slider
+	.btn.swiper-button-prev,
+	.btn.swiper-button-next
+		top: 104px
+
+.products-slider
+	.btn.swiper-button-prev,
+	.btn.swiper-button-next
+		top: 124px
+	.card-product
+		margin-bottom: 0 !important
+		.card-shadow
+			display: none
+		.card-attributes > ul > li
+			display: none
+			&:nth-child(1),
+			&:nth-child(2),
+			&:nth-child(3)
+				display: flex
+
 
 /* ==========================================================================
 	 Navigation customize
@@ -23,7 +43,7 @@
 .btn.swiper-button-prev,
 .btn.swiper-button-next
 	position: absolute
-	top: calc(50% - 16px)
+	top: 50%
 	z-index: 3
 	width: 40px
 	height: 40px
