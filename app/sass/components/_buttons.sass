@@ -35,9 +35,9 @@
 	background-color: $bg
 	color: $orange
 	&:hover
-		background-color: darken($bg, 3%)
+		background-color: $bg-hover
 	&:focus
-		background-color: darken($bg, 5%)
+		background-color: $bg-focus
 
 
 /* ==========================================================================
@@ -49,13 +49,13 @@
 	background-color: $bg
 	color: $orange
 	&:hover
-		background-color: darken($bg, 3%)
+		background-color: $bg-hover
 		&::after
-			border-left-color: darken($bg, 3%)
+			border-left-color: $bg-hover
 	&:focus
-		background-color: darken($bg, 5%)
+		background-color: $bg-focus
 		&::after
-			border-left-color: darken($bg, 5%)
+			border-left-color: $bg-focus
 	&::after
 		content: ''
 		position: absolute
@@ -65,6 +65,31 @@
 		border: 20px solid $trsp
 		border-left-color: $bg
 		transition: border .3s ease
+
+
+/* ==========================================================================
+	 Dropdown button
+	 ========================================================================== */
+.btn.btn-dropdown
+	padding-left: 0
+	padding-right: 0
+	height: auto
+	color: $text-300
+	&[aria-expanded="false"]
+		svg
+			transform: scaleY(-1)
+
+	svg
+		width: 16px
+		height: 16px
+		margin-left: 8px
+		fill: $text-200
+		transform: scaleY(1)
+		transition: transform .3s ease, fill .3s ease
+	&:hover
+		color: $orange
+		svg
+			fill: $orange
 
 
 /* ==========================================================================

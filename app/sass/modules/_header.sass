@@ -1,3 +1,6 @@
+/* ==========================================================================
+	 Site header
+	 ========================================================================== */
 .header
 
 	&-top
@@ -176,12 +179,7 @@
 						background-image: url('../images/icons/whatsapp.svg')
 					&:hover
 						color: $orange
-					&:not(:last-child)
-						margin-right: 6px
-						&::after
-							content: ','
-							display: inline-block
-							color: $text-400
+
 			.mail
 				> a
 					color: $text-300
@@ -354,7 +352,7 @@
 				padding-left: 8px
 				padding-right: 8px
 			&-item
-				margin-top: 32px
+				+mt(32)
 				.category
 					> a
 						display: inline-block

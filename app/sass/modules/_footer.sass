@@ -1,0 +1,144 @@
+/* ==========================================================================
+	 Site footer
+	 ========================================================================== */
+.footer
+	position: relative
+	margin-top: 100px
+	background-color: $white
+
+	&-main
+		padding-top: 32px
+		padding-bottom: 32px
+		border-top: 1px solid $border
+		+media-breakpoint-down(md)
+			padding-top: 24px
+			padding-bottom: 24px
+
+	&-title
+		margin-bottom: 16px
+		color: $text-300
+		+font-size(xs)
+		font-weight: $w-bold
+		letter-spacing: 0.1em
+		text-transform: uppercase
+		+media-breakpoint-down(md)
+			margin-bottom: 16px
+
+	// Intro
+	&-intro
+
+		.stores
+			+mt(24)
+			&-item
+				+mt(16)
+				span
+					display: block
+					font-weight: $w-bold
+				p
+					margin-top: 8px
+					margin-bottom: 0
+
+		.payments
+			+mt(32)
+			&-title
+				margin-bottom: 8px
+
+		// Navigation
+	&-nav
+		&-list
+			> li > a
+				display: inline-block
+				padding-top: 4px
+				padding-bottom: 4px
+
+	// Contacts
+	&-contacts
+		+media-breakpoint-up(lg)
+			padding-left: 24px
+
+		.phone
+			+mb(24)
+			> a
+				display: inline-flex
+				align-items: center
+				color: $text-200
+				+font-size(md)
+				> i:first-child
+					margin-left: 4px
+				.viber,
+				.whatsapp
+					user-select: none
+					flex: 0 0 auto
+					display: inline-block
+					margin-top: -2px
+					background-repeat: no-repeat
+					background-size: 100%
+					background-position: center
+					font-style: normal
+				.viber
+					width: 24px
+					height: 24px
+					background-image: url('../images/icons/viber.svg')
+				.whatsapp
+					width: 24px
+					height: 24px
+					background-image: url('../images/icons/whatsapp.svg')
+				&:hover
+					color: $orange
+				&:not(:last-child)
+					margin-right: 6px
+
+			// Text (description)
+			&-text
+				color: $text-300
+			// Callback button
+			&-callback
+				height: auto
+				padding-left: 0
+				padding-right: 0
+				&:hover
+					span
+						color: $orange
+						border-bottom-color: $orange
+				svg
+					width: 18px
+					height: 18px
+					margin-right: 8px
+					fill: $orange
+				span
+					border-bottom: 1px dashed $text-400
+					color: $text-300
+					+font-size(sm)
+					transition: $trs
+
+		.mail
+			+mb(24)
+			> a
+				+font-size(md)
+
+		.social
+			&-title
+				margin-bottom: 8px
+				color: $text-300
+			&-list
+				display: flex
+				align-items: center
+				> a
+					display: flex
+					align-items: center
+					justify-content: center
+					width: 48px
+					height: 48px
+					background-color: $bg
+					&:not(:last-child)
+						margin-right: 16px
+					&:hover
+						background-color: $bg-hover
+					> img
+						width: 32px
+						height: 32px
+
+	// Copyright
+	&-copyright
+		padding-top: 24px
+		padding-bottom: 24px
