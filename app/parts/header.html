@@ -19,6 +19,7 @@
 		<div class="header-top">
 			<div class="container">
 				<div class="row align-items-center">
+
 					<div class="col hours">
 						<div class="hours-icon">
 							<svg class="icon icon-clock"><use xlink:href="./images/symbol-defs.svg#clock"></use></svg>
@@ -28,6 +29,7 @@
 							<p>Прием заказов круглосуточно</p>
 						</div>
 					</div><!-- /.hours -->
+
 					<div class="col-auto navigation">
 						<ul class="navigation-list">
 							<li class="project">
@@ -55,19 +57,39 @@
 							<li><a href="#">Контакты</a></li>
 						</ul>
 					</div><!-- /.navigation -->
+
 				</div><!-- /.row -->
 			</div><!-- /.container -->
 		</div><!-- /.header-top -->
 
 		<div class="header-middle">
 			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-auto logotype">
+				<div class="row no-gutters">
+
+					<div class="col-auto align-self-center burger">
+						<div class="burger-megamenu">
+							<button class="btn btn-burger">
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+						<div class="burger-mmenu">
+							<button class="btn btn-burger">
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+					</div><!-- /.header-middle-burger -->
+
+					<div class="col-auto align-self-center logotype">
 						<a href="index.html" rel="home">
 							<img src="./images/logotype.png" alt="Интернет-магазин Aplitka">
 						</a>
 					</div><!-- /.logotype -->
-					<div class="col-auto stores">
+
+					<div class="col-auto align-self-center stores">
 						<div class="dropdown dropdown-stores">
 							<button type="button" class="btn btn-corner" id="dropdownStoresMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								<span>Где купить</span>
@@ -94,32 +116,122 @@
 							</div><!-- /.dropdown-menu -->
 						</div><!-- /.dropdown -->
 					</div><!-- /.stores -->
-					<div class="col search">
+
+					<div class="col align-self-center search">
 						<form class="search-form form">
 							<input type="text" class="search-form-input form-control" placeholder="Marazzi" required>
 							<button type="submit" class="search-form-btn btn">
 								<svg class="icon icon-search"><use xlink:href="./images/symbol-defs.svg#search"></use></svg>
 							</button>
 						</form>
-					</div><!-- /.search -->
-					<div class="col-auto contacts">
-						<div class="phone">
-							<a href="tel:+79262255096" title="Позвонить">+7 (926) 225-50-96 <i class="whatsapp"></i><i class="viber"></i></a>
+						<!-- Search results -->
+						<div class="search-results">
+							<div class="search-results-wrapper">
+								<div class="search-results-categories">
+									<span class="cats-title mb-8">Категории</span>
+									<div class="cats-list">
+										<a href="#" class="cats-item">
+											<div class="photo img-cover">
+												<img src="./images/collections/1.jpg" alt="">
+											</div>
+											<div class="title">Настенная</div>
+										</a>
+										<a href="#" class="cats-item">
+											<div class="photo img-cover">
+												<img src="./images/collections/2.jpg" alt="">
+											</div>
+											<div class="title">Напольная</div>
+										</a>
+										<a href="#" class="cats-item">
+											<div class="photo img-cover">
+												<img src="./images/collections/3.jpg" alt="">
+											</div>
+											<div class="title">Мозаика</div>
+										</a>
+										<a href="#" class="cats-item">
+											<div class="photo img-cover">
+												<img src="./images/collections/4.jpg" alt="">
+											</div>
+											<div class="title">Бежевая</div>
+										</a>
+										<a href="#" class="cats-item">
+											<div class="photo img-cover">
+												<img src="./images/collections/5.jpg" alt="">
+											</div>
+											<div class="title">Серая</div>
+										</a>
+										<a href="#" class="cats-item">
+											<div class="photo img-cover">
+												<img src="./images/collections/6.jpg" alt="">
+											</div>
+											<div class="title">Декоративная</div>
+										</a>
+									</div><!-- /.cats-list -->
+								</div><!-- /.search-results-categories -->
+								<div class="search-results-products">
+									<span class="products-title mb-8">Товары</span>
+									<div class="products-list">
+										<a href="#" class="products-item">
+											<div class="photo zoom-photo img-cover">
+												<img src="./images/products/1.jpg" alt="">
+											</div>
+											<div class="meta">
+												<span class="title">Керамогранит Bliss Beige FT4BSS11 41X41</span>
+												<div class="product-country">
+													<span>Italon,</span>
+													<img src="images/flags/228-russia.svg" alt="Россия">
+													<span>Россия</span>
+												</div>
+											</div>
+											<div class="product-price text-lg">16 950 ₽</div>
+										</a>
+										<a href="#" class="products-item">
+											<div class="photo zoom-photo img-cover">
+												<img src="./images/products/2.jpg" alt="">
+											</div>
+											<div class="meta">
+												<span class="title">Керамогранит Bliss Beige FT4BSS11 41X41</span>
+												<div class="product-country">
+													<span>Italon,</span>
+													<img src="images/flags/228-russia.svg" alt="Россия">
+													<span>Россия</span>
+												</div>
+											</div>
+											<div class="product-price text-lg">7 230 ₽</div>
+										</a>
+									</div><!-- /.products-list -->
+									<div class="mt-16">
+										<a href="#" class="link-arrow">Все результаты <svg class="icon icon-arrow-small"><use xlink:href="images/symbol-defs.svg#arrow-small"></use></svg></a>
+									</div>
+								</div><!-- /.search-results-products -->
+							</div><!-- /.search-results-wrapper -->
 						</div>
-						<div class="mail">
-							<a href="mailto:zakaz@aplitka.ru" title="Написать письмо">zakaz@aplitka.ru</a>
+						<!-- End Search results -->
+					</div><!-- /.search -->
+
+					<div class="col-auto align-self-end contacts">
+						<div class="contacts-item">
+							<div class="phone">
+								<a href="tel:+79262255096" title="Позвонить">+7 (926) 225-50-96 <i class="whatsapp"></i><i class="viber"></i></a>
+							</div>
+							<div class="mail">
+								<a href="mailto:zakaz@aplitka.ru" title="Написать письмо">zakaz@aplitka.ru</a>
+							</div>
+						</div>
+						<div class="contacts-item">
+							<div class="callback">
+								<div class="callback-phone">
+									<a href="tel:+74952255096" title="Позвонить">+7 (495) 225-50-96</a>
+								</div>
+								<button type="button" class="callback-btn btn">
+									<svg class="icon icon-support"><use xlink:href="./images/symbol-defs.svg#support"></use></svg>
+									<span>Перезвоните мне</span>
+								</button>
+							</div>
 						</div>
 					</div><!-- /.contacts -->
-					<div class="col-auto callback">
-						<div class="callback-phone">
-							<a href="tel:+74952255096" title="Позвонить">+7 (495) 225-50-96</a>
-						</div>
-						<button type="button" class="callback-btn btn">
-							<svg class="icon icon-support"><use xlink:href="./images/symbol-defs.svg#support"></use></svg>
-							<span>Перезвоните мне</span>
-						</button>
-					</div><!-- /.callback -->
-					<div class="col-auto cart">
+
+					<div class="col-auto align-self-center cart">
 						<a href="#" class="cart-link">
 							<div class="cart-icon">
 								<svg class="icon icon-cart"><use xlink:href="./images/symbol-defs.svg#cart"></use></svg>
@@ -130,12 +242,15 @@
 							</div>
 						</a>
 					</div><!-- /.cart -->
+
 				</div><!-- /.row -->
 			</div><!-- /.container -->
 		</div><!-- /.header-middle -->
 
 		<div class="header-bottom">
 			<div class="container">
+
+				<!-- Megamenu -->
 				<div class="navigation">
 					<ul class="navigation-list" role="navigation">
 						<li>
@@ -384,6 +499,8 @@
 						</li>
 					</ul>
 				</div><!-- /.navigation -->
+
+				<!-- Brands alphabet -->
 				<div class="brands">
 					<a href="#" class="brands-all">
 						<span>Все производители</span>
@@ -459,6 +576,7 @@
 						</li>
 					</ul>
 				</div><!-- /.brands -->
+
 			</div><!-- /.container -->
 		</div><!-- /.header-bottom -->
 

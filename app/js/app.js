@@ -56,8 +56,60 @@ $(document).ready(function() {
 
 
 	/**
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	* Sticky header
 	*-------------------------------------------------------------------------------------------------------------------------------------------
-	* Adaptive header menu
+	*/
+	new Headhesive('header.header', {
+		offset: 500,
+		classes: {
+			clone:   'header--clone',
+			stick:   'header--stick',
+			unstick: 'header--unstick'
+		},
+		onInit: function() {
+			$('.header--clone .header-top').remove()
+			$('.header--clone .header-middle .search-results').remove()
+			$('.header--clone .header-bottom .brands').remove()
+		},
+		onStick: function() {
+			$('.header-middle .search').removeClass('_is-focused')
+			$('.header-middle .search-results').removeClass('_is-opened')
+		}
+	})
+
+	$('.header-middle .burger-megamenu .btn-burger').on('click', function() {
+		$(this).toggleClass('_is-toggled')
+		$('.header--clone .header-bottom').toggleClass('_is-opened')
+	})
+
+
+	/**
+	*-------------------------------------------------------------------------------------------------------------------------------------------
+	* Site header: Toggle search results
+	*-------------------------------------------------------------------------------------------------------------------------------------------
+	*/
+	const headerSearchWrapper = $('.header-middle .search')
+	const headerSearchForm = $('.header-middle .search-form-input')
+	const headerSearchResults = $('.header-middle .search-results')
+
+	headerSearchForm.on('click', function() {
+		headerSearchWrapper.addClass('_is-focused')
+		headerSearchResults.addClass('_is-opened')
+	})
+
+	$(document).on('click', function(e) {
+		if (!headerSearchWrapper.is(e.target) && headerSearchWrapper.has(e.target).length === 0) {
+			headerSearchWrapper.removeClass('_is-focused')
+			headerSearchResults.removeClass('_is-opened')
+		}
+	})
+
+
+
+	/**
+	*-------------------------------------------------------------------------------------------------------------------------------------------
+	* Site header: Show more menu
 	*-------------------------------------------------------------------------------------------------------------------------------------------
 	*/
 	const headerMore = $('.header-bottom .navigation-list > li.more')

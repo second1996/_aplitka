@@ -10,19 +10,6 @@
 		user-select: none
 	&-meta
 		margin-top: 16px
-		.country
-			display: flex
-			align-items: center
-			margin-top: 8px
-			> img
-				width: 16px
-				height: 16px
-				margin-right: 6px
-			> span
-				color: $text-300
-				+font-size(xs)
-				&:not(:last-child)
-					margin-right: 8px
 
 
 /* ==========================================================================
@@ -32,6 +19,9 @@
 	.card-photo
 		height: 208px
 	.card-meta
+		.product-country
+			> span
+				color: $text-300
 		.collections
 			margin-top: 8px
 			color: $text-300
@@ -76,28 +66,10 @@
 			overflow: hidden
 			display: block
 			// height: 46px
-		.country
+		.product-country
 			+mt(24)
-			> span
-				color: $text-200
-				font-size: 14px
-		.price
-			display: flex
-			flex-wrap: wrap
-			align-items: center
+		.product-price
 			margin-top: 8px
-			> del
-				color: $text-400
-				~ ins
-					color: $orange
-					flex: 0 0 100%
-			> ins
-				color: $text-200
-				+font-size(lg)
-				text-decoration: none
-				> sup
-					color: $text-300
-					+font-size(xs)
 
 	.card-buttons
 		margin-top: 12px

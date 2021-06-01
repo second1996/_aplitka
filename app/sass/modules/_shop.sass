@@ -1,0 +1,39 @@
+/* ==========================================================================
+	 Product country
+	 ========================================================================== */
+.product-country
+	display: flex
+	align-items: center
+	margin-top: 8px
+	> img
+		width: 16px
+		height: 16px
+		margin-right: 6px
+	> span
+		color: $text-200
+		+font-size(xs)
+		&:not(:last-child)
+			margin-right: 8px
+
+
+/* ==========================================================================
+	 Product price
+	 ========================================================================== */
+.product-price
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	margin-top: 8px
+	> del
+		color: $text-400
+		~ ins
+			color: $orange
+			flex: 0 0 100%
+	> ins
+		color: $text-200
+		+font-size(lg)
+		text-decoration: none
+		> sup
+			color: $text-300
+			+font-size(xs)
+

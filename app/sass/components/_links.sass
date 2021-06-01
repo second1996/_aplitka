@@ -8,7 +8,11 @@
 	+font-size(sm)
 	&:hover
 		color: $text-200
+		> .icon
+			transform: translateX(-4px)
 	> .icon
 		width: 16px
 		height: 16px
 		margin-left: 4px
+		transition: transform .3s ease
+

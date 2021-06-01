@@ -1,12 +1,62 @@
 /* ==========================================================================
+	 Sticky header
+	 ========================================================================== */
+.header
+	&.header--clone
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		z-index: 100
+		box-shadow: 0px 100px 80px rgba(77, 77, 77, 0.07), 0px 30px 24px rgba(77, 77, 77, 0.035), 0px 12px 10px rgba(77, 77, 77, 0.022), 0px 5px 4px rgba(77, 77, 77, 0.015)
+		visibility: hidden
+		opacity: 0
+		transform: translateY(-100%)
+		transition: .3s ease-in-out
+		+media-breakpoint-down(sm)
+			padding-top: 6px
+			padding-bottom: 6px
+		.header-middle
+			padding-top: 12px
+			padding-bottom: 12px
+			.burger
+				display: block
+				&-megamenu
+					display: block
+			.stores
+				margin-left: 28px
+			.search
+				margin-left: 66px
+				margin-right: 56px
+				&-form
+					max-width: 100%
+			.contacts
+				display: none
+		.header-bottom
+			display: none
+			padding-top: 6px
+			padding-bottom: 18px
+			&._is-opened
+				display: block
+	&.header--stick
+		visibility: visible
+		opacity: 1
+		transform: translateY(0%)
+
+
+/* ==========================================================================
 	 Site header
 	 ========================================================================== */
 .header
+	position: relative
+	z-index: 99
+	background-color: $white
 
 	&-top
 		padding-top: 10px
 		padding-bottom: 16px
 
+		// Schedule
 		.hours
 			display: flex
 			&-icon
@@ -18,6 +68,7 @@
 				p
 					margin-bottom: 0
 
+		// Navigation menu
 		.navigation
 			&-list
 				display: inline-flex
@@ -98,6 +149,16 @@
 
 	&-middle
 
+		// Burgers (Megamenu & Mobile menu)
+		.burger
+			display: none
+			margin-right: 28px
+			&-megamenu
+				display: none
+			&-mmenu
+				display: none
+
+		// Logotype
 		.logotype
 			a
 				display: inline-block
@@ -105,7 +166,9 @@
 				display: inline-block
 				max-width: 200px
 
+		// Stores dropdown
 		.stores
+			margin-left: 20px
 			.dropdown.show
 				.btn.btn-corner
 					background-color: $orange
@@ -119,13 +182,39 @@
 					height: 22px
 					margin-left: 6px
 
+		// Search
 		.search
-			margin-left: 32px
+			margin-left: 48px
+			margin-right: 42px
+			&._is-focused
+				~ .contacts
+					display: none
+				.search-form
+					max-width: 100%
+					&::after
+						transform: none
+						transition: transform .35s
+
+			// Search form
 			&-form
+				position: relative
 				display: flex
 				align-items: center
+				max-width: 300px
 				height: 56px
 				border-bottom: 1px solid $border
+				transition: max-width .45s
+				&::after
+					content: ''
+					position: absolute
+					top: 100%
+					left: 0
+					right: 0
+					height: 1px
+					background-color: $text-200
+					will-change: transform
+					transform-origin: left
+					transform: scaleX(0)
 				&-input
 					flex: 1 1 auto
 					height: 100%
@@ -147,8 +236,122 @@
 						width: 22px
 						height: 22px
 
+			// Search results
+			&-results
+				pointer-events: none
+				overflow: hidden
+				position: absolute
+				left: 0
+				right: 0
+				z-index: 2
+				height: 0
+				margin-top: 24px
+				visibility: hidden
+				opacity: 0
+				transform: translate3d(0, 10px, 0)
+				transition: $trs
+				+media-breakpoint-down(xl)
+					left: 12px
+					right: -120px
+				+media-breakpoint-down(lg)
+					position: static
+					margin-top: 24px
+				&._is-opened
+					pointer-events: auto
+					overflow: visible
+					height: auto
+					visibility: visible
+					opacity: 1
+					transform: none
+				&-wrapper
+					padding: 16px 16px 24px
+					box-shadow: $box-shadow
+					background-color: $white
+					+media-breakpoint-down(lg)
+						padding: 0
+						box-shadow: none
+					> div:not(:last-child)
+						margin-bottom: 26px
+				&-categories
+					.cats-title
+						display: block
+						color: $text-400
+						letter-spacing: 0.04em
+					.cats-list
+						display: flex
+						flex-wrap: wrap
+						margin-left: -8px
+						margin-right: -8px
+					.cats-item
+						overflow: hidden
+						flex: 0 0 33.33333%
+						max-width: 33.33333%
+						display: flex
+						height: 48px
+						margin-top: 16px
+						padding-left: 8px
+						padding-right: 8px
+						&:hover
+							color: $text-200
+							.title
+								background-color: $bg
+						&:active
+							.title
+								background-color: $bg-hover
+						.photo
+							flex: 0 0 auto
+							width: 80px
+							height: 100%
+						.title
+							flex: 1 1 auto
+							display: flex
+							align-items: center
+							height: 100%
+							padding-left: 12px
+							border: 1px solid $border
+							border-left: 0
+							background-color: $white
+							+font-size(xxs)
+							font-weight: $w-bold
+							text-transform: uppercase
+							word-break: break-word
+							transition: background-color .3s ease
+				&-products
+					.products-title
+						display: block
+						color: $text-400
+						letter-spacing: 0.04em
+					.products-list
+					.products-item
+						display: flex
+						margin-top: 16px
+						.photo
+							flex: 0 0 auto
+							width: 96px
+							height: 96px
+						.meta
+							flex: 1 1 auto
+							padding-left: 16px
+							padding-right: 32px
+							.title
+								display: block
+								padding-top: 4px
+								line-height: 20px
+								text-transform: uppercase
+						.product-price
+							flex: 0 0 auto
+							align-items: flex-start
+							margin-top: 0
+
+		// Contacts (phone, email)
 		.contacts
-			margin-left: 26px
+			display: flex
+			align-items: flex-end
+			margin-right: 32px
+			&-item
+				&:not(:last-child)
+					margin-right: 24px
+
 			.phone
 				display: flex
 				align-items: center
@@ -187,35 +390,37 @@
 					&:hover
 						color: $orange
 
-		.callback
-			margin-left: 8px
-			&-phone
-				> a
-					color: $text-200
-					+font-size(md)
+			.callback
+				margin-left: 8px
+				&-phone
+					> a
+						display: block
+						color: $text-200
+						font-size: 18px
+						line-height: 1
+						&:hover
+							color: $orange
+				&-btn
+					height: auto
+					padding-left: 0
+					padding-right: 0
 					&:hover
-						color: $orange
-			&-btn
-				height: auto
-				padding-left: 0
-				padding-right: 0
-				&:hover
+						span
+							color: $orange
+							border-bottom-color: $orange
+					svg
+						width: 16px
+						height: 16px
+						margin-right: 8px
+						fill: $orange
 					span
-						color: $orange
-						border-bottom-color: $orange
-				svg
-					width: 16px
-					height: 16px
-					margin-right: 8px
-					fill: $orange
-				span
-					border-bottom: 1px dashed $text-400
-					color: $text-300
-					+font-size(sm)
-					transition: $trs
+						border-bottom: 1px dashed $text-400
+						color: $text-300
+						+font-size(sm)
+						transition: $trs
 
+		// Cart summary
 		.cart
-			margin-left: 20px
 			&-link
 				display: flex
 				align-items: center
@@ -253,6 +458,7 @@
 							color: $orange
 							&::after
 								opacity: 1
+								transform: none
 						.megamenu
 							pointer-events: auto
 							visibility: visible
@@ -276,7 +482,8 @@
 							height: 1px
 							background-color: $orange
 							opacity: 0
-							transition: opacity .35s ease
+							transform: scaleX(0)
+							transition: opacity .3s ease, transform .3s ease
 					&.more
 						margin-right: 0
 						&._is-toggled
@@ -327,8 +534,8 @@
 			pointer-events: none
 			position: absolute
 			top: 100%
-			left: 0
-			right: 0
+			left: -100%
+			right: -100%
 			z-index: 101
 			padding-bottom: 32px
 			background-color: $white
@@ -336,9 +543,9 @@
 			opacity: 0
 			transform: translateY(10px)
 			transition: $trs
-			.container
-				padding-left: 0
-				padding-right: 0
+			// .container
+			// 	padding-left: 0
+			// 	padding-right: 0
 			&-grid
 				display: flex
 				flex-wrap: wrap
