@@ -166,7 +166,7 @@ $(document).ready(function() {
 		html: true,
 		template: '<div class="popover popover-brands" role="tooltip"><div class="arrow"></div><div class="popover-body"></div></div>',
 		popperConfig: {
-			placement: 'bottom',
+			placement: 'bottom-end',
 		},
 		content: function() {
 			if ($(this).parent().find('ul').length) {
