@@ -33,9 +33,9 @@
 					<div class="col-auto navigation">
 						<ul class="navigation-list">
 							<li class="project">
-								<a href="#">
+								<a href="#projectModal" data-toggle="modal">
 									<svg class="icon icon-cube"><use xlink:href="./images/symbol-defs.svg#cube"></use></svg>
-									<span>Записаться на 3D проект</span>
+									<span>Записаться на 3D-проект</span>
 								</a>
 							</li>
 							<li class="has-dropdown">
@@ -119,7 +119,12 @@
 
 					<div class="col align-self-center search">
 						<form class="search-form form">
-							<input type="text" class="search-form-input form-control" placeholder="Marazzi" required>
+							<div class="form-placeholder">
+								<label>
+									<input type="text" class="search-form-input form-control" placeholder="Поиск" required>
+									<span>Поиск</span>
+								</label>
+							</div>
 							<button type="submit" class="search-form-btn btn">
 								<svg class="icon icon-search"><use xlink:href="./images/symbol-defs.svg#search"></use></svg>
 							</button>
@@ -223,7 +228,7 @@
 								<div class="callback-phone">
 									<a href="tel:+74952255096" title="Позвонить">+7 (495) 225-50-96</a>
 								</div>
-								<button type="button" class="callback-btn btn">
+								<button type="button" data-toggle="modal" data-target="#callbackModal" class="callback-btn btn">
 									<svg class="icon icon-support"><use xlink:href="./images/symbol-defs.svg#support"></use></svg>
 									<span>Перезвоните мне</span>
 								</button>

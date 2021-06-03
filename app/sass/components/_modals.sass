@@ -6,7 +6,7 @@
 	padding-left: 0!important
 	&.fade
 		.modal-dialog
-			transform: scale(0.95)
+			transform: translateY(10px)
 	&.show
 		.modal-dialog
 			transform: none
@@ -17,43 +17,66 @@
 			opacity: 0.4
 
 	.modal-dialog
-		max-width: 340px
+		max-width: 320px
 		margin-left: auto
 		margin-right: auto
-		padding-left: 8px
-		padding-right: 8px
 
-	.modal-dialog-lg
-		max-width: 875px
-		+media-breakpoint-up(md)
-			.modal-header
-				padding: 40px 24px
-				justify-content: center
-				.title
-					text-align: center
-		.modal-body
-			.btn-submit
-				max-width: 260px
-				+media-breakpoint-down(xs)
-					max-width: 100%
 	.modal-content
-		border-radius: 16px
+		padding: 24px 24px 32px
+		border-radius: 0
 		border: none
-		box-shadow: none
+		box-shadow: $box-shadow
 
 	.modal-header
-		padding: 24px
+		padding: 0 0 32px
 		border-bottom: 0
 		.title
 			margin-bottom: 0
-			padding-right: 20px
+			padding-right: 30px
 		.btn-close
 			position: absolute
-			top: 18px
-			right: 18px
+			top: 20px
+			right: 20px
+			z-index: 2
+			height: auto
+			padding: 0
+			color: $text-400
+			font-size: 24px
+			&:hover
+				color: $orange
 
 	.modal-body
-		padding: 8px 24px 32px
+		padding: 0
 		.btn-submit
+			margin-top: 32px
+			width: 100%
+
+
+/* ==========================================================================
+	 Success modal
+	 ========================================================================== */
+.modal-success
+	.modal-header
+		padding-bottom: 0
+	.success-form
+		text-align: center
+		&-icon
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 80px
+			height: 80px
+			margin-left: auto
+			margin-right: auto
+			background-color: $bg
+			color: $orange
+			font-size: 32px
+		&-title
+			+mt(24)
+			margin-bottom: 10px
+		&-descr
+			+mb(24)
+			color: $text-300
+		&-btn
 			width: 100%
 

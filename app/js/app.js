@@ -57,6 +57,36 @@ $(document).ready(function() {
 
 	/**
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	* Switch phone mask in forms
+	*-------------------------------------------------------------------------------------------------------------------------------------------
+	*/
+	function switchPhoneMask(selector) {
+		var maskCheckbox = $(selector).find('input[type="checkbox"]'),
+				maskInput = maskCheckbox.parents('.form-group').find('input[type="tel"]');
+
+		if (maskCheckbox.is(':checked')) {
+			maskInput.mask('+7 (999) 999-99-99')
+			maskInput.attr('placeholder', '+7 (___) ___ __ __')
+		} else {
+			maskInput.mask('0#')
+			maskInput.attr('placeholder', 'Номер телефона')
+		}
+	}
+
+	window.initSwitchPhoneMask = function() {
+		$('.switch-input-mask').each(function(index, element) {
+			switchPhoneMask(element)
+	
+			$(element).find('input[type="checkbox"]').on('input checked', function() {
+				switchPhoneMask(element)
+			})
+		})
+	}
+	initSwitchPhoneMask()
+
+
+	/**
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
 	* Sticky header
 	*-------------------------------------------------------------------------------------------------------------------------------------------
 	*/
