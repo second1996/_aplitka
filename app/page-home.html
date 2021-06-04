@@ -4,7 +4,7 @@
 
 	<!-- Section: Heroes -->
 	<section class="h-heroes section">
-		<div class="container">
+		<div class="h-heroes-wrapper container">
 			<div class="h-heroes-slider swiper-slider">
 				<!-- Slider content -->
 				<div class="swiper-container">
@@ -51,8 +51,8 @@
 	<!-- Section: Advantages -->
 	<section class="h-advantages section mt-80">
 		<div class="container">
-			<div class="row">
-				<div class="col-4">
+			<div class="h-advantages-list row flex-nowrap flex-xl-wrap">
+				<div class="col-auto col-lg-4">
 					<div class="h-advantages-item">
 						<div class="h-advantages-icon">
 							<img src="/images/icons/adv-1.svg" alt="96 человек получили услуги">
@@ -63,7 +63,7 @@
 						</div>
 					</div>
 				</div><!-- /.col -->
-				<div class="col-4">
+				<div class="col-auto col-lg-4">
 					<div class="h-advantages-item">
 						<div class="h-advantages-icon">
 							<img src="/images/icons/adv-2.svg" alt="439 заказов сделано">
@@ -74,7 +74,7 @@
 						</div>
 					</div>
 				</div><!-- /.col -->
-				<div class="col-4">
+				<div class="col-auto col-lg-4">
 					<div class="h-advantages-item">
 						<div class="h-advantages-icon">
 							<img src="/images/icons/adv-3.svg" alt="140 тонн материалов отгруженно">
@@ -93,7 +93,7 @@
 	<section class="h-categories section mt-80">
 		<div class="container">
 			<div class="row row-items-16">
-				<div class="col-7">
+				<div class="col-md-6 col-lg-7">
 					<div class="h-categories-item img-cover zoom-photo">
 						<a href="#" class="h-categories-link">
 							<div class="label">
@@ -104,7 +104,7 @@
 						<img src="images/categories/1.jpg" alt="">
 					</div>
 				</div><!-- /.col -->
-				<div class="col-5">
+				<div class="col-md-6 col-lg-5">
 					<div class="h-categories-item img-cover zoom-photo">
 						<a href="#" class="h-categories-link">
 							<div class="label">
@@ -115,7 +115,7 @@
 						<img src="images/categories/2.jpg" alt="">
 					</div>
 				</div><!-- /.col -->
-				<div class="col-6">
+				<div class="col-md-6 col-lg-4 col-xl-6">
 					<div class="h-categories-item img-cover zoom-photo">
 						<a href="#" class="h-categories-link">
 							<div class="label">
@@ -126,7 +126,7 @@
 						<img src="images/categories/3.jpg" alt="">
 					</div>
 				</div><!-- /.col -->
-				<div class="col-6">
+				<div class="col-md-6 col-lg-4 col-xl-6">
 					<div class="h-categories-item img-cover zoom-photo">
 						<a href="#" class="h-categories-link">
 							<div class="label">
@@ -137,7 +137,7 @@
 						<img src="images/categories/4.jpg" alt="">
 					</div>
 				</div><!-- /.col -->
-				<div class="col-5">
+				<div class="col-md-6 col-lg-4 col-xl-5">
 					<div class="h-categories-item img-cover zoom-photo">
 						<a href="#" class="h-categories-link">
 							<div class="label">
@@ -148,7 +148,7 @@
 						<img src="images/categories/5.jpg" alt="">
 					</div>
 				</div><!-- /.col -->
-				<div class="col-5">
+				<div class="col-md-6 col-lg-7 col-xl-5">
 					<div class="h-categories-item img-cover zoom-photo">
 						<a href="#" class="h-categories-link">
 							<div class="label">
@@ -159,8 +159,8 @@
 						<img src="images/categories/6.jpg" alt="">
 					</div>
 				</div><!-- /.col -->
-				<div class="col-2">
-					<div class="h-categories-item">
+				<div class="col-lg-5 col-xl-2">
+					<div class="h-categories-item h-categories-item--more">
 						<a href="#" class="h-categories-all">
 							<div class="picture">
 								<svg width="88" height="144" viewBox="0 0 88 144" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -187,16 +187,18 @@
 	<!-- Section: About -->
 	<section class="h-about section mt-80">
 		<div class="container">
-			<h1 class="h-about-title text-xxl"><span class="text-orange">aplitka.ru</span> — керамическая плитка и керамогранит от ведущих мировых брендов</h1>
+			<h1 class="h-about-title mb-60 text-xxl"><span class="text-orange">aplitka.ru</span> — керамическая плитка и керамогранит от ведущих мировых брендов</h1>
 
 			<!-- Tabs -->
-			<div class="nav nav-tabs" role="tablist">
-				<a id="tab-1" href="#about-tab-1" class="nav-link active" data-toggle="tab" role="tab">Нам доверяют</a>
-				<a id="tab-2" href="#about-tab-2" class="nav-link" data-toggle="tab" role="tab">Удобно выбирать</a>
-				<a id="tab-2" href="#about-tab-3" class="nav-link" data-toggle="tab" role="tab">Как сделать заказ</a>
-				<a id="tab-2" href="#about-tab-4" class="nav-link" data-toggle="tab" role="tab">Способы оплаты</a>
-				<a id="tab-2" href="#about-tab-5" class="nav-link" data-toggle="tab" role="tab">Способы доставки</a>
-				<a id="tab-2" href="#about-tab-6" class="nav-link" data-toggle="tab" role="tab">Акции и скидки</a>
+			<div class="h-about-tabs">
+				<div class="nav nav-tabs" role="tablist">
+					<a id="tab-1" href="#about-tab-1" class="nav-link active" data-toggle="tab" role="tab">Нам доверяют</a>
+					<a id="tab-2" href="#about-tab-2" class="nav-link" data-toggle="tab" role="tab">Удобно выбирать</a>
+					<a id="tab-2" href="#about-tab-3" class="nav-link" data-toggle="tab" role="tab">Как сделать заказ</a>
+					<a id="tab-2" href="#about-tab-4" class="nav-link" data-toggle="tab" role="tab">Способы оплаты</a>
+					<a id="tab-2" href="#about-tab-5" class="nav-link" data-toggle="tab" role="tab">Способы доставки</a>
+					<a id="tab-2" href="#about-tab-6" class="nav-link" data-toggle="tab" role="tab">Акции и скидки</a>
+				</div>
 			</div>
 
 			<!-- Tabs content -->
@@ -205,19 +207,19 @@
 				<!-- Tab #1 -->
 				<div id="about-tab-1" class="tab-pane fade show active" role="tabpanel">
 					<div class="row">
-						<div class="col-3">
+						<div class="col-md-4 col-xl-3">
 							<div class="h-about-text">
 								<h4>На рынке продаж стройматериалов с 2007 года</h4>
 								<p class="text-300">Мы ценим доверие каждого клиента. Заказы обрабатываются в максимально короткие сроки. Персональный менеджер ведет заказ от оформления до доставки товара клиенту.</p>
 							</div>
 						</div>
-						<div class="col-3">
+						<div class="col-md-4 col-xl-3">
 							<div class="h-about-text">
 								<h4>Выполняем более 2000 заказов в месяц</h4>
 								<p class="text-300">Мы ценим доверие каждого клиента. Заказы обрабатываются в максимально короткие сроки. Персональный менеджер ведет заказ от оформления до доставки товара клиенту.</p>
 							</div>
 						</div>
-						<div class="col-6">
+						<div class="col-md-4 col-xl-6">
 							<img src="images/h-about.jpg" alt="Нам доверяют">
 						</div>
 					</div>
@@ -226,19 +228,19 @@
 				<!-- Tab #2 -->
 				<div id="about-tab-2" class="tab-pane fade" role="tabpanel">
 					<div class="row">
-						<div class="col-3">
+						<div class="col-md-4 col-xl-3">
 							<div class="h-about-text">
 								<h4>Выполняем более 2000 заказов в месяц</h4>
 								<p class="text-300">Мы ценим доверие каждого клиента. Заказы обрабатываются в максимально короткие сроки. Персональный менеджер ведет заказ от оформления до доставки товара клиенту.</p>
 							</div>
 						</div>
-						<div class="col-3">
+						<div class="col-md-4 col-xl-3">
 							<div class="h-about-text">
 								<h4>На рынке продаж стройматериалов с 2007 года</h4>
 								<p class="text-300">Мы ценим доверие каждого клиента. Заказы обрабатываются в максимально короткие сроки. Персональный менеджер ведет заказ от оформления до доставки товара клиенту.</p>
 							</div>
 						</div>
-						<div class="col-6">
+						<div class="col-md-4 col-xl-6">
 							<img src="images/h-about.jpg" alt="Нам доверяют">
 						</div>
 					</div>
@@ -426,10 +428,15 @@
 			</div>
 
 			<!-- Tabs -->
-			<div class="nav nav-tabs nav-tabs--centered" role="tablist">
-				<a id="tab-1" href="#products-tab-1" class="nav-link active" data-toggle="tab" role="tab">Плитка</a>
-				<a id="tab-2" href="#products-tab-2" class="nav-link" data-toggle="tab" role="tab">Плитка для ванной</a>
-				<a id="tab-2" href="#products-tab-3" class="nav-link" data-toggle="tab" role="tab">Плитка для кухни</a>
+			<div class="h-products-tabs">
+				<div class="nav nav-tabs nav-tabs--centered" role="tablist">
+					<a id="tab-1" href="#products-tab-1" class="nav-link active" data-toggle="tab" role="tab">Плитка</a>
+					<a id="tab-2" href="#products-tab-2" class="nav-link" data-toggle="tab" role="tab">Плитка для ванной</a>
+					<a id="tab-3" href="#products-tab-3" class="nav-link" data-toggle="tab" role="tab">Плитка для кухни</a>
+					<a id="tab-4" href="#products-tab-4" class="nav-link" data-toggle="tab" role="tab">Плитка</a>
+					<a id="tab-5" href="#products-tab-5" class="nav-link" data-toggle="tab" role="tab">Плитка для ванной</a>
+					<a id="tab-6" href="#products-tab-6" class="nav-link" data-toggle="tab" role="tab">Плитка для кухни</a>
+				</div>
 			</div>
 
 			<!-- Tabs content -->
@@ -532,8 +539,8 @@
 				<h2 class="title">Адреса салонов</h2>
 				<a href="#" class="btn btn-corner">Наши контакты</a>
 			</div>
-			<div class="row">
-				<div class="col-4">
+			<div class="h-stores-list row flex-nowrap flex-lg-wrap">
+				<div class="col-auto col-lg-4">
 					<div class="h-stores-item">
 						<div class="number">1</div>
 						<h5 class="title text-lg">Магазин — Волоколамское шоссе</h5>
@@ -550,7 +557,7 @@
 						</div>
 					</div>
 				</div><!-- /.col -->
-				<div class="col-4">
+				<div class="col-auto col-lg-4">
 					<div class="h-stores-item">
 						<div class="number">2</div>
 						<h5 class="title text-lg">Магазин — Калужское шоссе</h5>
@@ -587,17 +594,17 @@
 				<!-- Articles Tab -->
 				<div id="articles-tab" class="tab-pane fade show active" role="tabpanel">
 					<!-- News list -->
-					<div class="row">
-						<div class="col-3">
+					<div class="h-articles-list row flex-nowrap flex-xl-wrap">
+						<div class="col-auto col-lg-3">
 							@@include('parts/article-cards/article-1.html')
 						</div><!-- /.col -->
-						<div class="col-3">
+						<div class="col-auto col-lg-3">
 							@@include('parts/article-cards/article-2.html')
 						</div><!-- /.col -->
-						<div class="col-3">
+						<div class="col-auto col-lg-3">
 							@@include('parts/article-cards/article-3.html')
 						</div><!-- /.col -->
-						<div class="col-3">
+						<div class="col-auto col-lg-3">
 							@@include('parts/article-cards/article-4.html')
 						</div><!-- /.col -->
 					</div><!-- /.row -->
@@ -610,17 +617,17 @@
 				<!-- News Tab -->
 				<div id="news-tab" class="tab-pane fade" role="tabpanel">
 					<!-- Articles list -->
-					<div class="row">
-						<div class="col-3">
+					<div class="h-articles-list row flex-nowrap flex-xl-wrap">
+						<div class="col-auto col-lg-3">
 							@@include('parts/article-cards/article-3.html')
 						</div><!-- /.col -->
-						<div class="col-3">
+						<div class="col-auto col-lg-3">
 							@@include('parts/article-cards/article-4.html')
 						</div><!-- /.col -->
-						<div class="col-3">
+						<div class="col-auto col-lg-3">
 							@@include('parts/article-cards/article-1.html')
 						</div><!-- /.col -->
-						<div class="col-3">
+						<div class="col-auto col-lg-3">
 							@@include('parts/article-cards/article-2.html')
 						</div><!-- /.col -->
 					</div><!-- /.row -->

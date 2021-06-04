@@ -108,11 +108,6 @@ $(document).ready(function() {
 		}
 	})
 
-	$('.header-middle .burger-megamenu .btn-burger').on('click', function() {
-		$(this).toggleClass('_is-toggled')
-		$('.header--clone .header-bottom').toggleClass('_is-opened')
-	})
-
 
 	/**
 	*-------------------------------------------------------------------------------------------------------------------------------------------
@@ -136,10 +131,9 @@ $(document).ready(function() {
 	})
 
 
-
 	/**
 	*-------------------------------------------------------------------------------------------------------------------------------------------
-	* Site header: Show more menu
+	* Site header: Toggle catalog menu
 	*-------------------------------------------------------------------------------------------------------------------------------------------
 	*/
 	const headerMore = $('.header-bottom .navigation-list > li.more')
@@ -154,6 +148,60 @@ $(document).ready(function() {
 		}
 	})
 
+	$('.header-middle .burger-megamenu .btn-burger').on('click', function() {
+		$(this).toggleClass('_is-toggled')
+		$('.header--clone .header-bottom').toggleClass('_is-opened')
+	})
+
+
+	/**
+	*-------------------------------------------------------------------------------------------------------------------------------------------
+	* Site header: Toggle mobile menu
+	*-------------------------------------------------------------------------------------------------------------------------------------------
+	*/
+	function mmenuBackdrop() {
+		if (!$('.mmenu-backdrop').length) {
+			$('body').append('<div class="mmenu-backdrop fade"></div>')
+			$('.mmenu-backdrop').delay(5).queue(function() {
+				$(this).addClass('show').dequeue()
+				$(this).on('click', function () {
+					mmenuBackdrop()
+					$('body').removeClass('lock-scroll')
+					$('.mmenu').removeClass('_is-opened')
+				})
+			})
+		} else {
+			$('.mmenu-backdrop').remove()
+		}
+	}
+
+	// Open menu
+	$('.header-middle .burger-mmenu .btn-burger').on('click', function() {
+		mmenuBackdrop()
+
+		$('body').addClass('lock-scroll')
+		$('.mmenu').addClass('_is-opened')
+	})
+
+	// Close menu
+	$('.mmenu .mmenu-heading .btn-close').on('click', function() {
+		mmenuBackdrop()
+
+		$('body').removeClass('lock-scroll')
+		$('.mmenu').removeClass('_is-opened')
+	})
+
+
+	/**
+	*-------------------------------------------------------------------------------------------------------------------------------------------
+	* Site header: Toggle search form on mobile
+	*-------------------------------------------------------------------------------------------------------------------------------------------
+	*/
+	$('.header-middle .search .search-btn').on('click', function() {
+		$('.header-middle .search .search-btn').toggleClass('_is-toggled')
+		$('.header-middle .search .search-form').toggleClass('_is-opened')
+	})
+
 
 	/**
 	*-------------------------------------------------------------------------------------------------------------------------------------------
@@ -166,7 +214,7 @@ $(document).ready(function() {
 		html: true,
 		template: '<div class="popover popover-brands" role="tooltip"><div class="arrow"></div><div class="popover-body"></div></div>',
 		popperConfig: {
-			placement: 'bottom-end',
+			placement: 'bottom',
 		},
 		content: function() {
 			if ($(this).parent().find('ul').length) {
@@ -199,7 +247,6 @@ $(document).ready(function() {
 	window.calcProductCardAttributes = function() {
 		$('.card-product').each(function(index, el) {
 			const li = $(el).find('.card-attributes > ul > li')
-			const shadow = $(el).find('.card-shadow')
 			let countHeight = 0
 
 			if (li.length >= 3) {

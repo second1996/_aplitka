@@ -6,34 +6,20 @@
 		font-size: 34px
 		line-height: 40px
 		+media-breakpoint-down(lg)
-			font-size: 27px
-			line-height: 32px
-		+media-breakpoint-down(md)
-			font-size: 22px
+			font-size: 28px
 			line-height: 32px
 
 	@else if $size == 'xl'
 		font-size: 27px
 		line-height: 32px
-		+media-breakpoint-down(lg)
-			font-size: 22px
-			line-height: 32px
-		+media-breakpoint-down(md)
-			font-size: 20px
-			line-height: 24px
 
 	@else if $size == 'lg'
 		font-size: 22px
 		line-height: 24px
-		+media-breakpoint-down(lg)
-			font-size: 18px
 
 	@else if $size == 'md'
 		font-size: 18px
 		line-height: 24px
-		+media-breakpoint-down(lg)
-			font-size: 16px
-			line-height: 22px
 
 	@else if $size == 'sm'
 		font-size: 15px
@@ -57,15 +43,28 @@
 @mixin mt($size)
 	@if $size == 120
 		margin-top: 120px
+		+media-breakpoint-down(lg)
+			margin-top: 80px
 
 	@else if $size == 80
 		margin-top: 80px
+		+media-breakpoint-down(lg)
+			margin-top: 60px
+
+	@else if $size == 60
+		margin-top: 60px
+		+media-breakpoint-down(lg)
+			margin-top: 40px
 
 	@else if $size == 40
 		margin-top: 40px
+		+media-breakpoint-down(lg)
+			margin-top: 32px
 
 	@else if $size == 32
 		margin-top: 32px
+		+media-breakpoint-down(lg)
+			margin-top: 24px
 
 	@else if $size == 24
 		margin-top: 24px
@@ -77,15 +76,28 @@
 @mixin mb($size)
 	@if $size == 120
 		margin-bottom: 120px
+		+media-breakpoint-down(lg)
+			margin-bottom: 80px
 
 	@else if $size == 80
 		margin-bottom: 80px
+		+media-breakpoint-down(lg)
+			margin-bottom: 60px
+
+	@else if $size == 60
+		margin-bottom: 60px
+		+media-breakpoint-down(lg)
+			margin-bottom: 40px
 
 	@else if $size == 40
 		margin-bottom: 40px
+		+media-breakpoint-down(lg)
+			margin-bottom: 32px
 
 	@else if $size == 32
 		margin-bottom: 32px
+		+media-breakpoint-down(lg)
+			margin-bottom: 24px
 
 	@else if $size == 24
 		margin-bottom: 24px

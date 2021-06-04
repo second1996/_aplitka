@@ -28,7 +28,11 @@
 					list-style: none;
 					margin-bottom: 8px;
 				}
-				.pages-list li::before {
+				.pages-list li a {
+					display: inline-block;
+					font-weight: 500;
+				}
+				.pages-list li a::before {
 					counter-increment: page;
 					content: counter(page);
 					display: inline-flex;
@@ -44,18 +48,14 @@
 					font-weight: 500;
 					transition: .3s ease;
 				}
-				.pages-list li a {
-					display: inline-block;
-					font-weight: 500;
-				}
 			</style>
 
-			<div class="pages-logo mb-48">
+			<div class="pages-logo mb-40">
 				<img src="images/logotype.png" alt="Интернет-магазин Aplitka">
 			</div>
 			<div class="row row-items-24">
 				<div class="col-sm-6">
-					<h3 class="mb-20 text-md">Общие страницы</h3>
+					<h3 class="mb-20 text-md w-bold">Общие страницы</h3>
 					<ol class="pages-list">
 						<li><a href="page-home.html">Главная страница</a></li>
 					</ol>

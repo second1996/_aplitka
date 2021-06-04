@@ -12,9 +12,6 @@
 		opacity: 0
 		transform: translateY(-100%)
 		transition: .3s ease-in-out
-		+media-breakpoint-down(sm)
-			padding-top: 6px
-			padding-bottom: 6px
 		.header-middle
 			padding-top: 12px
 			padding-bottom: 12px
@@ -25,13 +22,17 @@
 				&-megamenu
 					+media-breakpoint-up(xxl)
 						display: block
+				&-mmenu
+					+media-breakpoint-down(xl)
+						display: block
 			.stores
 				margin-left: 28px
 			.search
-				margin-left: 66px
-				margin-right: 56px
-				&-form
-					max-width: 100%
+				+media-breakpoint-up(xl)
+					margin-left: 66px
+					margin-right: 56px
+					&-form
+						max-width: 100%
 			.contacts
 				display: none
 		.header-bottom
@@ -58,8 +59,10 @@
 	&-top
 		padding-top: 10px
 		padding-bottom: 16px
+		+media-breakpoint-down(xl)
+			display: none
 
-		// Schedule
+		// Hours work
 		.hours
 			display: flex
 			&-icon
@@ -151,27 +154,62 @@
 									+font-size(sm)
 
 	&-middle
+		+media-breakpoint-down(xl)
+			padding-top: 12px
+			padding-bottom: 12px
+			background-color: $white
 
 		// Burgers (Megamenu & Mobile menu)
 		.burger
 			display: none
 			margin-right: 28px
+			+media-breakpoint-down(xl)
+				display: block
+			+media-breakpoint-down(md)
+				margin-right: 8px
+			&-megamenu,
+			&-mmenu
+				+media-breakpoint-down(md)
+					padding: 2px
 			&-megamenu
 				display: none
 			&-mmenu
 				display: none
+				+media-breakpoint-down(xl)
+					display: block
+
+		// Phone button
+		.phone
+			display: none
+			+media-breakpoint-down(md)
+				display: block
+			&-btn
+				color: $text-200
+				font-size: 32px
+				&:hover
+					color: $orange
 
 		// Logotype
 		.logotype
+			+media-breakpoint-down(md)
+				margin-left: 16px
+				margin-right: 16px
+				text-align: center
 			a
 				display: inline-block
 			img
 				display: inline-block
 				max-width: 200px
+				+media-breakpoint-down(md)
+					max-width: 110px
 
 		// Stores dropdown
 		.stores
 			margin-left: 20px
+			+media-breakpoint-down(xl)
+				margin-left: 28px
+			+media-breakpoint-down(md)
+				display: none
 			.dropdown.show
 				.btn.btn-corner
 					background-color: $orange
@@ -189,6 +227,16 @@
 		.search
 			margin-left: 48px
 			margin-right: 42px
+			+media-breakpoint-down(xl)
+				margin-left: 66px
+				margin-right: 56px
+			+media-breakpoint-down(lg)
+				margin-left: 42px
+				margin-right: 26px
+			+media-breakpoint-down(md)
+				position: static
+				margin-left: 0
+				margin-right: 8px
 			&._is-focused
 				~ .contacts
 					display: none
@@ -197,6 +245,32 @@
 					&::after
 						transform: none
 						transition: transform .35s
+
+			// Search button in navigation
+			&-btn
+				display: none
+				height: auto
+				padding-left: 0
+				padding-right: 0
+				color: $text-200
+				width: 32px
+				height: 32px
+				+media-breakpoint-down(md)
+					display: flex
+				&._is-toggled
+					.icon-search
+						display: none
+					.icon-close
+						display: block
+				.icon-search
+					width: 32px
+					height: 32px
+				.icon-close
+					display: none
+					width: 22px
+					height: 22px
+				&:hover
+					color: $orange
 
 			// Search form
 			&-form
@@ -207,6 +281,23 @@
 				height: 56px
 				border-bottom: 1px solid $border
 				transition: max-width .45s
+				+media-breakpoint-down(xl)
+					max-width: 100%
+				+media-breakpoint-down(md)
+					display: none
+				&._is-opened
+					+media-breakpoint-down(md)
+						display: flex
+						position: absolute
+						justify-content: center
+						top: 100%
+						left: 0
+						right: 0
+						z-index: 9
+						background-color: $white
+					+media-breakpoint-down(xs)
+						padding-left: 16px
+						padding-right: 16px
 				&::after
 					content: ''
 					position: absolute
@@ -218,8 +309,14 @@
 					will-change: transform
 					transform-origin: left
 					transform: scaleX(0)
+					+media-breakpoint-down(md)
+						display: none
 				.form-placeholder
 					flex: 1 1 auto
+					+media-breakpoint-down(md)
+						flex: 0 0 auto
+					+media-breakpoint-down(xs)
+						flex: 1 1 auto
 					span
 						color: $text-400
 				&-input
@@ -228,6 +325,12 @@
 					padding-right: 14px
 					border: 0
 					background-color: $trsp
+					+media-breakpoint-down(md)
+						width: 644px
+					+media-breakpoint-down(sm)
+						width: 466px
+					+media-breakpoint-down(xs)
+						width: 100%
 					&:focus
 						box-shadow: none
 				&-btn
@@ -235,12 +338,13 @@
 					height: 100%
 					padding-left: 6px
 					padding-right: 6px
+					font-size: 32px
 					color: $text-300
+					+media-breakpoint-down(md)
+						padding-left: 0
+						padding-right: 0
 					&:hover
 						color: $orange
-					svg
-						width: 22px
-						height: 22px
 
 			// Search results
 			&-results
@@ -257,11 +361,11 @@
 				transform: translate3d(0, 10px, 0)
 				transition: $trs
 				+media-breakpoint-down(xl)
-					left: 12px
-					right: -120px
+					left: -60%
 				+media-breakpoint-down(lg)
-					position: static
-					margin-top: 24px
+					left: -100%
+				+media-breakpoint-down(md)
+					display: none
 				&._is-opened
 					pointer-events: auto
 					overflow: visible
@@ -273,9 +377,6 @@
 					padding: 16px 16px 24px
 					box-shadow: $box-shadow
 					background-color: $white
-					+media-breakpoint-down(lg)
-						padding: 0
-						box-shadow: none
 					> div:not(:last-child)
 						margin-bottom: 26px
 				&-categories
@@ -297,6 +398,9 @@
 						margin-top: 16px
 						padding-left: 8px
 						padding-right: 8px
+						+media-breakpoint-down(xl)
+							flex-basis: 50%
+							max-width: 50%
 						&:hover
 							color: $text-200
 							.title
@@ -354,6 +458,8 @@
 			display: flex
 			align-items: flex-end
 			margin-right: 32px
+			+media-breakpoint-down(xl)
+				display: none
 			&-item
 				&:not(:last-child)
 					margin-right: 24px
@@ -429,16 +535,19 @@
 		.cart
 			&-link
 				display: flex
-				align-items: center
 				&:hover
 					.cart-icon
 						color: $orange
 			&-icon
+				flex: 0 0 auto
 				color: $text-200
 				font-size: 32px
 				transition: color .3s ease
 			&-content
+				flex: 1 1 auto
 				margin-left: 12px
+				+media-breakpoint-down(md)
+					display: none
 				&-total
 					color: $orange
 					+font-size(md)
@@ -451,7 +560,6 @@
 		padding-bottom: 24px
 		+media-breakpoint-down(xl)
 			display: none
-
 
 		// Navigation customize
 		.navigation
@@ -635,5 +743,4 @@
 							color: $orange
 					> ul
 						display: none
-
 

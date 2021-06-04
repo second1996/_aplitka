@@ -10,3 +10,9 @@
 			margin-right: 24px
 		.title, .btn
 			margin-bottom: 16px
+		+media-breakpoint-down(md)
+			.btn-corner
+				height: 24px
+				&::after
+					right: -24px
+					border-width: 12px

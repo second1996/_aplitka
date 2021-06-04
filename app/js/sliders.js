@@ -7,6 +7,14 @@ $(document).ready(function() {
 	*/
 	new Swiper('.h-heroes-slider .swiper-container', {
 		slidesPerView: 1,
+		speed: 1000,
+		autoplay: {
+			delay: 2500,
+		},
+		effect: 'fade',
+		fadeEffect: {
+			crossFade: true
+		},
 		navigation: {
 			prevEl: '.h-heroes-slider-nav .swiper-button-prev',
 			nextEl: '.h-heroes-slider-nav .swiper-button-next',
@@ -25,8 +33,8 @@ $(document).ready(function() {
 	*-------------------------------------------------------------------------------------------------------------------------------------------
 	*/
 	new Swiper('.h-brands-slider .swiper-container', {
-		slidesPerView: 6,
-		slidesPerGroup: 6,
+		slidesPerView: 1.5,
+		slidesPerGroup: 1,
 		spaceBetween: 16,
 		navigation: {
 			prevEl: '.h-brands-slider-nav .swiper-button-prev',
@@ -36,6 +44,24 @@ $(document).ready(function() {
 			el: '.h-brands-slider-dots .swiper-pagination',
 			type: 'bullets',
 			clickable: true,
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				slidesPerGroup: 3,
+			},
+			992: {
+				slidesPerView: 4,
+				slidesPerGroup: 4,
+			},
+			1240: {
+				slidesPerView: 5,
+				slidesPerGroup: 5,
+			},
+			1468: {
+				slidesPerView: 6,
+				slidesPerGroup: 6,
+			},
 		},
 	})
 
@@ -53,7 +79,7 @@ $(document).ready(function() {
 		new Swiper(`.products-slider-${id} .swiper-container`, {
 			observer: true,
 			observeParents: true,
-			slidesPerView: 2,
+			slidesPerView: 1.5,
 			spaceBetween: 16,
 			navigation: {
 				prevEl: `.products-slider-${id} .products-slider-nav .swiper-button-prev`,
@@ -66,10 +92,12 @@ $(document).ready(function() {
 			},
 			breakpoints: {
 				576: {
-					slidesPerView: 3,
-					spaceBetween: 24,
+					slidesPerView: 2,
 				},
 				768: {
+					slidesPerView: 3,
+				},
+				992: {
 					slidesPerView: 4,
 				},
 			}

@@ -36,7 +36,7 @@
 	color: $orange
 	&:hover
 		background-color: $bg-hover
-	&:focus
+	&:active
 		background-color: $bg-focus
 
 .btn.btn-secondary
@@ -63,7 +63,7 @@
 		background-color: $bg-hover
 		&::after
 			border-left-color: $bg-hover
-	&:focus
+	&:active
 		background-color: $bg-focus
 		&::after
 			border-left-color: $bg-focus
@@ -109,6 +109,18 @@
 				transform: scale(0)
 			&:nth-child(3)
 				transform: translateY(-7px) rotate(-45deg)
+
+
+/* ==========================================================================
+	 Close button
+	 ========================================================================== */
+.btn.btn-close
+	height: auto
+	padding-left: 0
+	padding-right: 0
+	font-size: 16px
+	&:hover
+		color: $orange
 
 
 /* ==========================================================================

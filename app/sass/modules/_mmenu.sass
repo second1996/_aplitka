@@ -10,13 +10,13 @@
 	right: 0
 	bottom: 0
 	z-index: 999
-	max-width: 375px
+	max-width: 320px
 	background-color: $white
 	visibility: hidden
 	opacity: 0
 	transform: translateX(-10px)
 	transition: $trs
-	&._is-active
+	&._is-opened
 		pointer-events: auto
 		visibility: visible
 		opacity: 1
@@ -38,5 +38,273 @@
 	&-wrapper
 		overflow-x: hidden
 		height: 100%
-		padding: 16px
+		padding: 16px 16px 32px
+
+	&-heading
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 24px
+
+	&-main
+
+		// Cart summary
+		.cart
+			margin-bottom: 32px
+			&-link
+				display: flex
+				&:hover
+					.cart-icon
+						color: $orange
+			&-icon
+				flex: 0 0 auto
+				color: $text-200
+				font-size: 32px
+				transition: color .3s ease
+			&-content
+				flex: 1 1 auto
+				margin-left: 12px
+				&-total
+					color: $orange
+					+font-size(md)
+				&-quantity
+					color: $text-300
+					+font-size(xs)
+
+		// Catalog navigation
+		.catalog
+			margin-bottom: 32px
+			&-list
+				> li
+					&:not(:last-child)
+						margin-bottom: 16px
+					> a
+						+font-size(md)
+
+		// Brands
+		.brands
+			margin-bottom: 16px
+			&-title
+				margin-bottom: 8px
+				color: $text-300
+			&-list
+				position: relative
+				&::after
+					content: ''
+					pointer-events: none
+					position: absolute
+					top: 0
+					right: 0
+					z-index: 1
+					width: 60px
+					height: 100%
+					background: linear-gradient(to right, rgba($white, 0) 0%, rgba($white, 1) 100%)
+				> ul
+					overflow-x: auto
+					display: flex
+					width: 100%
+					align-items: center
+					justify-content: space-between
+					padding-bottom: 8px
+					> li
+						position: relative
+						&:not(:last-child)
+							margin-right: 28px
+						&:last-child > a
+							position: relative
+							z-index: 2
+						> a
+							display: inline-block
+							font-size: 13px
+							font-weight: $w-bold
+							line-height: 1
+							white-space: nowrap
+						> ul
+							display: none
+
+		// Navigation
+		.navigation
+			margin-bottom: 32px
+			&-list
+				> li
+					display: flex
+					align-items: center
+					> a
+						padding-top: 8px
+						padding-bottom: 8px
+						color: $text-300
+						font-size: 15px
+						&:hover
+							color: $orange
+					&.project
+						> a
+							display: inline-flex
+							align-items: center
+							color: $orange
+							.icon
+								width: 17px
+								height: 17px
+								margin-right: 8px
+							span
+								+font-size(sm)
+							&:hover
+								color: $text-200
+					&.has-dropdown
+						position: relative
+						&::after
+							content: ''
+							display: inline-block
+							width: 16px
+							height: 16px
+							margin-left: 4px
+							background: url('../images/icons/dropdown-arrow.svg') no-repeat center/16px
+							transform-origin: 50% 50%
+							transition: transform .3s ease
+						&:hover
+							&::after
+								transform: rotate(180deg)
+							> a
+								color: $orange
+							> ul
+								pointer-events: auto
+								visibility: visible
+								opacity: 1
+								transform: none
+						> ul
+							pointer-events: none
+							position: absolute
+							top: 100%
+							left: 0
+							z-index: 9
+							width: 100%
+							padding: 16px
+							box-shadow: $box-shadow-2
+							background-color: $white
+							visibility: hidden
+							opacity: 0
+							transform: translate3d(0, 10px, 0)
+							transition: $trs
+							&::before
+								content: ''
+								position: absolute
+								top: -15px
+								left: 50px
+								display: block
+								border: 8px solid $trsp
+								border-bottom: 8px solid $white
+							> li
+								&:not(:last-child)
+									margin-bottom: 8px
+								> a
+									+font-size(sm)
+
+		// Stores
+		.stores
+			&-btn
+				width: calc(100% - 20px)
+				.icon
+					width: 20px
+					height: 20px
+					margin-left: 8px
+
+		// Hours work
+		.hours
+			display: flex
+			margin-top: 16px
+			&-icon
+				flex: 0 0 auto
+				color: $text-300
+				font-size: 18px
+			&-text
+				margin-left: 10px
+				letter-spacing: normal
+				p
+					margin-bottom: 0
+
+		// Contacts
+		.contacts
+			margin-top: 24px
+
+			.phone
+				+mb(24)
+				> a
+					display: inline-flex
+					align-items: center
+					color: $text-200
+					+font-size(md)
+					> i:first-child
+						margin-left: 4px
+					.viber,
+					.whatsapp
+						user-select: none
+						flex: 0 0 auto
+						display: inline-block
+						margin-top: -2px
+						background-repeat: no-repeat
+						background-size: 100%
+						background-position: center
+						font-style: normal
+					.viber
+						width: 24px
+						height: 24px
+						background-image: url('../images/icons/viber.svg')
+					.whatsapp
+						width: 24px
+						height: 24px
+						background-image: url('../images/icons/whatsapp.svg')
+					&:hover
+						color: $orange
+					&:not(:last-child)
+						margin-right: 6px
+
+				// Text (description)
+				&-text
+					color: $text-300
+				// Callback button
+				&-callback
+					display: flex
+					height: auto
+					padding-left: 0
+					padding-right: 0
+					&:hover
+						span
+							color: $orange
+							border-bottom-color: $orange
+					svg
+						width: 18px
+						height: 18px
+						margin-right: 8px
+						fill: $orange
+					span
+						color: $text-300
+						+font-size(sm)
+						transition: $trs
+
+			.mail
+				+mb(24)
+				> a
+					+font-size(md)
+
+			.social
+				&-title
+					margin-bottom: 8px
+					color: $text-300
+				&-list
+					display: flex
+					align-items: center
+					> a
+						display: flex
+						align-items: center
+						justify-content: center
+						width: 48px
+						height: 48px
+						border-radius: 50%
+						background-color: $border
+						color: $text-400
+						font-size: 32px
+						&:not(:last-child)
+							margin-right: 16px
+						&:hover
+							background-color: $bg
+							color: $orange
 

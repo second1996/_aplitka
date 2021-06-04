@@ -27,28 +27,33 @@
 
 .row-items-48
 	margin-bottom: -48px
+	+media-breakpoint-down(sm)
+		margin-bottom: -32px
 	> [class*="col"]
 		margin-bottom: 48px
-		+media-breakpoint-down(xs)
-			+mb(32)
+		+media-breakpoint-down(sm)
+			margin-bottom: 32px
 
 .row-items-32
 	margin-bottom: -32px
+	+media-breakpoint-down(sm)
+		margin-bottom: -24px
 	> [class*="col"]
-		+mb(32)
-		+media-breakpoint-down(xs)
-			+mb(24)
+		margin-bottom: 32px
+		+media-breakpoint-down(sm)
+			margin-bottom: 24px
 
 .row-items-24
 	margin-bottom: -24px
+	+media-breakpoint-down(sm)
+		margin-bottom: -16px
 	> [class*="col"]
-		+mb(24)
-		+media-breakpoint-down(xs)
+		margin-bottom: 24px
+		+media-breakpoint-down(sm)
 			margin-bottom: 16px
 
 .row-items-16
 	margin-bottom: -16px
 	> [class*="col"]
 		margin-bottom: 16px
-		+media-breakpoint-down(xs)
-			margin-bottom: 8px
+

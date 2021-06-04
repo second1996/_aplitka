@@ -2,8 +2,8 @@
 	<footer class="footer">
 		<div class="footer-main">
 			<div class="container">
-				<div class="row row-items-32 justify-content-between">
-					<div class="col-lg-3">
+				<div class="row row-items-48 justify-content-between">
+					<div class="col-md-8 col-xl-3 order-0">
 						<div class="footer-intro">
 							<div class="logo">
 								<a href="index.html" rel="home">
@@ -37,7 +37,7 @@
 							</div><!-- /.payments -->
 						</div><!-- /.footer-intro -->
 					</div><!-- /.col -->
-					<div class="col-sm-6 col-lg-2">
+					<div class="col-sm-6 col-md-4 col-xl-2 order-2 order-xl-1">
 						<div class="footer-nav">
 							<div class="footer-title">Каталог</div>
 							<ul class="footer-nav-list">
@@ -53,7 +53,7 @@
 							</ul>
 						</div><!-- /.footer-nav -->
 					</div><!-- /.col -->
-					<div class="col-sm-6 col-lg-2">
+					<div class="col-sm-6 col-md-4 col-xl-2 order-3 order-xl-2">
 						<div class="footer-nav">
 							<div class="footer-title">Для клиента</div>
 							<ul class="footer-nav-list">
@@ -64,7 +64,7 @@
 							</ul>
 						</div><!-- /.footer-nav -->
 					</div><!-- /.col -->
-					<div class="col-sm-6 col-lg-2">
+					<div class="col-sm-6 col-md-4 col-xl-2 order-4 order-xl-3">
 						<div class="footer-nav">
 							<div class="footer-title">Компания</div>
 							<ul class="footer-nav-list">
@@ -74,14 +74,14 @@
 							</ul>
 						</div><!-- /.footer-nav -->
 					</div><!-- /.col -->
-					<div class="col-sm-6 col-lg-3">
+					<div class="col-sm-6 col-md-4 col-xl-3 order-1 order-xl-4">
 						<div class="footer-contacts">
 							<div class="phone">
 								<a href="tel:+79262255096" title="Позвонить">+7 (926) 225-50-96 <i class="whatsapp"></i><i class="viber"></i></a>
 							</div><!-- /.phone -->
 							<div class="phone">
 								<a href="tel:+74952255096" title="Позвонить">+7 (495) 225-50-96</a>
-								<button type="button" class="phone-callback btn">
+								<button type="button" data-toggle="modal" data-target="#callbackModal" class="phone-callback btn">
 									<svg class="icon icon-support"><use xlink:href="./images/symbol-defs.svg#support"></use></svg>
 									<span>Перезвоните мне</span>
 								</button>
@@ -127,7 +127,7 @@
 		</button>
 	</div>
 
-	<!-- @@include('mobile-menu.html') -->
+	@@include('mobile-menu.html')
 
 	@@include('modals/callback-modal.html')
 
