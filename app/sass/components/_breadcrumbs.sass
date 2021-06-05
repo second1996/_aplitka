@@ -2,7 +2,6 @@
 	 Page breadcrumbs
 	 ========================================================================== */
 .breadcrumbs
-	margin-top: 8px
 	&-list
 		display: flex
 		flex-wrap: wrap
@@ -10,17 +9,16 @@
 		> li
 			display: inline-flex
 			align-items: center
-			color: $text-200
+			+font-size(xs)
 			&:not(:last-child)::after
-				content: '/'
+				content: '—'
 				display: inline-block
 				vertical-align: middle
 				margin: 0 16px
-				+font-size(xxs)
+				color: $text-400
 			> a
-				color: $text-200
+				color: $text-400
 				&:hover
-					color: blue
-			> a,
+					color: $orange
 			> span
-				+font-size(xxs)
+				color: $text-200

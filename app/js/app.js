@@ -119,8 +119,10 @@ $(document).ready(function() {
 	const headerSearchResults = $('.header-middle .search-results')
 
 	headerSearchForm.on('click', function() {
-		headerSearchWrapper.addClass('_is-focused')
-		headerSearchResults.addClass('_is-opened')
+		if ($(this).parents('.header--clone').length == 0) {
+			headerSearchWrapper.addClass('_is-focused')
+			headerSearchResults.addClass('_is-opened')
+		}
 	})
 
 	$(document).on('click', function(e) {
@@ -185,7 +187,7 @@ $(document).ready(function() {
 
 	// Close menu
 	$('.mmenu .mmenu-heading .btn-close').on('click', function() {
-		mmenuBackdrop()
+		mmenuBackdrop()-
 
 		$('body').removeClass('lock-scroll')
 		$('.mmenu').removeClass('_is-opened')

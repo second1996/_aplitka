@@ -3,7 +3,6 @@
 	 ========================================================================== */
 .img-cover,
 .img-scale
-	overflow: hidden
 	img
 		width: 100%
 		height: 100%
@@ -16,7 +15,9 @@
 .zoom-photo
 	overflow: hidden
 	img
+		will-change: transform
 		transition: transform .5s
+		transform: scale(1.005) // Fix drug photo when scaling
 	&:hover
 		img
 			transform: scale(1.125)

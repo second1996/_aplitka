@@ -1,0 +1,62 @@
+.page-catalog
+
+	// Catalog categories
+	.category
+		display: block
+		&:hover
+			.category-photo::before
+				top: 8px
+				left: 8px
+		&-photo
+			position: relative
+			width: 120px
+			height: 120px
+			+media-breakpoint-down(md)
+				width: 88px
+				height: 88px
+			&::before
+				content: ''
+				position: absolute
+				top: 16px
+				left: 16px
+				width: 100%
+				height: 100%
+				z-index: -1
+				background-color: $bg
+				transition: $trs
+		&-title
+			margin-top: 24px
+			word-break: break-word
+
+	// Catalog brands
+	.brand
+		&-letter
+			display: block
+			margin-bottom: 8px
+			+font-size(lg)
+			text-transform: uppercase
+		&-list
+			> li
+				> a
+					display: inline-block
+					padding-top: 8px
+					padding-bottom: 8px
+					+font-size(xs)
+					word-break: break-word
+
+	// Catalog collections
+	.collection
+		&-name
+			display: inline-block
+			margin-bottom: 16px
+			+font-size(lg)
+			word-break: break-word
+		&-list
+			> li
+				> a
+					display: inline-block
+					padding-top: 8px
+					padding-bottom: 8px
+					+font-size(xs)
+					word-break: break-word
+
