@@ -28,6 +28,7 @@ input, textarea
 
 label
 	cursor: pointer
+	word-break: break-word
 
 .form
 	position: relative
@@ -77,6 +78,23 @@ label
 			top: 0
 			left: 3px
 			opacity: 0
+		&-sm
+			.form-checkbox-label
+				padding-top: 0
+				padding-left: 24px
+				+font-size(xs)
+				&::before,
+				&::after
+					width: 16px
+					height: 16px
+					border: 0
+					background-size: 100%
+				&::before
+					background-color: $border
+				&::after
+					background-color: $bg
+				&:hover::before
+					background-color: $bg
 		&-label
 			user-select: none
 			position: relative
@@ -108,7 +126,7 @@ label
 		input:checked + label::after
 			opacity: 1
 
-	// Checkbox
+	// Radio
 	&-radio
 		position: relative
 		display: flex
@@ -201,22 +219,7 @@ label
 			margin-top: 16px
 			margin-bottom: 0
 			.form-checkbox-label
-				padding-top: 0
-				padding-left: 24px
 				color: $text-300
-				+font-size(xs)
-				&::before,
-				&::after
-					width: 16px
-					height: 16px
-					border: 0
-					background-size: 100%
-				&::before
-					background-color: $border
-				&::after
-					background-color: $bg
-				&:hover::before
-					background-color: $bg
 
 	// Form label + placeholder
 	&-placeholder

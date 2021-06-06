@@ -37,3 +37,170 @@
 			color: $text-300
 			+font-size(xs)
 
+
+/* ==========================================================================
+	 Proudct categories/subcategories
+	 ========================================================================== */
+.shop-categories
+	&-item
+		overflow: hidden
+		display: flex
+		height: 48px
+		&:hover
+			color: $text-200
+			.title
+				background-color: $bg
+		&:active
+			.title
+				background-color: $bg-hover
+		.photo
+			flex: 0 0 auto
+			width: 80px
+			height: 100%
+		.title
+			flex: 1 1 auto
+			display: flex
+			align-items: center
+			height: 100%
+			padding-left: 12px
+			border: 1px solid $border
+			border-left: 0
+			background-color: $white
+			+font-size(xxs)
+			font-weight: $w-bold
+			text-transform: uppercase
+			word-break: break-word
+			transition: background-color .3s ease
+
+
+/* ==========================================================================
+	 Shop tabs
+	 ========================================================================== */
+.shop-tabs
+	overflow-x: auto
+	display: flex
+	margin-top: 48px
+	margin-bottom: 32px
+	&-item
+		position: relative
+		border-bottom: 1px solid $trsp
+		transition: border-color .3s ease
+		&:not(:last-child)
+			margin-right: 40px
+		&:hover
+			border-bottom-color: $text-400
+		&._current
+			pointer-events: none
+			border-bottom-color: $orange
+			> a,
+			> a > span
+				color: $orange
+		> a
+			display: inline-block
+			padding-bottom: 16px
+			+font-size(xl)
+			&:hover
+				color: $text-200
+			> span
+				color: $text-400
+
+
+/* ==========================================================================
+	 Shop filters
+	 ========================================================================== */
+.shop-filters
+	margin-bottom: 30px
+
+	// Price slider
+	&-price
+		overflow: hidden
+		display: flex
+		height: 56px
+		margin-top: 8px
+		margin-right: -4px
+		margin-left: -8px
+		padding: 8px
+		&-label
+			flex: 0 0 auto
+			align-self: center
+			margin-right: 16px
+			color: $text-200
+		&-slider
+			flex: 1 1 auto
+			align-self: flex-end
+
+	// Dropdown with checkboxes
+	&-item
+		&._is-active
+			.btn.btn-dropdown
+				border-bottom-color: $text-200
+				font-weight: $w-bold
+				.key::after
+					content: ':'
+		&.show
+			.btn.btn-dropdown
+				border-bottom-color: $orange
+		.btn.btn-dropdown
+			width: 100%
+			justify-content: space-between
+			height: 56px
+			border-bottom: 1px solid $border
+			color: $text-200
+			text-align: left
+		.dropdown-menu
+			width: 100%
+			padding-bottom: 16p
+	&-name
+		position: relative
+		overflow: hidden
+		display: flex
+		flex: 1 1 auto
+		&::after
+			content: ''
+			pointer-events: none
+			position: absolute
+			top: 0
+			right: 0
+			z-index: 1
+			width: 60px
+			height: 100%
+			background: linear-gradient(to right, rgba($white, 0) 0%, rgba($white, 1) 100%)
+		.key
+			flex: 0 0 auto
+		.values
+			flex: 1 1 auto
+			margin-left: 4px
+	&-list
+		.form-checkbox
+			&:last-child
+				margin-bottom: 0
+
+
+/* ==========================================================================
+	 Shop filters
+	 ========================================================================== */
+.shop-sort
+	margin-bottom: 24px
+	&-label
+		flex: 0 0 auto
+		margin-right: 16px
+		color: $text-300
+		+font-size(xs)
+	&-list
+		display: inline-flex
+		flex-wrap: wrap
+		> a
+			padding: 8px
+			background-color: $trsp
+			color: $text-300
+			+font-size(xs)
+			&:not(:last-child)
+				margin-right: 16px
+			&:hover
+				color: $text-200
+				background-color: #f5f5f5
+			&._is-active
+				pointer-events: none
+				background-color: $bg
+				color: $orange
+

@@ -1,0 +1,49 @@
+@@include('parts/header.html', { title: 'Категория: колекции' })
+
+<main class="page-main">
+
+	<!-- Page heading -->
+	<div class="page-heading">
+		<div class="container">
+			<div class="breadcrumbs">
+				<ul class="breadcrumbs-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+					<li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement">
+						<a itemprop="item" href="page-home.html" rel="home"><span itemprop="name">Главная</span></a>
+						<meta itemprop="position" content="0">
+					</li>
+					<li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement">
+						<a itemprop="item" href="page-catalog.html"><span itemprop="name">Каталог</span></a>
+						<meta itemprop="position" content="1">
+					</li>
+					<li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement">
+						<span itemprop="item"><span itemprop="name">Плитка для ванной</span></span>
+						<meta itemprop="position" content="2">
+					</li>
+				</ul>
+			</div>
+			<h1 class="title text-xxl">Плитка для ванной</h1>
+		</div>
+	</div>
+
+	<!-- Page content -->
+	<div class="page-catalog">
+		<div class="container">
+
+			<!-- Subcategoires -->
+			@@include('parts/shop/shop-subcategories.html')
+
+			<!-- Shop tabs -->
+			@@include('parts/shop/shop-tabs.html')
+
+			<!-- Shop filters -->
+			@@include('parts/shop/shop-filters.html')
+
+			<!-- Shop sort -->
+			@@include('parts/shop/shop-sort.html')
+
+		</div><!-- /.container -->
+	</div><!-- /.page-catalog -->
+
+</main>
+
+@@include('parts/footer.html')
