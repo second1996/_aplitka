@@ -7,9 +7,28 @@
 	min-width: 0
 	height: 100%
 	&-photo
+		position: relative
 		user-select: none
 	&-meta
 		margin-top: 16px
+		.permalink
+			display: inline-block
+
+
+/* ==========================================================================
+	 Brand card
+	 ========================================================================== */
+.card-brand
+	.card-photo
+		height: 208px
+	.card-meta
+		.product-country
+			> span
+				color: $text-300
+				+font-size(xs)
+		.collections
+			margin-top: 8px
+			color: $text-300
 
 
 /* ==========================================================================
@@ -17,14 +36,42 @@
 	 ========================================================================== */
 .card-collection
 	.card-photo
-		height: 208px
+		height: 248px
+		&-btn
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 16px
+			z-index: 2
+			text-align: center
+			> a:first-child
+				display: inline-flex
+				align-items: center
+				justify-content: center
+				padding: 4px 12px
+				border-radius: 24px
+				background-color: rgba($white, 0.7)
+				&:hover
+					background-color: $bg
+					color: $orange
+				&:active
+					background-color: $bg-hover
+				.icon
+					width: 24px
+					height: 24px
+					margin-right: 8px
+			> a:not(:first-child)
+				display: none
 	.card-meta
-		.product-country
-			> span
-				color: $text-300
-		.collections
-			margin-top: 8px
+		.permalink
+			font-weight: $w-bold
+		.product-price
 			color: $text-300
+			> span
+				margin-left: 4px
+				margin-right: 4px
+				color: $text-200
+				+font-size(lg)
 
 
 /* ==========================================================================
@@ -64,10 +111,8 @@
 	.card-meta
 		.permalink
 			overflow: hidden
-			display: block
-			// height: 46px
 		.product-country
-			+mt(24)
+			+mt(16)
 		.product-price
 			margin-top: 8px
 

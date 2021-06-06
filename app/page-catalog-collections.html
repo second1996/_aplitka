@@ -22,8 +22,8 @@
 				</ul>
 			</div>
 			<h1 class="title text-xxl">Плитка для ванной</h1>
-		</div>
-	</div>
+		</div><!-- /.container -->
+	</div><!-- /.page-heading -->
 
 	<!-- Page content -->
 	<div class="page-catalog">
@@ -41,8 +41,54 @@
 			<!-- Shop sort -->
 			@@include('parts/shop/shop-sort.html')
 
+			<!-- Products list -->
+			<div class="row">
+				<div class="col-4">
+					<div class="card card-collection">
+						<div class="card-photo zoom-photo img-cover">
+							<div class="card-photo-btn">
+								<a href="./images/collections/1.jpg" data-fancybox="product-gallery-1">
+									<svg class="icon icon-eye"><use xlink:href="./images/symbol-defs.svg#eye"></use></svg>
+									<span>Образцы в магазине</span>
+								</a>
+								<a href="./images/collections/2.jpg" data-fancybox="product-gallery-1"></a>
+							</div>
+							<a href="#">
+								<img src="./images/collections/1.jpg" alt="">
+							</a>
+						</div>
+						<div class="card-meta">
+							<a href="#" class="permalink">CHARME ADVANCE FLOOR PROJECT</a>
+							<div class="product-country">
+								<span>Italon,</span>
+								<img src="./images/flags/011-italy.svg" alt="Италия">
+								<span>Италия</span>
+							</div>
+							<div class="product-price">от <span>5300</span> ₽</div>
+						</div>
+						<div class="card-details"></div>
+					</div>
+				</div><!-- /.col -->
+			</div><!-- /.row -->
+
+			<!-- Pagination -->
+			@@include('parts/pagination.html')
+
+			<!-- Popular rubrics -->
+			@@include('parts/shop/shop-rubrics.html')
+
 		</div><!-- /.container -->
 	</div><!-- /.page-catalog -->
+
+	<!-- Calculation project form -->
+	@@include('parts/calculation-project.html')
+
+	<!-- Section: SEO article -->
+	<section class="seo-article mt-80">
+		<div class="container">
+			@@include('parts/seo-article.html')
+		</div><!-- /.container -->
+	</section>
 
 </main>
 

@@ -1,0 +1,90 @@
+/* ==========================================================================
+	 Page pagination/navigation
+	 ========================================================================== */
+.pagination
+	+mt(60)
+
+	// Show more button
+	&-more
+		+mb(24)
+		text-align: center
+
+	// Back to start button
+	&-start
+		margin-top: 24px
+		text-align: center
+		+media-breakpoint-down(sm)
+			margin-top: 12px
+		> a
+			color: $text-300
+			&:hover
+				color: $orange
+
+	// Pagination wrapper
+	&-wrapper
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		justify-content: center
+
+	// Prev & Next buttons
+	&-button
+		> a
+			display: flex
+			height: 100%
+			align-items: center
+			color: $text-300
+			+font-size(sm)
+			span
+				+media-breakpoint-down(sm)
+					display: none
+			.icon
+				width: 16px
+				height: 16px
+				color: $text-300
+				transition: color .3s ease
+			&:hover
+				color: $orange
+				.icon
+					color: $orange
+		&-prev
+			margin-right: 40px
+			+media-breakpoint-down(sm)
+				margin-right: 10px
+			.icon
+				margin-right: 4px
+		&-next
+			margin-left: 40px
+			+media-breakpoint-down(sm)
+				margin-left: 10px
+			.icon
+				margin-left: 4px
+				transform: scaleX(-1)
+		&._disabled
+			cursor: not-allowed
+			opacity: 0.25
+			> a
+				user-select: none
+				pointer-events: none
+
+	// Page item
+	&-item
+		&._current > a
+			pointer-events: none
+			color: $orange
+		> a,
+		> span
+			padding-left: 12px
+			padding-right: 12px
+			color: $text-300
+			+font-size(sm)
+			font-weight: $w-bold
+			+media-breakpoint-down(sm)
+				padding-left: 6px
+				padding-right: 6px
+		> a:hover
+			color: $orange
+		&--dots
+			> span
+				color: $text-300
+

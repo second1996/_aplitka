@@ -61,6 +61,7 @@ $(document).ready(function() {
 			// Create noUiSlider
 			sliderOptions = {
 				start: [inputMinPrice, inputMaxPrice],
+				step: 100,
 				tooltips: [
 					{
 						from: function(value) {

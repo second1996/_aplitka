@@ -7,6 +7,7 @@ $(document).ready(function() {
 	*/
 	$.fancybox.defaults.animationEffect = 'fade'
 	$.fancybox.defaults.buttons = ['zoom', 'thumbs', 'close']
+	$.fancybox.defaults.smallBtn = true
 
 
 	/**
@@ -62,7 +63,7 @@ $(document).ready(function() {
 	*/
 	function switchPhoneMask(selector) {
 		var maskCheckbox = $(selector).find('input[type="checkbox"]'),
-				maskInput = maskCheckbox.parents('.form-group').find('input[type="tel"]');
+				maskInput = $(selector).parent().find('input[type="tel"]');
 
 		if (maskCheckbox.is(':checked')) {
 			maskInput.mask('+7 (999) 999-99-99')
@@ -76,7 +77,7 @@ $(document).ready(function() {
 	window.initSwitchPhoneMask = function() {
 		$('.switch-input-mask').each(function(index, element) {
 			switchPhoneMask(element)
-	
+
 			$(element).find('input[type="checkbox"]').on('input checked', function() {
 				switchPhoneMask(element)
 			})
@@ -263,5 +264,27 @@ $(document).ready(function() {
 		})
 	}
 	calcProductCardAttributes()
+
+
+	/**
+	*-------------------------------------------------------------------------------------------------------------------------------------------
+	* File upload in forms
+	*-------------------------------------------------------------------------------------------------------------------------------------------
+	*/
+	$('.form-file').each(function() {
+		const uploadInput = $(this).find('input[type="file"]')
+		const uploadPlaceholder = $(this).find('.form-file-placeholder .placeholder')
+		const uploadName = $(this).find('.form-file-placeholder .name')
+
+		uploadInput.on('change', function() {
+			uploadName.text(this.value.split('\\').pop())
+	
+			if (this.value.split('\\').pop().length) {
+				uploadPlaceholder.css('display', 'none')
+			} else {
+				uploadPlaceholder.css('display', 'block')
+			}
+		})
+	})
 
 })

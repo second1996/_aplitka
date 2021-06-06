@@ -60,3 +60,23 @@
 					+font-size(xs)
 					word-break: break-word
 
+	// Catalog rubrics
+	.rubric
+		display: flex
+		align-items: center
+		justify-content: center
+		min-height: 72px
+		padding: 8px
+		border: 1px solid $border
+		font-weight: $w-bold
+		line-height: 20px
+		text-align: center
+		word-break: break-word
+		&:hover
+			border-color: $bg
+			background-color: $bg
+			color: $text-200
+		&:active
+			border-color: $bg-hover
+			background-color: $bg-hover
+

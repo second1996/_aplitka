@@ -13,3 +13,38 @@
 	.title
 		margin-bottom: 0
 
+
+/* ==========================================================================
+	 Calculation project form
+	 ========================================================================== */
+.calc-project
+	&-inner
+		position: relative
+		padding: 40px
+		background-color: #FDF8F5
+		&::before
+			content: ''
+			position: absolute
+			top: -16px
+			right: 0
+			width: 320px
+			height: 400px
+			background: url('../images/calculation-bg.svg') no-repeat center/100%
+	.tab-content
+		max-width: 920px
+	&-form
+		.form-placeholder
+			input:not(:placeholder-shown) ~ span,
+			textarea:not(:placeholder-shown) ~ span
+				color: #999
+		.switch-input-mask
+			margin-top: 16px
+			margin-bottom: 0
+		.form-checkbox-sm .form-checkbox-label
+			&::before
+				background-color: $white
+			&:hover::before
+				background-color: $bg
+		.form-textarea
+			margin-top: 8px
+

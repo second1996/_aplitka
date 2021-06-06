@@ -1,7 +1,7 @@
 @import '../helpers/helpers'
 
 ::selection
-	background-color: $bg
+	background-color: $bg-hover
 	color: $text-200
 
 // html, body
@@ -17,6 +17,12 @@ body
 	&.lock-scroll
 		overflow: hidden
 		height: 100%
+	&.modal-open,
+	&.compensate-for-scrollbar,
+	&.lock-scroll
+		+media-breakpoint-up(xl)
+			.header--clone
+				padding-right: 17px
 
 *
 	box-sizing: border-box
@@ -36,6 +42,8 @@ a
 	&:hover
 		color: $orange
 		text-decoration: none
+	&[data-fancybox]
+		outline: none
 
 img
 	display: inline-block
