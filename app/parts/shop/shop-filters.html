@@ -1,6 +1,17 @@
 <div class="shop-filters">
-	<form class="shop-filters-form form">
-		<div class="row row-cols-4">
+
+	<!-- Filters -->
+	<form class="shop-filters-form form" id="shop-filters">
+		<div class="shop-filters-actions">
+			<a href="#" class="shop-filters-reset _is-shown" role="button" rel="nofollow">
+				<span>Сбросить фильтр</span>
+				<svg class="icon icon-close"><use xlink:href="images/symbol-defs.svg#close"></use></svg>
+			</a>
+			<button type="button" class="shop-filters-close btn btn-close">
+				<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+			</button>
+		</div>
+		<div class="row row-cols-1 row-cols-lg-3 row-cols-xl-4">
 			<div class="col">
 				<div class="shop-filters-price">
 					<span class="shop-filters-price-label">Цена:</span>
@@ -139,4 +150,44 @@
 			</div><!-- /.col -->
 		</div><!-- /.row -->
 	</form><!-- /.shop-filters-form -->
+
+	<!-- Sort -->
+	<div class="shop-filters-sort">
+		<span class="shop-filters-sort-label">Сортировки:</span>
+		<div class="shop-filters-sort-list">
+			<a rel="nofollow" href="?sort=-popular" class="_is-active">Популярные</a>
+			<a rel="nofollow" href="?sort=price">Дешевые</a>
+			<a rel="nofollow" href="?sort=-price">Дорогие</a>
+			<a rel="nofollow" href="?sort=-stock">Скидки</a>
+			<a rel="nofollow" href="?sort=-new">Новинки</a>
+			<a rel="nofollow" href="?sort=-rating">По рейтингу</a>
+			<a rel="nofollow" href="?sort=-reviews_count">По отзывам</a>
+		</div><!-- /.shop-filters-sort-list -->
+	</div><!-- /.shop-filters-sort -->
+
+	<!-- Mobile filters  -->
+	<div class="shop-filters-mobile">
+		<div class="sort dropdown">
+			<button type="button" class="sort-btn btn btn-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span>Сортировки</span>
+				<svg class="icon icon-arrow-dropdown"><use xlink:href="images/symbol-defs.svg#arrow-dropdown"></use></svg>
+			</button>
+			<div class="sort-list dropdown-menu">
+				<a rel="nofollow" href="?sort=-popular">Популярные</a>
+				<a rel="nofollow" href="?sort=price" class="_is-active">Дешевые</a>
+				<a rel="nofollow" href="?sort=-price">Дорогие</a>
+				<a rel="nofollow" href="?sort=-stock">Скидки</a>
+				<a rel="nofollow" href="?sort=-new">Новинки</a>
+				<a rel="nofollow" href="?sort=-rating">По рейтингу</a>
+				<a rel="nofollow" href="?sort=-reviews_count">По отзывам</a>
+			</div>
+		</div><!-- /.sort -->
+		<div class="filters">
+			<button class="filters-btn btn" id="toggle-filters-sidebar">
+				<svg class="icon icon-filter"><use xlink:href="./images/symbol-defs.svg#filter"></use></svg>
+				<span>Фильтр</span>
+			</button>
+		</div><!-- /.filters -->
+	</div><!-- /.shop-filters-mobile -->
+
 </div><!-- /.shop-filters -->

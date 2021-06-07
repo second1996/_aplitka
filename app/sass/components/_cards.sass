@@ -13,6 +13,7 @@
 		margin-top: 16px
 		.permalink
 			display: inline-block
+			word-break: break-word
 
 
 /* ==========================================================================
@@ -35,6 +36,34 @@
 	 Collection card
 	 ========================================================================== */
 .card-collection
+	height: auto
+	z-index: 1
+	&::before,
+	.card-details::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: -1
+		width: calc(100% + 32px)
+		margin: -16px
+		box-shadow: $box-shadow-2
+		background-color: $white
+		visibility: hidden
+		opacity: 0
+		transition: $trs
+		+media-breakpoint-down(md)
+			display: none
+	&:hover
+		z-index: 2
+		&::before,
+		.card-meta::before,
+		.card-details,
+		.card-details::before
+			visibility: visible
+			opacity: 1
 	.card-photo
 		height: 248px
 		&-btn
@@ -63,6 +92,20 @@
 			> a:not(:first-child)
 				display: none
 	.card-meta
+		position: relative
+		z-index: 2
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: -16px
+			right: -16px
+			z-index: -1
+			height: 100%
+			background-color: $white
+			visibility: hidden
+			opacity: 0
+			transition: $trs
 		.permalink
 			font-weight: $w-bold
 		.product-price
@@ -72,26 +115,88 @@
 				margin-right: 4px
 				color: $text-200
 				+font-size(lg)
+	.card-details
+		position: absolute
+		top: 100%
+		left: 0
+		right: 0
+		z-index: 1
+		visibility: hidden
+		opacity: 0
+		transition: $trs
+		+media-breakpoint-down(md)
+			display: none
+		.exemplars
+			&-item
+				display: none
+				margin-top: 16px
+				&:nth-child(1)
+					display: block
+			&-title
+				display: block
+				margin-bottom: 8px
+			&-list
+				display: flex
+				flex-wrap: wrap
+				align-items: flex-end
+				margin-top: -3px
+				margin-bottom: -3px
+				> li
+					flex: 0 0 auto
+					margin-right: 6px
+					margin-top: 3px
+					margin-bottom: 3px
+			&-more
+				margin-top: 16px
+				.btn.btn-more
+					color: $orange
+					+font-size(xs)
+					.icon
+						fill: $orange
+					&:hover
+						color: $text-200
+						.icon
+							fill: $text-200
+		.attributes
+			margin-top: 16px
+			> ul
+				> li
+					position: relative
+					z-index: 1
+					display: flex
+					+font-size(xs)
+					transition: .3s ease
+					&:not(:last-child)
+						margin-bottom: 6px
+					.attr
+						padding-right: 4px
+						color: $text-300
+					.value
+						color: $text-200
 
 
 /* ==========================================================================
 	 Product card
 	 ========================================================================== */
 .card-product
+	z-index: 1
 	height: auto
 	.card-shadow
 		position: absolute
 		top: 0
 		left: 0
+		right: 0
 		bottom: 0
 		z-index: -1
-		width: 100%
+		width: calc(100% + 32px)
 		margin: -16px
 		box-shadow: $box-shadow-2
 		background-color: $white
 		visibility: hidden
 		opacity: 0
 		transition: $trs
+		+media-breakpoint-down(md)
+			display: none
 	&:hover
 		z-index: 2
 		.card-shadow,
@@ -101,6 +206,8 @@
 
 	.card-photo
 		height: 248px
+		+media-breakpoint-down(xs)
+			height: 136px
 		img
 			width: 100%
 			height: 100%
@@ -123,6 +230,8 @@
 	.card-attributes
 		position: relative
 		z-index: -1
+		+media-breakpoint-down(md)
+			display: none
 		> ul
 			> li
 				position: relative

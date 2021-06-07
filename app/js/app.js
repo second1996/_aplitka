@@ -51,7 +51,7 @@ $(document).ready(function() {
 	* Fix closing dropdown menu when selecting the text
 	*-------------------------------------------------------------------------------------------------------------------------------------------
 	*/
-	$('.dropdown-menu').on('click', function (e) {
+	$(document).on('click', '.dropdown-menu', function (e) {
 		e.stopPropagation()
 	})
 
@@ -244,10 +244,10 @@ $(document).ready(function() {
 
 	/**
 	*-------------------------------------------------------------------------------------------------------------------------------------------
-	* Products attributes height
+	* Products attributes height (card shadow)
 	*-------------------------------------------------------------------------------------------------------------------------------------------
 	*/
-	window.calcProductCardAttributes = function() {
+	window.calcCardShadow = function() {
 		$('.card-product').each(function(index, el) {
 			const li = $(el).find('.card-attributes > ul > li')
 			let countHeight = 0
@@ -263,7 +263,7 @@ $(document).ready(function() {
 			$(el).css('margin-bottom', '-' + countHeight + 'px')
 		})
 	}
-	calcProductCardAttributes()
+	calcCardShadow()
 
 
 	/**
@@ -286,5 +286,71 @@ $(document).ready(function() {
 			}
 		})
 	})
+
+
+	/**
+	*-------------------------------------------------------------------------------------------------------------------------------------------
+	* Show more button for catalog categories/rubrics & collection cards
+	*-------------------------------------------------------------------------------------------------------------------------------------------
+	*/
+	window.showMoreButton = function() {
+		// Catalog categories, rubrics
+		$('.show-more').each(function() {
+			const _this = $(this)
+			const list = _this.find('.show-more-list > div')
+			const btnShow = _this.find('.btn-more--show')
+			const btnHide = _this.find('.btn-more--hide')
+	
+			if (list.length > 6) {
+				btnShow.addClass('_is-visible')
+				btnShow.on('click', function() {
+					$(this).addClass('_is-toggled')
+					list.each(function (index, el) {
+						if ($(el).is(':hidden')) {
+							$(el).addClass('hidden')
+							$(el).slideDown(200)
+						}
+					})
+				})
+				btnHide.on('click', function() {
+					btnShow.removeClass('_is-toggled')
+					list.each(function (index, el) {
+						if ($(el).hasClass('hidden')) {
+							$(el).slideUp(200)
+						}
+					})
+				})
+			}
+		})
+		// Collection card
+		$('.exemplars').each(function() {
+			const _this = $(this)
+			const list = _this.find('.exemplars-item')
+			const btnShow = _this.find('.btn-more--show')
+			const btnHide = _this.find('.btn-more--hide')
+	
+			if (list.length > 1) {
+				btnShow.addClass('_is-visible')
+				btnShow.on('click', function() {
+					$(this).addClass('_is-toggled')
+					list.each(function (index, el) {
+						if ($(el).is(':hidden')) {
+							$(el).addClass('hidden')
+							$(el).slideDown(200)
+						}
+					})
+				})
+				btnHide.on('click', function() {
+					btnShow.removeClass('_is-toggled')
+					list.each(function (index, el) {
+						if ($(el).hasClass('hidden')) {
+							$(el).slideUp(200)
+						}
+					})
+				})
+			}
+		})
+	}
+	showMoreButton()
 
 })

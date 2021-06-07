@@ -1,4 +1,11 @@
 /* ==========================================================================
+	 Main page
+	 ========================================================================== */
+.page-main
+	padding-top: 16px
+
+
+/* ==========================================================================
 	 Page heading
 	 ========================================================================== */
 .page-heading
@@ -22,6 +29,8 @@
 		position: relative
 		padding: 40px
 		background-color: #FDF8F5
+		+media-breakpoint-down(sm)
+			padding: 24px
 		&::before
 			content: ''
 			position: absolute
@@ -30,6 +39,18 @@
 			width: 320px
 			height: 400px
 			background: url('../images/calculation-bg.svg') no-repeat center/100%
+			+media-breakpoint-down(md)
+				display: none
+	&-tabs
+		+media-breakpoint-down(md)
+			.nav-tabs
+				overflow-x: auto
+				flex-wrap: nowrap
+				white-space: nowrap
+				padding-right: 30px
+				> a:last-child
+					position: relative
+					z-index: 2
 	.tab-content
 		max-width: 920px
 	&-form
@@ -47,4 +68,7 @@
 				background-color: $bg
 		.form-textarea
 			margin-top: 8px
+		.form-submit
+			+media-breakpoint-down(md)
+				width: 100%
 

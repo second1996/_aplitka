@@ -1,6 +1,44 @@
 $(document).ready(function() {
 
 	/**
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	 * Toggle shop filters sidebar
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	*/
+	function filtersBackdrop() {
+		if (!$('.mmenu-backdrop').length) {
+			$('body').append('<div class="mmenu-backdrop fade"></div>')
+			$('.mmenu-backdrop').delay(5).queue(function() {
+				$(this).addClass('show').dequeue()
+				$(this).on('click', function () {
+					filtersBackdrop()
+					$('body').removeClass('lock-scroll')
+					$('#shop-filters').removeClass('_is-active')
+				})
+			})
+		} else {
+			$('.mmenu-backdrop').remove()
+		}
+	}
+
+	// Open sidebar
+	$('#toggle-filters-sidebar').on('click', function() {
+		filtersBackdrop()
+
+		$('body').addClass('lock-scroll')
+		$('#shop-filters').addClass('_is-active')
+	})
+
+	// Close sidebar
+	$('#shop-filters .btn-close').on('click', function() {
+		filtersBackdrop()
+
+		$('body').removeClass('lock-scroll')
+		$('#shop-filters').removeClass('_is-active')
+	})
+
+
+	/**
 	*-------------------------------------------------------------------------------------------------------------------------------------------
 	* Shop filters
 	*-------------------------------------------------------------------------------------------------------------------------------------------
@@ -46,7 +84,7 @@ $(document).ready(function() {
 
 	/**
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
-	 * Price Filter (noUiSlider)
+	 * Price filter (noUiSlider)
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
 	*/
 	window.initPriceFilter = function() {

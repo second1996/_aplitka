@@ -163,6 +163,48 @@
 
 
 /* ==========================================================================
+	 Show more button
+	 ========================================================================== */
+.show-more
+	&-list > div
+		display: none
+		&:nth-child(-n+6)
+			display: block
+	.btn-more--show
+		pointer-events: none
+		visibility: hidden
+		&._is-visible
+			pointer-events: auto
+			visibility: visible
+
+.btn.btn-more
+	padding-left: 0
+	padding-right: 0
+	height: auto
+	color: $text-300
+	&.btn-more--hide
+		display: none
+		.icon
+			transform: scaleY(1)
+	&._is-toggled
+		display: none
+		~ .btn-more--hide
+			display: inline-flex
+	.icon
+		flex: 0 0 auto
+		width: 16px
+		height: 16px
+		margin-left: 8px
+		fill: $text-200
+		transform: scaleY(-1)
+		transition: transform .3s ease, fill .3s ease
+	&:hover
+		color: $orange
+		.icon
+			fill: $orange
+
+
+/* ==========================================================================
 	 Add to cart button
 	 ========================================================================== */
 .btn-purchase
@@ -170,6 +212,9 @@
 	padding-right: 16px
 	white-space: normal
 	text-align: left
+	+media-breakpoint-down(xxs)
+		padding-left: 10px
+		padding-right: 10px
 	&._added
 		.before-added
 			display: none
@@ -189,6 +234,8 @@
 				+media-breakpoint-down(md)
 					margin-left: 6px
 					font-size: 12px
+				+media-breakpoint-down(xxs)
+					font-size: 11px
 				> a
 					color: $orange
 					font-weight: $w-bold
