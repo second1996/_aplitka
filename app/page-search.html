@@ -1,0 +1,151 @@
+@@include('parts/header.html', { title: 'Каталог' })
+
+<main class="page-main">
+
+	<!-- Page heading -->
+	<div class="page-heading">
+		<div class="container">
+			<div class="breadcrumbs">
+				<ul class="breadcrumbs-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+					<li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement">
+						<a itemprop="item" href="page-home.html" rel="home"><span itemprop="name">Главная</span></a>
+						<meta itemprop="position" content="0">
+					</li>
+					<li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement">
+						<span itemprop="item"><span itemprop="name">Результаты поиска: Плитка</span></span>
+						<meta itemprop="position" content="1">
+					</li>
+				</ul>
+			</div>
+			<h1 class="title text-xxl"><span class="text-400">Результаты поиска:</span> Плитка</h1>
+		</div><!-- /.container -->
+	</div><!-- /.page-heading -->
+
+	<!-- Page content -->
+	<div class="page-catalog">
+		<div class="container">
+
+			<!-- Catalog categories -->
+			<section class="mb-60">
+				<h2 class="mb-32 text-400 text-sm">Категории</h2>
+				<div class="row row-items-32 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xl-6">
+					<div class="col">
+						<a href="#" class="category">
+							<div class="category-photo img-cover">
+								<img src="./images/categories/1.jpg" alt="">
+							</div>
+							<h4 class="category-title text-xxs w-bold text-uppercase">Настенная</h4>
+						</a>
+					</div><!-- /.col -->
+					<div class="col">
+						<a href="#" class="category">
+							<div class="category-photo img-cover">
+								<img src="./images/categories/2.jpg" alt="">
+							</div>
+							<h4 class="category-title text-xxs w-bold text-uppercase">Напольная</h4>
+						</a>
+					</div><!-- /.col -->
+					<div class="col">
+						<a href="#" class="category">
+							<div class="category-photo img-cover">
+								<img src="./images/categories/3.jpg" alt="">
+							</div>
+							<h4 class="category-title text-xxs w-bold text-uppercase">Мозаика</h4>
+						</a>
+					</div><!-- /.col -->
+					<div class="col">
+						<a href="#" class="category">
+							<div class="category-photo img-cover">
+								<img src="./images/categories/4.jpg" alt="">
+							</div>
+							<h4 class="category-title text-xxs w-bold text-uppercase">Мозаика</h4>
+						</a>
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</section>
+
+			<!-- Shop tabs -->
+			<div class="shop-tabs">
+				<div class="shop-tabs-item _current">
+					<a href="#">Коллекции <span>2456</span></a>
+				</div><!-- /.shop-tabs-item -->
+				<div class="shop-tabs-item">
+					<a href="#">Товары <span>32457</span></a>
+				</div><!-- /.shop-tabs-item -->
+			</div><!-- /.shop-tabs -->
+
+			<!-- Shop filters -->
+			<div class="shop-filters">
+				<!-- Shop sort -->
+				@@include('parts/shop/shop-sort.html')
+
+				<!-- Mobile filters -->
+				<div class="shop-filters-mobile">
+					<div class="sort dropdown">
+						<button type="button" class="sort-btn btn btn-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<span>Сортировки</span>
+							<svg class="icon icon-arrow-dropdown"><use xlink:href="./images/symbol-defs.svg#arrow-dropdown"></use></svg>
+						</button>
+						<div class="sort-list dropdown-menu">
+							<a rel="nofollow" href="?sort=-popular">Популярные</a>
+							<a rel="nofollow" href="?sort=price" class="_is-active">Дешевые</a>
+							<a rel="nofollow" href="?sort=-price">Дорогие</a>
+							<a rel="nofollow" href="?sort=-stock">Скидки</a>
+							<a rel="nofollow" href="?sort=-new">Новинки</a>
+							<a rel="nofollow" href="?sort=-rating">По рейтингу</a>
+							<a rel="nofollow" href="?sort=-reviews_count">По отзывам</a>
+						</div>
+					</div><!-- /.sort -->
+				</div><!-- /.shop-filters-mobile -->
+			</div>
+
+			<!-- Products list -->
+			<div class="row row-items-24 row-cols-2 row-cols-md-3 row-cols-lg-4">
+				<div class="col">
+					@@include('parts/product-cards/product-1.html')
+				</div><!-- /.col -->
+				<div class="col">
+					@@include('parts/product-cards/product-2.html')
+				</div><!-- /.col -->
+				<div class="col">
+					@@include('parts/product-cards/product-1.html')
+				</div><!-- /.col -->
+				<div class="col">
+					@@include('parts/product-cards/product-2.html')
+				</div><!-- /.col -->
+				<div class="col">
+					@@include('parts/product-cards/product-1.html')
+				</div><!-- /.col -->
+				<div class="col">
+					@@include('parts/product-cards/product-2.html')
+				</div><!-- /.col -->
+				<div class="col">
+					@@include('parts/product-cards/product-1.html')
+				</div><!-- /.col -->
+				<div class="col">
+					@@include('parts/product-cards/product-2.html')
+				</div><!-- /.col -->
+			</div><!-- /.row -->
+
+			<!-- Pagination -->
+			@@include('parts/pagination.html')
+
+			<!-- Popular rubrics -->
+			@@include('parts/shop/shop-rubrics.html')
+
+		</div><!-- /.container -->
+	</div><!-- /.page-catalog -->
+
+	<!-- Calculation project form -->
+	@@include('parts/calculation-project.html')
+
+	<!-- Section: SEO article -->
+	<section class="seo-article mt-80">
+		<div class="container">
+			@@include('parts/seo-article.html')
+		</div><!-- /.container -->
+	</section>
+
+</main>
+
+@@include('parts/footer.html')

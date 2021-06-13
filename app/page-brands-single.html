@@ -98,11 +98,33 @@
 				</div><!-- /.shop-tabs-item -->
 			</div><!-- /.shop-tabs -->
 
-			<!-- Shop sort -->
-			@@include('parts/shop/shop-sort.html')
+			<!-- Shop filters -->
+			<div class="shop-filters">
+				<!-- Shop sort -->
+				@@include('parts/shop/shop-sort.html')
+
+				<!-- Mobile filters -->
+				<div class="shop-filters-mobile">
+					<div class="sort dropdown">
+						<button type="button" class="sort-btn btn btn-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<span>Сортировки</span>
+							<svg class="icon icon-arrow-dropdown"><use xlink:href="./images/symbol-defs.svg#arrow-dropdown"></use></svg>
+						</button>
+						<div class="sort-list dropdown-menu">
+							<a rel="nofollow" href="?sort=-popular">Популярные</a>
+							<a rel="nofollow" href="?sort=price" class="_is-active">Дешевые</a>
+							<a rel="nofollow" href="?sort=-price">Дорогие</a>
+							<a rel="nofollow" href="?sort=-stock">Скидки</a>
+							<a rel="nofollow" href="?sort=-new">Новинки</a>
+							<a rel="nofollow" href="?sort=-rating">По рейтингу</a>
+							<a rel="nofollow" href="?sort=-reviews_count">По отзывам</a>
+						</div>
+					</div><!-- /.sort -->
+				</div><!-- /.shop-filters-mobile -->
+			</div>
 
 			<!-- Collections list -->
-			<div class="row mt-32 row-items-48 row-cols-1 row-cols-md-2 row-cols-xl-3">
+			<div class="row row-items-48 row-cols-1 row-cols-md-2 row-cols-xl-3">
 				<div class="col">
 					@@include('parts/collection-cards/collection-1.html')
 				</div><!-- /.col -->
