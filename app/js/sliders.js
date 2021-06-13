@@ -104,4 +104,34 @@ $(document).ready(function() {
 		})
 	})
 
+
+	/**
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	 * Collection gallery slider
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	*/
+	const collectionThumbs = new Swiper('.page-single-collection .gallery-thumbs .swiper-container', {
+		spaceBetween: 8,
+		slidesPerView: 6,
+		freeMode: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+	})
+
+	new Swiper('.page-single-collection .gallery-slider .swiper-container', {
+		slidesPerView: 1,
+		speed: 1000,
+		effect: 'fade',
+		fadeEffect: {
+			crossFade: true
+		},
+		navigation: {
+			prevEl: '.page-single-collection .gallery-slider-nav .swiper-button-prev',
+			nextEl: '.page-single-collection .gallery-slider-nav .swiper-button-next',
+		},
+		thumbs: {
+			swiper: collectionThumbs
+		},
+	})
+
 })

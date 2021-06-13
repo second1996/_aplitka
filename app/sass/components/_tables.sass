@@ -22,3 +22,34 @@ table
 	-webkit-overflow-scrolling: touch
 	table
 		min-width: 500px
+
+
+/* ==========================================================================
+	 Product & Collection attributes table
+	 ========================================================================== */
+.table-attributes
+	tr
+		.attribute,
+		.value
+			position: relative
+			vertical-align: top
+			padding-top: 4px
+			padding-bottom: 4px
+			padding-right: 6px
+			z-index: 1
+			+font-size(xs)
+			word-break: break-word
+			a
+				color: $orange
+				border-bottom: 1px solid rgba($orange, 0.25)
+				&:hover
+					color: $text-200
+					border-bottom-color: $text-300
+		.attribute
+			width: 40%
+			color: $text-300
+		.value
+			width: 60%
+			padding-left: 6px
+			color: $text-200
+
