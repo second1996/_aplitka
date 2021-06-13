@@ -1,0 +1,146 @@
+@@include('parts/header.html', { title: 'Каталог' })
+
+<main class="page-main">
+
+	<!-- Page heading -->
+	<div class="page-heading">
+		<div class="container">
+			<div class="breadcrumbs">
+				<ul class="breadcrumbs-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+					<li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement">
+						<a itemprop="item" href="page-home.html" rel="home"><span itemprop="name">Главная</span></a>
+						<meta itemprop="position" content="0">
+					</li>
+					<li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement">
+						<a itemprop="item" href="page-brands.html"><span itemprop="name">Производители</span></a>
+						<meta itemprop="position" content="1">
+					</li>
+					<li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement">
+						<span itemprop="item"><span itemprop="name">41ZERO42</span></span>
+						<meta itemprop="position" content="2">
+					</li>
+				</ul>
+			</div>
+			<h1 class="title text-xxl">41ZERO42</h1>
+		</div><!-- /.container -->
+	</div><!-- /.page-heading -->
+
+	<!-- Page content -->
+	<div class="page-single-brands">
+		<div class="container">
+
+			<!-- Section: About brand -->
+			<section class="about">
+				<div class="about-heading dropdown">
+					<button type="button" class="about-heading-btn btn btn-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span>Коллекции 41zero42</span>
+						<svg class="icon icon-arrow-dropdown"><use xlink:href="./images/symbol-defs.svg#arrow-dropdown"></use></svg>
+					</button>
+					<div class="about-heading-dropdown dropdown-menu">
+						<ul class="row row-items-8 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-6">
+							<li class="col"><a href="#">ABK</a></li>
+							<li class="col"><a href="#">ABSOLUT CERAMICA</a></li>
+							<li class="col"><a href="#">ADEX</a></li>
+							<li class="col"><a href="#">ALELUIA CERAMICAS</a></li>
+							<li class="col"><a href="#">ALMERA CERAMICA</a></li>
+							<li class="col"><a href="#">ATLAS CONCORDE RUSSIA</a></li>
+							<li class="col"><a href="#">Eurotile Ceramica RUSSIA</a></li>
+							<li class="col"><a href="#">Mykonos Ceramica</a></li>
+							<li class="col"><a href="#">Kutahya Seramik</a></li>
+							<li class="col"><a href="#">LOVE CERAMIC TILES</a></li>
+						</ul>
+					</div>
+				</div><!-- /.about-heading -->
+				<div class="about-content">
+					<div class="row row-items-24">
+						<div class="col-md order-1 order-md-0">
+							<div class="readmore">
+								<div class="about-content-text readmore-list">
+									<p>Название фабрики 41ZERO42 — не что иное, как почтовый индекс Фьорано-Моденезе — города в Италии, располагающимся в знаменитом керамическом регионе Эмилия-Романья (Модена). Молодая амбициозная команда, объединенная общими интересами, убеждена, что для того, чтобы сделать что-то стимулирующее, нам нужно искать вдохновение как внутри наших собственных границ, так и вне их. Большое значение при разработке керамической плитки 41zero42 придается концепции трансверсальности между коллекциями, чтобы подчеркнуть лучший способ выразить интегрированный проект.</p>
+									<p>Название фабрики 41ZERO42 — не что иное, как почтовый индекс Фьорано-Моденезе — города в Италии, располагающимся в знаменитом керамическом регионе Эмилия-Романья (Модена). Молодая амбициозная команда, объединенная общими интересами, убеждена, что для того, чтобы сделать что-то стимулирующее, нам нужно искать вдохновение как внутри наших собственных границ, так и вне их. Большое значение при разработке керамической плитки 41zero42 придается концепции трансверсальности между коллекциями, чтобы подчеркнуть лучший способ выразить интегрированный проект.</p>
+								</div>
+								<div class="mt-16">
+									<button class="btn btn-more btn-more--show">
+										<span>Читать дальше</span>
+										<svg class="icon icon-arrow-dropdown"><use xlink:href="./images/symbol-defs.svg#arrow-dropdown"></use></svg>
+									</button>
+									<button class="btn btn-more btn-more--hide">
+										<span>Скрыть</span>
+										<svg class="icon icon-arrow-dropdown"><use xlink:href="./images/symbol-defs.svg#arrow-dropdown"></use></svg>
+									</button>
+								</div>
+							</div>
+						</div><!-- /.col -->
+						<div class="col-md-auto order-0 order-md-1">
+							<div class="about-content-meta">
+								<div class="logo img-scale">
+									<img src="images/brands/4.png" alt="41ZERO42">
+								</div>
+								<div class="download">
+									<a href="#" target="_blank" rel="noopener">
+										<span>Каталог продукции .pdf</span>
+										<img src="images/icons/pdf.svg" alt="Каталог продукции .pdf">
+									</a>
+								</div>
+							</div>
+						</div><!-- /.col -->
+					</div><!-- /.row -->
+				</div><!-- /.about-content -->
+			</section>
+
+			<!-- Shop tabs -->
+			<div class="shop-tabs">
+				<div class="shop-tabs-item _current">
+					<a href="#">Коллекции <span>2456</span></a>
+				</div><!-- /.shop-tabs-item -->
+				<div class="shop-tabs-item">
+					<a href="#">Товары <span>32457</span></a>
+				</div><!-- /.shop-tabs-item -->
+			</div><!-- /.shop-tabs -->
+
+			<!-- Shop sort -->
+			@@include('parts/shop/shop-sort.html')
+
+			<!-- Collections list -->
+			<div class="row mt-32 row-items-48 row-cols-1 row-cols-md-2 row-cols-xl-3">
+				<div class="col">
+					@@include('parts/collection-cards/collection-1.html')
+				</div><!-- /.col -->
+				<div class="col">
+					@@include('parts/collection-cards/collection-2.html')
+				</div><!-- /.col -->
+				<div class="col">
+					@@include('parts/collection-cards/collection-1.html')
+				</div><!-- /.col -->
+				<div class="col-12">
+					<a href="#" class="shop-promo">
+						<picture>
+							<source media="(min-width: 576px)" srcset="./images/promo-banner.png" />
+							<source media="(min-width: 320px)" srcset="./images/promo-mobile-banner.png" />
+							<img src="./images/promo-banner.png" alt="">
+						</picture>
+					</a>
+				</div>
+				<div class="col">
+					@@include('parts/collection-cards/collection-1.html')
+				</div><!-- /.col -->
+				<div class="col">
+					@@include('parts/collection-cards/collection-2.html')
+				</div><!-- /.col -->
+				<div class="col">
+					@@include('parts/collection-cards/collection-1.html')
+				</div><!-- /.col -->
+			</div><!-- /.row -->
+
+			<!-- Pagination -->
+			@@include('parts/pagination.html')
+
+		</div><!-- /.container -->
+	</div><!-- /.page-single-brands -->
+
+	<!-- Calculation project form -->
+	@@include('parts/calculation-project.html')
+
+</main>
+
+@@include('parts/footer.html')

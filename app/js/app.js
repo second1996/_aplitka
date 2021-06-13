@@ -353,4 +353,47 @@ $(document).ready(function() {
 	}
 	showMoreButton()
 
+
+	/**
+	*-------------------------------------------------------------------------------------------------------------------------------------------
+	* Read more button for paragraphs
+	*-------------------------------------------------------------------------------------------------------------------------------------------
+	*/
+	window.readMoreButton = function() {
+		$('.readmore').each(function() {
+			const _this = $(this)
+			const list = _this.find('.readmore-list').children()
+			const btnShow = _this.find('.btn-more--show')
+			const btnHide = _this.find('.btn-more--hide')
+
+			if (list.length > 1) {
+				btnShow.addClass('_is-visible')
+
+				// list.each(function (index, el) {
+				// 	if (index >= 1) $(el).css('display', 'none')
+				// })
+
+				btnShow.on('click', function() {
+					console.log('clicked');
+					$(this).addClass('_is-toggled')
+					list.each(function (index, el) {
+						if ($(el).is(':hidden')) {
+							$(el).addClass('hidden')
+							$(el).slideDown(200)
+						}
+					})
+				})
+				btnHide.on('click', function() {
+					btnShow.removeClass('_is-toggled')
+					list.each(function (index, el) {
+						if ($(el).hasClass('hidden')) {
+							$(el).slideUp(200)
+						}
+					})
+				})
+			}
+		})
+	}
+	readMoreButton()
+
 })

@@ -165,11 +165,13 @@
 /* ==========================================================================
 	 Show more button
 	 ========================================================================== */
-.show-more
-	&-list > div
-		display: none
-		&:nth-child(-n+6)
-			display: block
+.show-more-list > div
+	display: none
+	&:nth-child(-n+6)
+		display: block
+
+.show-more,
+.readmore
 	.btn-more--show
 		pointer-events: none
 		visibility: hidden

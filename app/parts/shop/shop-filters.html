@@ -153,20 +153,9 @@
 	</form><!-- /.shop-filters-form -->
 
 	<!-- Sort -->
-	<div class="shop-filters-sort">
-		<span class="shop-filters-sort-label">Сортировки:</span>
-		<div class="shop-filters-sort-list">
-			<a rel="nofollow" href="?sort=-popular" class="_is-active">Популярные</a>
-			<a rel="nofollow" href="?sort=price">Дешевые</a>
-			<a rel="nofollow" href="?sort=-price">Дорогие</a>
-			<a rel="nofollow" href="?sort=-stock">Скидки</a>
-			<a rel="nofollow" href="?sort=-new">Новинки</a>
-			<a rel="nofollow" href="?sort=-rating">По рейтингу</a>
-			<a rel="nofollow" href="?sort=-reviews_count">По отзывам</a>
-		</div><!-- /.shop-filters-sort-list -->
-	</div><!-- /.shop-filters-sort -->
+	@@include('shop-sort.html')
 
-	<!-- Mobile filters  -->
+	<!-- Mobile filters -->
 	<div class="shop-filters-mobile">
 		<div class="sort dropdown">
 			<button type="button" class="sort-btn btn btn-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

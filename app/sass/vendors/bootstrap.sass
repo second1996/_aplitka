@@ -25,6 +25,10 @@
 [class*="col"]
 	min-width: 0 // Fix Swiper width in Bootstrap columns
 
+[class*="row-cols"] > .col-12
+	flex: 0 0 100%
+	max-width: 100%
+
 .row-items-48
 	margin-bottom: -48px
 	+media-breakpoint-down(sm)

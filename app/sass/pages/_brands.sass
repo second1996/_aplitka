@@ -1,3 +1,6 @@
+/* ==========================================================================
+	 Page brands
+	 ========================================================================== */
 .page-brands
 
 	// Section: Brands alphabet
@@ -66,5 +69,52 @@
 				padding-right: 4px
 
 
+/* ==========================================================================
+	 Single page brands
+	 ========================================================================== */
+.page-single-brands
+
+	// Section: About brand
+	.about
+		&-heading
+			margin-bottom: 24px
+			&-btn
+				color: $orange
+				> .icon
+					fill: $orange
+			&-dropdown
+				width: 100%
+				&::before
+					left: 42px
+				> ul > li > a
+					display: block
+					padding-top: 2px
+					padding-bottom: 2px
+					font-size: 14px
+		&-content
+			&-text
+				> p:not(:first-child)
+					display: none
+			&-meta
+				max-width: 208px
+				.logo
+					width: 208px
+					height: 208px
+					padding: 8px
+					border: 1px solid $border
+				.download
+					margin-top: 8px
+					> a
+						display: flex
+						align-items: center
+						color: $text-300
+						+font-size(xs)
+						&:hover
+							color: $orange
+						> img
+							flex: 0 0 auto
+							width: 32px
+							height: 32px
+							margin-left: 8px
 
 
