@@ -1,0 +1,70 @@
+.page-brands
+
+	// Section: Brands alphabet
+	.alphabet
+		margin-bottom: 48px
+		&-list
+			position: relative
+			+media-breakpoint-down(lg)
+				&::after
+					content: ''
+					pointer-events: none
+					position: absolute
+					top: 0
+					right: 0
+					z-index: 1
+					width: 60px
+					height: 100%
+					background: linear-gradient(to right, rgba($white, 0) 0%, rgba($white, 1) 100%)
+			> ul
+				display: flex
+				flex-wrap: wrap
+				align-items: center
+				margin-top: -8px
+				margin-bottom: -8px
+				+media-breakpoint-down(lg)
+					overflow-x: auto
+					flex-wrap: nowrap
+				> li
+					position: relative
+					margin-top: 8px
+					margin-bottom: 8px
+					&:not(:last-child)
+						margin-right: 28px
+					&:last-child > a
+						position: relative
+						z-index: 2
+					> a
+						display: inline-block
+						+font-size(lg)
+						white-space: nowrap
+
+	// Section: Brands countries
+	.countries
+		margin-bottom: 48px
+		&-item
+			display: flex
+			align-items: center
+			> img
+				flex: 0 0 auto
+				width: 16px
+				height: auto
+				margin-right: 8px
+
+	// Section: Brands list
+	.brands
+		margin-bottom: 48px
+		&-item
+			display: block
+			text-align: center
+			.photo
+				height: 80px
+				margin-bottom: 8px
+			.title
+				display: block
+				padding-left: 4px
+				padding-right: 4px
+
+
+
+

@@ -190,6 +190,15 @@
 		&-slider
 			flex: 1 1 auto
 			align-self: flex-end
+		&-range
+			display: flex
+			align-items: center
+			.form-control
+				border-bottom-color: $border
+			> span
+				margin-left: 12px
+				margin-right: 12px
+				color: $orange
 
 	// Dropdown with checkboxes
 	&-item
@@ -227,8 +236,8 @@
 	&-name
 		position: relative
 		overflow: hidden
-		display: flex
 		flex: 1 1 auto
+		display: flex
 		&::after
 			content: ''
 			pointer-events: none

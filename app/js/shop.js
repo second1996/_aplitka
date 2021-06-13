@@ -100,24 +100,24 @@ $(document).ready(function() {
 			sliderOptions = {
 				start: [inputMinPrice, inputMaxPrice],
 				step: 100,
-				tooltips: [
-					{
-						from: function(value) {
-							return Math.round(value);
-						},
-						to: function(value) {
-							return 'от ' + Math.round(value) + ' р';
-						},
-					},
-					{
-						from: function(value) {
-							return Math.round(value);
-						},
-						to: function(value) {
-							return 'до ' + Math.round(value) + ' р';
-						},
-					}
-				],
+				// tooltips: [
+				// 	{
+				// 		from: function(value) {
+				// 			return Math.round(value);
+				// 		},
+				// 		to: function(value) {
+				// 			return 'от ' + Math.round(value) + ' р';
+				// 		},
+				// 	},
+				// 	{
+				// 		from: function(value) {
+				// 			return Math.round(value);
+				// 		},
+				// 		to: function(value) {
+				// 			return 'до ' + Math.round(value) + ' р';
+				// 		},
+				// 	}
+				// ],
 				connect: true,
 				range: {
 					'min': filterMinPrice,
