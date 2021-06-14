@@ -1,0 +1,40 @@
+/* ==========================================================================
+	 Product quantity form
+	 ========================================================================== */
+.quantity
+	display: flex
+	align-items: center
+	justify-content: space-between
+	width: 200px
+	+media-breakpoint-down(xs)
+		width: 100%
+	&-amount
+		flex: 1 1 auto
+		overflow: hidden
+		display: flex
+		align-items: baseline
+		justify-content: center
+		padding-left: 8px
+		padding-right: 8px
+		line-height: 1
+		.value
+			word-break: break-all
+			font-size: 22px
+		.size
+			padding-left: 4px
+			font-size: 15px
+	&-minus,
+	&-plus
+		flex: 0 0 auto
+		width: 32px
+		height: 32px
+		padding: 4px
+		font-size: 32px
+		.icon
+			fill: $text-200
+			transition: fill .3s ease
+		&:hover
+			.icon
+				fill: $orange
+		&:active
+			transform: scale(0.95)

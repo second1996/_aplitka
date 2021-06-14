@@ -139,4 +139,35 @@ $(document).ready(function() {
 		},
 	})
 
+
+	/**
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	 * Product gallery slider
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	*/
+	const productThumbs = new Swiper('.page-single-product .gallery-thumbs .swiper-container', {
+		spaceBetween: 8,
+		slidesPerView: 5,
+		freeMode: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		breakpoints: {
+			576: {
+				slidesPerView: 6,
+			},
+		}
+	})
+
+	new Swiper('.page-single-product .gallery-slider .swiper-container', {
+		slidesPerView: 1,
+		speed: 1000,
+		navigation: {
+			prevEl: '.page-single-product .gallery-slider-nav .swiper-button-prev',
+			nextEl: '.page-single-product .gallery-slider-nav .swiper-button-next',
+		},
+		thumbs: {
+			swiper: productThumbs
+		},
+	})
+
 })

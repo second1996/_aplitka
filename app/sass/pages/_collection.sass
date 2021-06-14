@@ -1,0 +1,221 @@
+/* ==========================================================================
+	 Collection single page
+	 ========================================================================== */
+.page-single-collection
+
+	// Section: Heading
+	.collection-heading
+		display: flex
+		flex-wrap: wrap
+		+mb(40)
+		.title
+			margin-right: 16px
+		.in-stock,
+		.out-of-stock
+			+font-size(xxs)
+			font-weight: $w-bold
+			text-transform: uppercase
+		.in-stock
+			color: #509B5C
+		.out-of-stock
+			color: $text-400
+
+	// Section: Content (slider, description, attributes, price etc.)
+	.collection-content
+
+		// Gallery slideshow
+		.gallery
+			margin-bottom: 48px
+			+media-breakpoint-down(sm)
+				margin-bottom: 16px
+
+			// Main slider
+			&-slider
+			&-photo
+				position: relative
+				height: 498px
+				+media-breakpoint-down(xl)
+					height: 420px
+				+media-breakpoint-down(sm)
+					height: 280px
+				+media-breakpoint-down(xs)
+					height: 200px
+				+media-breakpoint-down(xxs)
+					height: 160px
+				&:hover
+					.gallery-photo-zoom > span
+						visibility: visible
+						opacity: 1
+						transform: none
+				&-zoom
+					position: absolute
+					top: 0
+					left: 0
+					display: flex
+					align-items: center
+					justify-content: center
+					width: 100%
+					height: 100%
+					z-index: 2
+					> span
+						display: flex
+						align-items: center
+						justify-content: center
+						width: 88px
+						height: 88px
+						border-radius: 100%
+						background-color: $white
+						color: $text-400
+						font-size: 42px
+						visibility: hidden
+						opacity: 0
+						will-change: transform
+						transform: scale(0.95)
+						transition: $trs
+						+media-breakpoint-down(sm)
+							width: 60px
+							height: 60px
+							font-size: 32px
+						&:hover
+							background-color: $orange
+							color: $white
+
+		// Description
+		.description
+			+media-breakpoint-down(xs)
+				margin-bottom: 32px
+			&-text
+				+media-breakpoint-down(xs)
+					font-size: 14px
+					line-height: 22px
+				> p:not(:first-child)
+					display: none
+
+		// Price
+		.price
+			display: flex
+			flex-wrap: wrap
+			align-items: flex-end
+			margin-bottom: 24px
+			&-label
+				padding-right: 4px
+				color: $text-300
+				+font-size(md)
+			&-value
+				color: $orange
+				+font-size(md)
+				> span
+					+font-size(xxl)
+
+		// Purchase form
+		.purchase
+			margin-bottom: 16px
+			&-form
+				.btn-purchase
+					width: 100%
+					&._added
+						background-color: $bg
+						&:hover
+							background-color: $bg-hover
+
+		// Quick order form
+		.quickorder
+			margin-bottom: 24px
+			&-form-wrapper
+				display: flex
+				width: 100%
+				margin-bottom: 8px
+				+media-breakpoint-down(xs)
+					flex-wrap: wrap
+				.form-control
+					flex: 1 1 auto
+					height: 40px
+					padding-left: 12px
+					padding-right: 12px
+					border: 0
+					background-color: $border
+					+media-breakpoint-down(xs)
+						flex-basis: 100%
+				.btn
+					flex: 0 0 auto
+					border-color: #DFE3E8
+					+media-breakpoint-down(xs)
+						flex-basis: 100%
+
+		// Attributes
+		.attributes
+			margin-bottom: 32px
+
+		// Advantages
+		.advantages
+			&-list
+				display: flex
+				flex-wrap: wrap
+			&-item
+				display: flex
+				align-items: center
+				.picture
+					flex: 0 0 auto
+					display: flex
+					align-items: center
+					justify-content: center
+					width: 40px
+					height: 40px
+					margin-right: 16px
+					padding: 4px
+					background-color: $bg
+				.text
+					+font-size(xxs)
+					font-weight: $w-bold
+					text-transform: uppercase
+
+		// Social share
+		.social-share
+			display: flex
+			flex-wrap: wrap
+			align-items: center
+			margin-top: 32px
+			&-label
+				padding-right: 8px
+				color: $text-300
+			&-list
+				display: flex
+				align-items: center
+			&-btn
+				padding: 0
+				&:not(:last-child)
+					margin-right: 8px
+				&:hover
+					opacity: 0.75
+
+	// Section: Collection products
+	.collection-products
+		&-tabs
+			position: relative
+			+media-breakpoint-down(lg)
+				&::after
+					content: ''
+					pointer-events: none
+					position: absolute
+					top: 0
+					right: 0
+					z-index: 1
+					width: 60px
+					height: 100%
+					background: linear-gradient(to right, rgba($white, 0) 0%, rgba($white, 1) 100%)
+				.nav-tabs
+					overflow-x: auto
+					flex-wrap: nowrap
+					white-space: nowrap
+					padding-right: 30px
+					> a:last-child
+						position: relative
+						z-index: 2
+		&-list
+			+media-breakpoint-down(md)
+				overflow-x: auto
+				flex-wrap: nowrap
+				> [class*="col"]
+					flex: 0 0 224px
+				> [class*="col-12"]
+					display: none

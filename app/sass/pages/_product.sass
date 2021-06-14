@@ -1,10 +1,10 @@
 /* ==========================================================================
-	 Collection single page
+	 Product single page
 	 ========================================================================== */
-.page-single-collection
+.page-single-product
 
 	// Section: Heading
-	.collection-heading
+	.product-heading
 		display: flex
 		flex-wrap: wrap
 		+mb(40)
@@ -21,16 +21,19 @@
 			color: $text-400
 
 	// Section: Content (slider, description, attributes, price etc.)
-	.collection-content
+	.product-content
 
 		// Gallery slideshow
 		.gallery
-			margin-bottom: 48px
-			+media-breakpoint-down(sm)
-				margin-bottom: 16px
 
 			// Main slider
 			&-slider
+				.btn.swiper-button-next,
+				.btn.swiper-button-prev
+					color: $orange
+					&:hover
+						color: $text-300
+
 			&-photo
 				position: relative
 				height: 498px
@@ -66,7 +69,7 @@
 						border-radius: 100%
 						background-color: $white
 						color: $text-400
-						font-size: 48px
+						font-size: 42px
 						visibility: hidden
 						opacity: 0
 						will-change: transform
@@ -91,27 +94,42 @@
 				> p:not(:first-child)
 					display: none
 
-		// Price
-		.price
-			display: flex
-			flex-wrap: wrap
-			align-items: flex-end
-			margin-bottom: 24px
-			&-label
-				padding-right: 4px
-				color: $text-300
-				+font-size(md)
-			&-value
-				color: $orange
-				+font-size(md)
-				> span
-					+font-size(xxl)
-
 		// Purchase form
 		.purchase
 			margin-bottom: 16px
 			&-form
-				.btn
+				.price
+					display: flex
+					align-items: center
+					+media-breakpoint-down(xs)
+						flex-wrap: wrap
+						align-items: flex-start
+					&-main
+						display: flex
+						flex-wrap: wrap
+						align-items: flex-end
+						margin-bottom: 24px
+						+media-breakpoint-down(xs)
+							flex: 0 0 100%
+							justify-content: space-between
+							margin-bottom: 16px
+						.label
+							padding-right: 4px
+							color: $text-300
+							+font-size(md)
+						.value
+							color: $text-300
+							+font-size(md)
+							> span
+								color: $text-200
+								+font-size(xxl)
+					&-quantity
+						margin-left: 32px
+						margin-bottom: 24px
+						+media-breakpoint-down(xs)
+							margin-left: 0
+							flex: 0 0 100%
+				.btn-purchase
 					width: 100%
 					&._added
 						background-color: $bg
@@ -144,7 +162,6 @@
 
 		// Attributes
 		.attributes
-			margin-bottom: 32px
 
 		// Advantages
 		.advantages
@@ -189,7 +206,7 @@
 					opacity: 0.75
 
 	// Section: Collection products
-	.collection-products
+	.product-products
 		&-tabs
 			position: relative
 			+media-breakpoint-down(lg)
