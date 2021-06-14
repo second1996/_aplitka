@@ -47,6 +47,10 @@
 		position: relative
 		height: 72px
 		transition: opacity .35s ease
+		+media-breakpoint-down(sm)
+			height: 46px
+		+media-breakpoint-down(xs)
+			height: 36px
 		&:hover:not(.swiper-slide-thumb-active)
 			cursor: pointer
 			opacity: 0.75

@@ -112,10 +112,15 @@ $(document).ready(function() {
 	*/
 	const collectionThumbs = new Swiper('.page-single-collection .gallery-thumbs .swiper-container', {
 		spaceBetween: 8,
-		slidesPerView: 6,
+		slidesPerView: 5,
 		freeMode: true,
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
+		breakpoints: {
+			576: {
+				slidesPerView: 6,
+			},
+		}
 	})
 
 	new Swiper('.page-single-collection .gallery-slider .swiper-container', {
