@@ -49,6 +49,11 @@
 		overflow: hidden
 		display: flex
 		height: 48px
+		&._is-active
+			pointer-events: none
+			color: $text-200
+			.title
+				background-color: $bg
 		&:hover
 			color: $text-200
 			.title
