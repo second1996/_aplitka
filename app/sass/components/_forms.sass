@@ -71,14 +71,16 @@ label
 		padding-top: 16px
 		padding-bottom: 16px
 
-	// Checkbox
-	&-checkbox
+	// Checkbox & Radio
+	&-checkbox,
+	&-radio
 		position: relative
 		display: flex
 		flex-wrap: wrap
 		align-items: center
 		margin-bottom: 8px
-		input[type="checkbox"]
+		input[type="checkbox"],
+		input[type="radio"]
 			position: absolute
 			top: 0
 			left: 3px
@@ -90,6 +92,7 @@ label
 				+font-size(xs)
 				&::before,
 				&::after
+					top: 0
 					width: 16px
 					height: 16px
 					border: 0
@@ -114,7 +117,7 @@ label
 				content: ''
 				flex: 0 0 auto
 				position: absolute
-				top: 0
+				top: -2px
 				left: 0
 				width: 32px
 				height: 32px
@@ -132,72 +135,72 @@ label
 			opacity: 1
 
 	// Radio
-	&-radio
-		position: relative
-		display: flex
-		flex-wrap: wrap
-		align-items: center
-		margin-bottom: 8px
-		input[type="radio"]
-			position: absolute
-			top: 0
-			left: 3px
-			opacity: 0
-		&-label
-			user-select: none
-			position: relative
-			width: 100%
-			padding-top: 2px
-			margin-bottom: 0
-			padding-left: 32px
-			padding-right: 20px
-			color: $text-200
-			font-size: 15px
-			line-height: 20px
-			> .hint
-				margin-left: -14px
-			&::before
-				content: ''
-				flex: 0 0 auto
-				position: absolute
-				top: 0
-				left: 0
-				width: 24px
-				height: 24px
-				border-radius: 50%
-				border: 1px solid $border
-				background-color: $white
-				transition: $trs
-			&::after
-				content: ''
-				flex: 0 0 auto
-				position: absolute
-				top: 8px
-				left: 8px
-				z-index: 2
-				display: block
-				width: 8px
-				height: 8px
-				border-radius: 50%
-				background-color: $white
-				opacity: 0
-				transition: $trs
-			&:hover
-				&::before,
-				&::after
-					border-color: $text-200
-		input:checked + label
-			&::before
-				border-color: $trsp
-				background-color: $text-200
-			&::after
-				opacity: 1
-		&-descr
-			flex: 0 0 100%
-			padding-top: 2px
-			padding-left: 32px
-			color: $text-200
-			+font-size(xxs)
+	// &-radio
+	// 	position: relative
+	// 	display: flex
+	// 	flex-wrap: wrap
+	// 	align-items: center
+	// 	margin-bottom: 8px
+	// 	input[type="radio"]
+	// 		position: absolute
+	// 		top: 0
+	// 		left: 3px
+	// 		opacity: 0
+	// 	&-label
+	// 		user-select: none
+	// 		position: relative
+	// 		width: 100%
+	// 		padding-top: 2px
+	// 		margin-bottom: 0
+	// 		padding-left: 32px
+	// 		padding-right: 20px
+	// 		color: $text-200
+	// 		font-size: 15px
+	// 		line-height: 20px
+	// 		> .hint
+	// 			margin-left: -14px
+	// 		&::before
+	// 			content: ''
+	// 			flex: 0 0 auto
+	// 			position: absolute
+	// 			top: 0
+	// 			left: 0
+	// 			width: 24px
+	// 			height: 24px
+	// 			border-radius: 50%
+	// 			border: 1px solid $border
+	// 			background-color: $white
+	// 			transition: $trs
+	// 		&::after
+	// 			content: ''
+	// 			flex: 0 0 auto
+	// 			position: absolute
+	// 			top: 8px
+	// 			left: 8px
+	// 			z-index: 2
+	// 			display: block
+	// 			width: 8px
+	// 			height: 8px
+	// 			border-radius: 50%
+	// 			background-color: $white
+	// 			opacity: 0
+	// 			transition: $trs
+	// 		&:hover
+	// 			&::before,
+	// 			&::after
+	// 				border-color: $text-200
+	// 	input:checked + label
+	// 		&::before
+	// 			border-color: $trsp
+	// 			background-color: $text-200
+	// 		&::after
+	// 			opacity: 1
+	// 	&-descr
+	// 		flex: 0 0 100%
+	// 		padding-top: 2px
+	// 		padding-left: 32px
+	// 		color: $text-200
+	// 		+font-size(xxs)
 
 	// Select
 	&-select
