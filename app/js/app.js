@@ -332,6 +332,7 @@ $(document).ready(function() {
 			if (list.length > 1) {
 				btnShow.addClass('_is-visible')
 				btnShow.on('click', function() {
+					_this.addClass('_is-toggled')
 					$(this).addClass('_is-toggled')
 					list.each(function (index, el) {
 						if ($(el).is(':hidden')) {
@@ -341,6 +342,7 @@ $(document).ready(function() {
 					})
 				})
 				btnHide.on('click', function() {
+					_this.removeClass('_is-toggled')
 					btnShow.removeClass('_is-toggled')
 					list.each(function (index, el) {
 						if ($(el).hasClass('hidden')) {

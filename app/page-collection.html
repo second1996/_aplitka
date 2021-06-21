@@ -1,4 +1,4 @@
-@@include('parts/header.html', { title: 'Каталог' })
+@@include('parts/header.html', { title: 'Страница колекции' })
 
 <main class="page-main">
 
@@ -143,17 +143,9 @@
 							<div class="price-value"><span>4500</span> ₽</div>
 						</div>
 
-						<!-- Purchase form -->
-						<div class="purchase">
-							<form class="purchase-form form">
-								<button type="submit" class="btn btn-secondary btn-purchase">
-									<div class="before-added">Заказать</div>
-									<div class="after-added">
-										<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
-										<span>Товар добавлен в <a href="#">корзину</a></span>
-									</div>
-								</button>
-							</form>
+						<!-- View products -->
+						<div class="view-products">
+							<a href="#collection-products" data-anchor class="view-products-btn btn btn-secondary">Перейти к товарам</a>
 						</div>
 
 						<!-- Quick order -->
@@ -261,7 +253,7 @@
 			</section><!-- /.collection-content -->
 
 			<!-- Section: Collection products -->
-			<section class="collection-products mt-60">
+			<section class="collection-products mt-60" id="collection-products">
 				<h2 class="mb-32 text-xl">Товары из коллекции</h2>
 
 				<!-- Tabs -->
@@ -281,7 +273,7 @@
 
 					<!-- Tab #1 -->
 					<div id="products-tab-1" class="tab-pane fade show active" role="tabpanel">
-						<div class="collection-products-list row row-items-24 row-cols-md-3 row-cols-lg-4">
+						<div class="collection-products-list row row-items-24 row-cols-2 row-cols-lg-4">
 							<div class="col">
 								@@include('parts/product-cards/product-1.html')
 							</div><!-- /.col -->
@@ -297,7 +289,7 @@
 							<div class="col-12">
 								<a href="#" class="shop-promo">
 									<picture>
-										<source media="(min-width: 576px)" srcset="./images/promo-banner.png" />
+										<source media="(min-width: 768px)" srcset="./images/promo-banner.png" />
 										<source media="(min-width: 320px)" srcset="./images/promo-mobile-banner.png" />
 										<img src="./images/promo-banner.png" alt="">
 									</picture>
@@ -309,12 +301,18 @@
 							<div class="col">
 								@@include('parts/product-cards/product-2.html')
 							</div><!-- /.col -->
+							<div class="col">
+								@@include('parts/product-cards/product-1.html')
+							</div><!-- /.col -->
+							<div class="col">
+								@@include('parts/product-cards/product-2.html')
+							</div><!-- /.col -->
 						</div><!-- /.row -->
 					</div><!-- /.tab-pane -->
 
 					<!-- Tab #2 -->
 					<div id="products-tab-2" class="tab-pane fade" role="tabpanel">
-						<div class="collection-products-list row row-items-24 row-cols-2 row-cols-md-3 row-cols-lg-4">
+						<div class="collection-products-list row row-items-24 row-cols-2 row-cols-lg-4">
 							<div class="col">
 								@@include('parts/product-cards/product-2.html')
 							</div><!-- /.col -->
@@ -323,6 +321,30 @@
 							</div><!-- /.col -->
 							<div class="col">
 								@@include('parts/product-cards/product-2.html')
+							</div><!-- /.col -->
+							<div class="col">
+								@@include('parts/product-cards/product-1.html')
+							</div><!-- /.col -->
+							<div class="col-12">
+								<a href="#" class="shop-promo">
+									<picture>
+										<source media="(min-width: 768px)" srcset="./images/promo-banner.png" />
+										<source media="(min-width: 320px)" srcset="./images/promo-mobile-banner.png" />
+										<img src="./images/promo-banner.png" alt="">
+									</picture>
+								</a>
+							</div>
+							<div class="col">
+								@@include('parts/product-cards/product-2.html')
+							</div><!-- /.col -->
+							<div class="col">
+								@@include('parts/product-cards/product-1.html')
+							</div><!-- /.col -->
+							<div class="col">
+								@@include('parts/product-cards/product-2.html')
+							</div><!-- /.col -->
+							<div class="col">
+								@@include('parts/product-cards/product-1.html')
 							</div><!-- /.col -->
 						</div><!-- /.row -->
 					</div><!-- /.tab-pane -->

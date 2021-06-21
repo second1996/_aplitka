@@ -39,7 +39,8 @@
 	height: auto
 	z-index: 1
 	&::before,
-	.card-details::before
+	.card-details .exemplars::before,
+	.card-details .attributes::before
 		content: ''
 		position: absolute
 		top: 0
@@ -54,14 +55,17 @@
 		visibility: hidden
 		opacity: 0
 		transition: $trs
-		+media-breakpoint-down(md)
+		+media-breakpoint-down(sm)
 			display: none
+	.card-details .attributes::before
+		z-index: -1
 	&:hover
 		z-index: 2
 		&::before,
 		.card-meta::before,
-		.card-details,
-		.card-details::before
+		.card-details .exemplars-more,
+		.card-details .attributes::before,
+		.card-details .attributes
 			visibility: visible
 			opacity: 1
 	.card-photo
@@ -116,24 +120,20 @@
 				color: $text-200
 				+font-size(lg)
 	.card-details
-		position: absolute
-		top: 100%
-		left: 0
-		right: 0
-		z-index: 1
-		visibility: hidden
-		opacity: 0
-		transition: $trs
-		+media-breakpoint-down(md)
-			display: none
 		.exemplars
+			position: relative
+			z-index: 2
+			background-color: $white
+			&._is-toggled
+				.exemplars-title
+					display: block
 			&-item
 				display: none
 				margin-top: 16px
 				&:nth-child(1)
 					display: block
 			&-title
-				display: block
+				display: none
 				margin-bottom: 8px
 			&-list
 				display: flex
@@ -143,11 +143,22 @@
 				margin-bottom: -3px
 				> li
 					flex: 0 0 auto
-					margin-right: 6px
+					margin-right: 7px
 					margin-top: 3px
 					margin-bottom: 3px
+					> a
+						display: block
+						width: 32px
+						height: 64px
+						background-size: contain
+						background-repeat: no-repeat
+						background-position: center bottom
 			&-more
 				margin-top: 16px
+				+media-breakpoint-up(md)
+					opacity: 0
+					visibility: hidden
+					transition: $trs
 				.btn.btn-more
 					color: $orange
 					+font-size(xs)
@@ -159,6 +170,14 @@
 							fill: $text-200
 		.attributes
 			margin-top: 16px
+			+media-breakpoint-up(md)
+				position: absolute
+				top: 100%
+				left: 0
+				right: 0
+				z-index: 1
+				visibility: hidden
+				opacity: 0
 			> ul
 				> li
 					position: relative

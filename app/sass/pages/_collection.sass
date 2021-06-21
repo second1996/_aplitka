@@ -107,16 +107,11 @@
 				> span
 					+font-size(xxl)
 
-		// Purchase form
-		.purchase
+		// View products
+		.view-products
 			margin-bottom: 16px
-			&-form
-				.btn-purchase
-					width: 100%
-					&._added
-						background-color: $bg
-						&:hover
-							background-color: $bg-hover
+			&-btn
+				width: 100%
 
 		// Quick order form
 		.quickorder
@@ -212,10 +207,11 @@
 						position: relative
 						z-index: 2
 		&-list
-			+media-breakpoint-down(md)
-				overflow-x: auto
-				flex-wrap: nowrap
-				> [class*="col"]
-					flex: 0 0 224px
-				> [class*="col-12"]
-					display: none
+			> [class*="col-12"]
+				+media-breakpoint-down(sm)
+					flex-basis: 50%
+					max-width: 50%
+				+media-breakpoint-down(xs)
+					flex-basis: 100%
+					max-width: 100%
+

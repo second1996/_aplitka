@@ -77,15 +77,44 @@
 	// Section: About brand
 	.about
 		&-heading
-			margin-bottom: 24px
+			position: relative
+			padding-bottom: 24px
+			&:hover
+				.about-heading-btn
+					.icon
+						transform: scaleY(1)
+				.about-heading-dropdown
+					pointer-events: auto
+					visibility: visible
+					opacity: 1
+					transform: translate3d(0, 32px, 0)
 			&-btn
 				color: $orange
 				> .icon
 					fill: $orange
 			&-dropdown
+				pointer-events: none
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				z-index: 99
 				width: 100%
+				padding: 24px 24px 32px
+				box-shadow: $box-shadow
+				background-color: $white
+				visibility: hidden
+				opacity: 0
+				transform: translate3d(0, 40px, 0)
+				transition: $trs
 				&::before
+					content: ''
+					position: absolute
+					top: -20px
 					left: 42px
+					display: block
+					border: 10px solid $trsp
+					border-bottom: 10px solid $white
 				> ul > li > a
 					display: block
 					padding-top: 2px
@@ -116,5 +145,4 @@
 							width: 32px
 							height: 32px
 							margin-left: 8px
-
 

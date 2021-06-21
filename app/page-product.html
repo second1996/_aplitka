@@ -1,4 +1,4 @@
-@@include('parts/header.html', { title: 'Каталог' })
+@@include('parts/header.html', { title: 'Страница товара' })
 
 <main class="page-main">
 
@@ -27,6 +27,39 @@
 	<!-- Page content -->
 	<div class="page-single-product">
 		<div class="container">
+
+			<!------- Microdata ------->
+			<div itemscope itemtype="http://schema.org/Product">
+
+				<!-- Код товара и название товара-->
+				<meta itemprop="mpn" content="20-1207471" />
+				<meta itemprop="name" content="Керамогранит Kerama Marazzi 60х119,5" />
+
+				<!-- Ссылка на главное изображение -->
+				<meta itemprop="image" content="./images/products/3.jpg">
+
+				<!-- Код товара и описание -->
+				<meta itemprop="productID" content="20-1207471" />
+				<meta itemprop="description" content="" />
+
+				<!-- Наличие и цена товара -->
+				<div itemprop="offers" itemtype="http://schema.org/Offer" itemscope>
+					<link itemprop="url" href="page-product.html" />
+					<meta itemprop="availability" content="https://schema.org/InStock" />
+					<meta itemprop="priceCurrency" content="RUB" />
+					<meta itemprop="itemCondition" content="https://schema.org/UsedCondition" />
+					<meta itemprop="price" content="4500" />
+					<div itemprop="seller" itemtype="http://schema.org/Organization" itemscope>
+						<meta itemprop="name" content="aplitka.ru" />
+					</div>
+				</div>
+
+				<!-- Бренд/Производитель -->
+				<div itemprop="brand" itemtype="http://schema.org/Brand" itemscope>
+					<meta itemprop="name" content="Orinda" />
+				</div>
+			</div>
+			<!------- End Microdata ------->
 
 			<!-- Section: Heading -->
 			<section class="product-heading">
@@ -313,7 +346,7 @@
 
 					<!-- Tab #1 -->
 					<div id="products-tab-1" class="tab-pane fade show active" role="tabpanel">
-						<div class="product-products-list row row-items-24 row-cols-md-3 row-cols-lg-4">
+						<div class="product-products-list row row-items-24 row-cols-2 row-cols-lg-4">
 							<div class="col">
 								@@include('parts/product-cards/product-1.html')
 							</div><!-- /.col -->
@@ -329,7 +362,7 @@
 							<div class="col-12">
 								<a href="#" class="shop-promo">
 									<picture>
-										<source media="(min-width: 576px)" srcset="./images/promo-banner.png" />
+										<source media="(min-width: 768px)" srcset="./images/promo-banner.png" />
 										<source media="(min-width: 320px)" srcset="./images/promo-mobile-banner.png" />
 										<img src="./images/promo-banner.png" alt="">
 									</picture>
@@ -341,12 +374,18 @@
 							<div class="col">
 								@@include('parts/product-cards/product-2.html')
 							</div><!-- /.col -->
+							<div class="col">
+								@@include('parts/product-cards/product-1.html')
+							</div><!-- /.col -->
+							<div class="col">
+								@@include('parts/product-cards/product-2.html')
+							</div><!-- /.col -->
 						</div><!-- /.row -->
 					</div><!-- /.tab-pane -->
 
 					<!-- Tab #2 -->
 					<div id="products-tab-2" class="tab-pane fade" role="tabpanel">
-						<div class="product-products-list row row-items-24 row-cols-2 row-cols-md-3 row-cols-lg-4">
+						<div class="product-products-list row row-items-24 row-cols-2 row-cols-lg-4">
 							<div class="col">
 								@@include('parts/product-cards/product-2.html')
 							</div><!-- /.col -->
@@ -355,6 +394,30 @@
 							</div><!-- /.col -->
 							<div class="col">
 								@@include('parts/product-cards/product-2.html')
+							</div><!-- /.col -->
+							<div class="col">
+								@@include('parts/product-cards/product-1.html')
+							</div><!-- /.col -->
+							<div class="col-12">
+								<a href="#" class="shop-promo">
+									<picture>
+										<source media="(min-width: 768px)" srcset="./images/promo-banner.png" />
+										<source media="(min-width: 320px)" srcset="./images/promo-mobile-banner.png" />
+										<img src="./images/promo-banner.png" alt="">
+									</picture>
+								</a>
+							</div>
+							<div class="col">
+								@@include('parts/product-cards/product-2.html')
+							</div><!-- /.col -->
+							<div class="col">
+								@@include('parts/product-cards/product-1.html')
+							</div><!-- /.col -->
+							<div class="col">
+								@@include('parts/product-cards/product-2.html')
+							</div><!-- /.col -->
+							<div class="col">
+								@@include('parts/product-cards/product-1.html')
 							</div><!-- /.col -->
 						</div><!-- /.row -->
 					</div><!-- /.tab-pane -->

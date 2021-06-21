@@ -1,19 +1,22 @@
-<div class="card card-product">
+<div class="card card-product" itemscope itemtype="http://schema.org/Product">
 	<div class="card-shadow"></div>
 	<div class="card-photo zoom-photo">
 		<a href="page-product.html">
+			<meta itemprop="image" content="./images/products/3.jpg">
 			<img src="./images/products/3.jpg" alt="">
 		</a>
 	</div>
 	<div class="card-meta">
-		<a href="page-product.html" class="permalink">Керамогранит Italon Класс Блэк 45x45</a>
+		<a href="page-product.html" class="permalink" itemprop="name">Керамогранит Italon Класс Блэк 45x45</a>
 		<div class="product-country">
 			<span>Italon,</span>
 			<img src="./images/flags/228-russia.svg" alt="Россия">
 			<span>Россия</span>
 		</div>
-		<div class="product-price">
+		<div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 			<ins>6300 <sup>₽/шт</sup></ins>
+			<meta itemprop="price" content="6300">
+			<meta itemprop="priceCurrency" content="RUB">
 		</div>
 	</div>
 	<div class="card-buttons">
