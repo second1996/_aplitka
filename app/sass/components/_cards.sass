@@ -190,8 +190,14 @@
 					.attr
 						padding-right: 4px
 						color: $text-300
+						+media-breakpoint-down(md)
+							flex: 0 0 50%
+							word-break: break-all
 					.value
 						color: $text-200
+						+media-breakpoint-down(md)
+							flex: 0 0 50%
+							word-break: break-all
 
 
 /* ==========================================================================
@@ -233,10 +239,11 @@
 			object-fit: scale-down
 			object-position: left bottom
 			transform-origin: left bottom
+			+media-breakpoint-down(md)
+				object-position: center bottom
+				transform-origin: center bottom
 
 	.card-meta
-		.permalink
-			overflow: hidden
 		.product-country
 			+mt(16)
 		.product-price
