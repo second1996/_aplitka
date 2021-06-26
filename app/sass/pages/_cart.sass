@@ -258,3 +258,17 @@
 						counter-increment: checkout-step
 						content: counter(checkout-step) ". "
 
+				&-body
+
+					.legal-entity
+						display: none
+
+			&-policy
+				margin-bottom: 24px
+				.form-checkbox-label
+					width: auto
+					&::before
+						border: 1px solid $orange
+					&::after
+						background-color: $white
+						border: 1px solid $orange

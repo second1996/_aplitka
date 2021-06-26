@@ -190,4 +190,25 @@ $(document).ready(function() {
 		initPriceFilter()
 	}
 
+
+	/**
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	 * Toggle cart checkout tabs
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	*/
+	$('a[id*="checkout-tab"]').on('click', function(e) {
+		e.preventDefault()
+
+		$('a[id*="checkout-tab"]').removeClass('active')
+		$(this).addClass('active')
+
+		if (this.id == 'checkout-tab-2') {
+			$('.checkout-form').find('.legal-entity').fadeIn(200)
+		}
+
+		if (this.id == 'checkout-tab-1') {
+			$('.checkout-form').find('.legal-entity').fadeOut(200)
+		}
+	})
+
 })
