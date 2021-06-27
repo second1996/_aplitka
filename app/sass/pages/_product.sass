@@ -1,6 +1,6 @@
 /* ==========================================================================
-	 Product single page
-	 ========================================================================== */
+ Product single page
+ ========================================================================== */
 .page-single-product
 
 	// Section: Heading
@@ -162,6 +162,37 @@
 
 		// Attributes
 		.attributes
+			&-list
+				> li
+					display: flex
+					.attribute,
+					.value
+						position: relative
+						vertical-align: top
+						padding-top: 4px
+						padding-bottom: 4px
+						padding-right: 6px
+						z-index: 1
+						+font-size(xs)
+						word-break: break-word
+						a
+							color: $orange
+							border-bottom: 1px solid rgba($orange, 0.25)
+							&:hover
+								color: $text-200
+								border-bottom-color: $text-300
+					.attribute
+						flex: 0 0 auto
+						width: 164px
+						color: $text-300
+						+media-breakpoint-down(xs)
+							width: 50%
+					.value
+						flex: 1 1 auto
+						padding-left: 6px
+						color: $text-200
+						+media-breakpoint-down(xs)
+							width: 50%
 
 		// Advantages
 		.advantages
