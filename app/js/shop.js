@@ -44,38 +44,57 @@ $(document).ready(function() {
 	*-------------------------------------------------------------------------------------------------------------------------------------------
 	*/
 	window.initShopFilters = function() {
-		$('.shop-filters-item.dropdown').on('show.bs.dropdown', function() {
-			const filterName = $(this).find('.shop-filters-name'),
-						checkboxes = $(this).find('.shop-filters-list input[type="checkbox"]')
-			let filtersArr = []
+		$('.shop-filters-item').each(function(index, el) {
 
-			checkboxes.each(function() {
-				if (this.checked) {
-					filtersArr.push($(this).siblings('label').text())
+			let arr = []
+
+			$(el).find('.shop-filters-list input[type="checkbox"]').each(function(index, checkboxEl) {
+				if ($(this).is(':checked')) {
+					arr.push($(this).siblings('label').text())
+					$(el).find('.shop-filters-name').find('.values').html(arr.join(', '))
 				}
 			})
 
-			checkboxes.on('change', function() {
-				const filterItem = $(this).parents('.shop-filters-item'),
-							label = $(this).siblings('label').text()
+			if (arr.length > 0) {
+				$(el).addClass('_is-active')
+			} else {
+				$(el).removeClass('_is-active')
+			}
 
-				if ($(this).is(':checked')) {
-					filtersArr.push(label)
-				} else {
-					for (let el = filtersArr.length - 1; el >= 0; el--) {
-						if (filtersArr[el] === label) {
-							filtersArr.splice(el, 1);
+			$(el).on('show.bs.dropdown', function() {
+				const filterName = $(el).find('.shop-filters-name'),
+							checkboxes = $(el).find('.shop-filters-list input[type="checkbox"]')
+				let filtersArr = []
+
+				checkboxes.each(function() {
+					if ($(this).is(':checked')) {
+						filtersArr.push($(this).siblings('label').text())
+						filterName.find('.values').html(filtersArr.join(', '))
+					}
+				})
+
+				$(el).find('.shop-filters-list input[type="checkbox"]').on('change', function(e) {
+					const filterItem = $(this).parents('.shop-filters-item'),
+								label = $(this).siblings('label').text()
+	
+					if ($(this).is(':checked')) {
+						filtersArr.push(label)
+					} else {
+						for (let el = filtersArr.length - 1; el >= 0; el--) {
+							if (filtersArr[el] === label) {
+								filtersArr.splice(el, 1);
+							}
 						}
 					}
-				}
-
-				if (filtersArr.length > 0) {
-					filterItem.addClass('_is-active')
-				} else {
-					filterItem.removeClass('_is-active')
-				}
-
-				filterName.find('.values').html(filtersArr.join(', '))
+	
+					if (filtersArr.length > 0) {
+						filterItem.addClass('_is-active')
+					} else {
+						filterItem.removeClass('_is-active')
+					}
+	
+					filterName.find('.values').html(filtersArr.join(', '))
+				})
 			})
 		})
 	}
