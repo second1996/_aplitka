@@ -194,6 +194,17 @@ $(document).ready(function() {
 		$('.mmenu').removeClass('_is-opened')
 	})
 
+	// Toggle Submenu
+	$('.mmenu .catalog-item > span, .mmenu .brands-item > span').on('click', function() {
+		$(this).siblings('.submenu').addClass('_is-opened')
+	})
+
+	// Close Submenu
+	$('.mmenu .catalog-item .submenu > .submenu-back-btn, .mmenu .brands-item .submenu > .submenu-back-btn').on('click', function() {
+		$(this).parent().removeClass('_is-opened')
+	})
+
+
 
 	/**
 	*-------------------------------------------------------------------------------------------------------------------------------------------
@@ -238,7 +249,7 @@ $(document).ready(function() {
 			if (!$('.popover:hover').length) {
 				$(_this).popover('hide')
 			}
-		}, 300)
+		}, 100)
 	})
 
 

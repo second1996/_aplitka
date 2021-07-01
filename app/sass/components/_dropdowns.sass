@@ -4,7 +4,6 @@
 .dropdown
 	&-menu
 		position: relative
-		margin-top: 16px
 		padding: 20px 16px
 		border-radius: 0
 		border: 0
@@ -17,6 +16,18 @@
 			display: block
 			border: 10px solid $trsp
 			border-bottom: 10px solid $white
+		&[x-placement="bottom-start"]
+			margin-top: 16px
+		&[x-placement="top-start"]
+			margin-top: 0
+			margin-bottom: 16px
+			&::before
+				top: auto
+				bottom: -20px
+				left: 14px
+				display: block
+				border: 10px solid $trsp
+				border-top: 10px solid $white
 
 
 /* ==========================================================================

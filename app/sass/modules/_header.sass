@@ -204,13 +204,18 @@
 				margin-left: 16px
 				margin-right: 16px
 				text-align: center
+			+media-breakpoint-down(xs)
+				margin-left: 8px
+				margin-right: 8px
 			a
 				display: inline-block
 			img
 				display: inline-block
 				max-width: 200px
 				+media-breakpoint-down(md)
-					max-width: 110px
+					max-width: 160px
+				+media-breakpoint-down(xxs)
+					max-width: 120px
 
 		// Stores dropdown
 		.stores
@@ -542,10 +547,27 @@
 		// Cart summary
 		.cart
 			&-link
+				position: relative
 				display: flex
 				&:hover
 					.cart-icon
 						color: $orange
+				+media-breakpoint-down(md)
+					&::after
+						content: attr(data-quantity)
+						position: absolute
+						top: -4px
+						right: -8px
+						display: flex
+						align-items: center
+						justify-content: center
+						width: 20px
+						height: 20px
+						border-radius: 50%
+						background-color: $orange
+						color: $white
+						font-size: 10px
+						font-weight: $w-bold
 			&-icon
 				flex: 0 0 auto
 				color: $text-200

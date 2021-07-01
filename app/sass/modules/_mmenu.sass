@@ -75,11 +75,76 @@
 		.catalog
 			margin-bottom: 32px
 			&-list
-				> li
-					&:not(:last-child)
-						margin-bottom: 16px
-					> a
-						+font-size(md)
+			&-item
+				&:not(:last-child)
+					margin-bottom: 16px
+				&:hover
+					> a,
+					> span
+						color: $orange
+				> a,
+				> span
+					display: flex
+					align-items: center
+					justify-content: space-between
+					cursor: pointer
+					+font-size(md)
+					.icon
+						transform: scaleX(-1)
+						transition: color .3s ease
+				.submenu
+					position: absolute
+					top: 0
+					left: 0
+					right: 0
+					bottom: 0
+					overflow-x: hidden
+					height: 100%
+					padding: 16px 16px 32px
+					z-index: 99
+					padding: 16px
+					background-color: $white
+					visibility: hidden
+					opacity: 0
+					transform: translateX(60%)
+					transition: opacity .15s, transform .4s ease
+					&._is-opened
+						visibility: visible
+						opacity: 1
+						transform: none
+					&-back-btn
+						justify-content: space-between
+						width: 100%
+						padding-left: 0
+						margin-left: -4px
+						padding-right: 24px
+						padding-left: 16px
+						&:hover
+							> .icon
+								fill: $orange
+							> span
+								color: $orange
+						> .icon
+							flex: 0 0 auto
+							width: 18px
+							height: 18px
+						> span
+							flex: 1 1 auto
+							text-align: center
+					&-title
+						margin-top: 24px
+						+font-size(sm)
+						font-weight: $w-bold
+					&-list
+						display: flex
+						flex-direction: column
+						margin-top: 8px
+						> li
+							> a
+								display: inline-block
+								padding-top: 6px
+								padding-bottom: 6px
+								+font-size(sm)
 
 		// Brands
 		.brands
@@ -87,7 +152,8 @@
 			&-title
 				margin-bottom: 8px
 				color: $text-300
-			&-list
+			&-wrapper
+			&-shadow
 				position: relative
 				&::after
 					content: ''
@@ -97,30 +163,86 @@
 					right: 0
 					z-index: 1
 					width: 60px
-					height: 100%
+					height: 28px
 					background: linear-gradient(to right, rgba($white, 0) 0%, rgba($white, 1) 100%)
-				> ul
-					overflow-x: auto
-					display: flex
-					width: 100%
-					align-items: center
-					justify-content: space-between
-					padding-bottom: 8px
-					> li
-						position: relative
-						&:not(:last-child)
-							margin-right: 28px
-						&:last-child > a
-							position: relative
-							z-index: 2
-						> a
-							display: inline-block
-							font-size: 13px
-							font-weight: $w-bold
-							line-height: 1
-							white-space: nowrap
-						> ul
-							display: none
+			&-list
+				overflow-x: auto
+				display: flex
+				width: 100%
+				align-items: center
+				justify-content: space-between
+				padding-bottom: 8px
+			&-item
+				&:not(:last-child)
+					margin-right: 28px
+				&:last-child > a,
+				&:last-child > span
+					position: relative
+					z-index: 2
+				> a,
+				> span
+					cursor: pointer
+					display: inline-block
+					font-size: 13px
+					font-weight: $w-bold
+					line-height: 1
+					white-space: nowrap
+					transition: color .3s ease
+					&:hover
+						color: $orange
+				.submenu
+					position: absolute
+					top: 0
+					left: 0
+					right: 0
+					bottom: 0
+					overflow-x: hidden
+					height: 100%
+					padding: 16px 16px 32px
+					z-index: 99
+					padding: 16px
+					background-color: $white
+					visibility: hidden
+					opacity: 0
+					transform: translateX(60%)
+					transition: opacity .15s, transform .4s ease
+					&._is-opened
+						visibility: visible
+						opacity: 1
+						transform: none
+					&-back-btn
+						justify-content: space-between
+						width: 100%
+						padding-left: 0
+						margin-left: -4px
+						padding-right: 24px
+						padding-left: 16px
+						&:hover
+							> .icon
+								fill: $orange
+							> span
+								color: $orange
+						> .icon
+							flex: 0 0 auto
+							width: 18px
+							height: 18px
+						> span
+							flex: 1 1 auto
+							text-align: center
+					&-title
+						margin-top: 24px
+						+font-size(sm)
+						font-weight: $w-bold
+					&-list
+						display: flex
+						flex-direction: column
+						margin-top: 8px
+						> li
+							> a
+								display: inline-block
+								padding-top: 6px
+								padding-bottom: 6px
+								+font-size(sm)
 
 		// Navigation
 		.navigation
@@ -200,12 +322,23 @@
 
 		// Stores
 		.stores
-			&-btn
+			.btn.btn-corner
 				width: calc(100% - 20px)
+				&::after
+					right: -20px
 				.icon
 					width: 20px
 					height: 20px
 					margin-left: 8px
+			.dropdown-stores
+				&.show
+					.btn.btn-corner
+						background-color: $orange
+						color: $white
+						&::after
+							border-left-color: $orange
+				.dropdown-menu
+					margin-left: 0
 
 		// Hours work
 		.hours

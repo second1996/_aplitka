@@ -190,7 +190,7 @@
 		.icon
 			transform: scaleY(1)
 	&._is-toggled
-		display: none
+		display: none !important
 		~ .btn-more--hide
 			display: inline-flex
 	.icon
@@ -266,11 +266,21 @@
 	transform-origin: bottom left
 	transform: rotate(-90deg) translateY(12px)
 	transition: $trs
+	+media-breakpoint-down(xs)
+		top: 48px
+		left: 0
+		right: 0
+		bottom: auto
+		width: 100%
+		transform: none
+		transition: visability .3s ease, opacity .3s ease
 	&._is-shown
 		pointer-events: auto
 		visibility: visible
 		opacity: 1
 		transform: rotate(-90deg) translateY(0)
+		+media-breakpoint-down(xs)
+			transform: none
 	&-btn
 		height: 40px
 		padding: 12px
@@ -278,6 +288,13 @@
 		background-color: $white
 		color: $orange
 		font-size: 14px
+		+media-breakpoint-down(xs)
+			width: 100%
+			border-top: 1px solid $border
+			box-shadow: 0px 10px 15px rgba(176, 190, 197, 0.22)
+			&:hover
+				background-color: $orange
+				color: $white
 		&:hover
 			box-shadow: none
 			background-color: $bg
@@ -286,4 +303,6 @@
 			width: 12px
 			height: 12px
 			margin-left: 4px
+			+media-breakpoint-down(xs)
+				transform: rotate(-90deg)
 
