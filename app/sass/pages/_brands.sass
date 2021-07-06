@@ -1,6 +1,6 @@
 /* ==========================================================================
-	 Page brands
-	 ========================================================================== */
+ Page brands
+ ========================================================================== */
 .page-brands
 
 	// Section: Brands alphabet
@@ -68,10 +68,9 @@
 				padding-left: 4px
 				padding-right: 4px
 
-
 /* ==========================================================================
-	 Single page brands
-	 ========================================================================== */
+ Single page brands
+ ========================================================================== */
 .page-single-brands
 
 	// Section: About brand
@@ -100,13 +99,16 @@
 				right: 0
 				z-index: 99
 				width: 100%
-				padding: 24px 24px 32px
+				padding: 24px
 				box-shadow: $box-shadow
 				background-color: $white
 				visibility: hidden
 				opacity: 0
 				transform: translate3d(0, 40px, 0)
 				transition: $trs
+				+media-breakpoint-down(sm)
+					overflow-y: auto
+					max-height: 360px
 				&::before
 					content: ''
 					position: absolute
@@ -115,15 +117,42 @@
 					display: block
 					border: 10px solid $trsp
 					border-bottom: 10px solid $white
-				> ul > li > a
-					display: block
-					padding-top: 2px
-					padding-bottom: 2px
-					font-size: 14px
+				.brands
+					column-count: 4
+					column-gap: 30px
+					+media-breakpoint-down(lg)
+						column-count: 3
+					+media-breakpoint-down(sm)
+						column-count: 2
+					+media-breakpoint-down(xs)
+						column-count: 1
+					&-item
+						break-inside: avoid
+						margin-bottom: 12px
+					&-letter
+						padding-bottom: 8px
+						color: $orange
+						font-weight: $w-bold
+					&-list
+						margin-bottom: 8px
+						> li > a
+							display: block
+							padding-top: 2px
+							padding-bottom: 2px
+							font-size: 14px
 		&-content
 			&-text
-				> p:not(:first-child)
+				> *:not(:first-child)
 					display: none
+			.readmore
+				.btn.btn-more
+					color: $orange
+					> svg
+						fill: $orange
+					&:hover
+						color: $text-200
+						> svg
+							fill: $text-200
 			&-meta
 				max-width: 208px
 				.logo
@@ -145,4 +174,3 @@
 							width: 32px
 							height: 32px
 							margin-left: 8px
-

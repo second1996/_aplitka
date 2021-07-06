@@ -1,6 +1,6 @@
 /* ==========================================================================
-	 Sticky header
-	 ========================================================================== */
+ Sticky header
+ ========================================================================== */
 .header
 	&.header--clone
 		position: fixed
@@ -51,10 +51,9 @@
 		opacity: 1
 		transform: translateY(0%)
 
-
 /* ==========================================================================
-	 Site header
-	 ========================================================================== */
+ Site header
+ ========================================================================== */
 .header
 	position: relative
 	z-index: 99
@@ -599,7 +598,7 @@
 				align-items: center
 				justify-content: space-between
 				> li
-					margin-right: 32px
+					margin-right: 24px
 					&:hover
 						> a
 							color: $orange
@@ -616,6 +615,7 @@
 						display: inline-block
 						color: $text-200
 						+font-size(sm)
+						font-weight: $w-bold
 						white-space: nowrap
 						&:hover
 							color: $orange
@@ -648,6 +648,7 @@
 							padding-right: 0
 							color: $text-200
 							+font-size(sm)
+							font-weight: $w-bold
 							&:hover
 								color: $orange
 						> ul
@@ -685,14 +686,12 @@
 			right: -20px
 			z-index: 101
 			padding-bottom: 32px
+			box-shadow: 0 20px 15px 0 rgba($text-200, 0.05)
 			background-color: $white
 			visibility: hidden
 			opacity: 0
 			transform: translateY(10px)
 			transition: $trs
-			// .container
-			// 	padding-left: 0
-			// 	padding-right: 0
 			&-grid
 				display: flex
 				flex-wrap: wrap
@@ -773,4 +772,3 @@
 							color: $orange
 					> ul
 						display: none
-
