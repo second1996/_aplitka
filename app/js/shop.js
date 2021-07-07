@@ -230,4 +230,27 @@ $(document).ready(function() {
 		}
 	})
 
+
+	/**
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	 * Toggle all collection products tabs
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	*/
+	const showAllTab = $('.collection-products-tabs > .nav-tabs > a[data-toggle-all]')
+	const collectionTabs = $('.collection-products').find('.tab-content > .tab-pane')
+
+	function toggleAllTabs() {
+		collectionTabs.each(function (index, el) {
+			$(el).addClass('show active')
+		})
+	}
+
+	if (showAllTab.length) {
+		toggleAllTabs()
+
+		showAllTab.on('click', function() {
+			toggleAllTabs()
+		})
+	}
+
 })
