@@ -236,21 +236,9 @@ $(document).ready(function() {
 	 * Toggle all collection products tabs
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
 	*/
-	const showAllTab = $('.collection-products-tabs > .nav-tabs > a[data-toggle-all]')
-	const collectionTabs = $('.collection-products').find('.tab-content > .tab-pane')
-
-	function toggleAllTabs() {
-		collectionTabs.each(function (index, el) {
-			$(el).addClass('show active')
-		})
+	window.showAllCollectionTabs = function() {
+		$('.collection-products-list > [class*="col"]').clone().appendTo('#products-tab-1 .collection-products-list')
 	}
-
-	if (showAllTab.length) {
-		toggleAllTabs()
-
-		showAllTab.on('click', function() {
-			toggleAllTabs()
-		})
-	}
+	showAllCollectionTabs()
 
 })
