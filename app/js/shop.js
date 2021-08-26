@@ -45,7 +45,6 @@ $(document).ready(function() {
 	*/
 	window.initShopFilters = function() {
 		$('.shop-filters-item').each(function(index, el) {
-
 			let arr = []
 
 			$(el).find('.shop-filters-list input[type="checkbox"]').each(function(index, checkboxEl) {

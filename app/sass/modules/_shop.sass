@@ -1,6 +1,6 @@
 /* ==========================================================================
-	 Product country
-	 ========================================================================== */
+ Product country
+ ========================================================================== */
 .product-country
 	display: flex
 	align-items: center
@@ -18,10 +18,9 @@
 		&:not(:last-child)
 			margin-right: 8px
 
-
 /* ==========================================================================
-	 Product price
-	 ========================================================================== */
+ Product price
+ ========================================================================== */
 .product-price
 	display: flex
 	flex-wrap: wrap
@@ -40,10 +39,9 @@
 			color: $text-300
 			+font-size(xs)
 
-
 /* ==========================================================================
-	 Proudct categories/subcategories
-	 ========================================================================== */
+ Proudct categories/subcategories
+ ========================================================================== */
 .shop-categories
 	&-item
 		overflow: hidden
@@ -80,10 +78,9 @@
 			word-break: break-word
 			transition: background-color .3s ease
 
-
 /* ==========================================================================
-	 Shop tabs
-	 ========================================================================== */
+ Shop tabs
+ ========================================================================== */
 .shop-tabs
 	overflow-x: auto
 	display: flex
@@ -114,10 +111,9 @@
 			> span
 				color: $text-400
 
-
 /* ==========================================================================
-	 Shop filters
-	 ========================================================================== */
+ Shop filters
+ ========================================================================== */
 .shop-filters
 	margin-bottom: 32px
 	+media-breakpoint-down(md)
@@ -127,17 +123,46 @@
 		display: flex
 		align-items: center
 		justify-content: flex-end
+		height: 40px
 		+media-breakpoint-down(md)
+			flex-wrap: wrap
 			justify-content: space-between
+			height: auto
 			margin-bottom: 24px
 
 	// Close filters button
 	&-close
+		position: relative
+		z-index: 10
+		+media-breakpoint-down(md)
+			order: 1
 		&.btn
 			display: none
 			padding: 0
 			+media-breakpoint-down(md)
 				display: block
+
+	// Submit filters button
+	&-submit
+		visibility: hidden
+		opacity: 0
+		transition: $trs
+		+media-breakpoint-down(md)
+			order: 2
+			flex: 1 1 100%
+			margin-top: 16px
+		&.btn.btn-secondary
+			display: none
+			height: 40px
+			padding-left: 18px
+			padding-right: 18px
+			+media-breakpoint-down(md)
+				height: 46px
+		&._is-shown
+			visibility: visible
+			opacity: 1
+			&.btn.btn-secondary
+				display: inline-flex
 
 	// Reset filters button
 	&-reset
@@ -147,6 +172,12 @@
 		visibility: hidden
 		opacity: 0
 		transition: $trs
+		+media-breakpoint-down(md)
+			order: 0
+		~ .shop-filters-submit._is-shown
+			margin-left: 24px
+			+media-breakpoint-down(md)
+				margin-left: 0
 		&._is-shown
 			visibility: visible
 			opacity: 1
@@ -326,13 +357,11 @@
 					height: 24px
 					margin-right: 8px
 
-
 /* ==========================================================================
-	 Shop promo banner
-	 ========================================================================== */
+ Shop promo banner
+ ========================================================================== */
 .shop-promo
 	display: block
 	text-align: center
 	picture
 		display: block
-
