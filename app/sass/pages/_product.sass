@@ -101,6 +101,7 @@
 				.price
 					display: flex
 					align-items: center
+					justify-content: space-between
 					+media-breakpoint-down(xs)
 						flex-wrap: wrap
 						align-items: flex-start
@@ -123,12 +124,21 @@
 							> span
 								color: $text-200
 								+font-size(xxl)
+								word-break: break-all
 					&-quantity
 						margin-left: 32px
 						margin-bottom: 24px
 						+media-breakpoint-down(xs)
 							margin-left: 0
 							flex: 0 0 100%
+						.quantity-amount
+							.value
+								flex: 0 0 98px
+								border-bottom: 0
+								text-align: center
+						.quantity-size
+							margin-left: 10px
+							color: $text-200
 				.btn-purchase
 					width: 100%
 					&._added

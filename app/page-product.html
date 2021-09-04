@@ -223,11 +223,14 @@
 											<button type="button" class="quantity-minus btn btn-primary">
 												<svg class="icon icon-minus"><use xlink:href="./images/symbol-defs.svg#minus"></use></svg>
 											</button>
-											<div class="quantity-amount"><div class="value">1.467</div> <div class="size">м<sup>2</sup></div></div>
+											<div class="quantity-amount">
+												<input type="number" min="0" max="999" data-mask="999.999" class="value form-control" value="3.336">
+											</div>
 											<button type="button" class="quantity-plus btn btn-primary">
 												<svg class="icon icon-plus"><use xlink:href="./images/symbol-defs.svg#plus"></use></svg>
 											</button>
-											<input type="text" name="quantity" hidden>
+											<div class="quantity-size">м<sup>2</sup></div>
+											<input type="text" name="qty" class="changeQty itemQtyChanger" data-price="8950" data-count="1" data-one="3.336" value="3.336" hidden>
 										</div>
 									</div>
 								</div>

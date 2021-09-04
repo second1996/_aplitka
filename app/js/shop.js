@@ -2,6 +2,38 @@ $(document).ready(function() {
 
 	/**
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	 * Calc product quantity
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	*/
+	$('.purchase-form .quantity-amount .value').on('change', function() {
+		const _this    = $(this);
+		const maxVal   = Number(_this.attr('max'))
+		const curVal   = Number(_this.val())
+		const qtyEl    = _this.parents('.purchase-form').find('input[name="qty"]')
+		const qtyOne   = Number(qtyEl.attr('data-one'))
+
+		if (curVal <= 0) _this.val(qtyOne)
+		if (curVal > maxVal) _this.val(maxVal)
+
+		function calcQty(val) {
+			if (val <= maxVal) {
+				for (let i = qtyOne; i <= curVal + qtyOne; i += qtyOne) {
+					if (i > maxVal) {
+						_this.val(maxVal)
+					} else {
+						_this.val(i.toFixed(3))
+					}
+				}
+			}
+
+			qtyEl.val(_this.val()).change()
+		}
+		calcQty(curVal)
+	})
+
+
+	/**
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
 	 * Toggle shop filters sidebar
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
 	*/
