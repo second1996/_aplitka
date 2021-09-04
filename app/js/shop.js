@@ -8,24 +8,19 @@ $(document).ready(function() {
 	$('.purchase-form .quantity-amount .value').on('change', function() {
 		const _this    = $(this);
 		const maxVal   = Number(_this.attr('max'))
-		const curVal   = Number(_this.val())
+		let curVal   = Number(_this.val())
 		const qtyEl    = _this.parents('.purchase-form').find('input[name="qty"]')
-		const qtyOne   = Number(qtyEl.attr('data-one'))
+		const qtyOne   = Number(qtyEl.attr('data-one')) // 3.336
 
-		if (curVal <= 0) _this.val(qtyOne)
-		if (curVal > maxVal) _this.val(maxVal)
+		if (curVal <= 0) curVal = qtyOne
+		if (curVal > maxVal) curVal = maxVal
 
-		function calcQty(val) {
-			if (val <= maxVal) {
-				for (let i = qtyOne; i <= curVal + qtyOne; i += qtyOne) {
-					if (i > maxVal) {
-						_this.val(maxVal)
-					} else {
-						_this.val(i.toFixed(3))
-					}
-				}
-			}
+		function calcQty() {
+			let calcVal = Math.ceil(curVal / qtyOne) * qtyOne
 
+			if (calcVal > maxVal) calcVal = maxVal
+
+			_this.val(calcVal.toFixed(3))
 			qtyEl.val(_this.val()).change()
 		}
 		calcQty(curVal)
