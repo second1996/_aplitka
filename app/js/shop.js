@@ -10,7 +10,9 @@ $(document).ready(function() {
 		const maxVal   = Number(_this.attr('max'))
 		let curVal   = Number(_this.val())
 		const qtyEl    = _this.parents('.purchase-form').find('input[name="qty"]')
-		const qtyOne   = Number(qtyEl.attr('data-one')) // 3.336
+		const qtyOne   = Number(qtyEl.attr('data-one'))
+
+		console.log(qtyEl);
 
 		if (curVal <= 0) curVal = qtyOne
 		if (curVal > maxVal) curVal = maxVal
