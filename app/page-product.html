@@ -212,21 +212,21 @@
 
 						<!-- Purchase form -->
 						<div class="purchase">
-							<form class="purchase-form form">
+							<form class="purchase-form form addToCartForm">
 								<div class="price">
 									<div class="price-main">
 										<div class="label">Цена:</div>
-										<div class="value"><span>4500</span> ₽/м<sup>2</sup></div>
+										<div class="value"><span class="itemPrice">8 950</span> ₽/м<sup>2</sup></div>
 									</div>
 									<div class="price-quantity">
 										<div class="quantity">
-											<button type="button" class="quantity-minus btn btn-primary">
+											<button type="button" class="quantity-minus btn btn-primary" data-qty-action="minus">
 												<svg class="icon icon-minus"><use xlink:href="./images/symbol-defs.svg#minus"></use></svg>
 											</button>
 											<div class="quantity-amount">
-												<input type="number" min="0" max="999" data-mask="999.999" class="value form-control" value="3.336">
+												<input type="number" step="0.001" min="0" max="999" class="value form-control" value="3.336" data-qty-action="input">
 											</div>
-											<button type="button" class="quantity-plus btn btn-primary">
+											<button type="button" class="quantity-plus btn btn-primary" data-qty-action="plus">
 												<svg class="icon icon-plus"><use xlink:href="./images/symbol-defs.svg#plus"></use></svg>
 											</button>
 											<div class="quantity-size">м<sup>2</sup></div>

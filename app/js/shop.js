@@ -5,28 +5,44 @@ $(document).ready(function() {
 	 * Calc product quantity
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
 	*/
-	$('.purchase-form .quantity-amount .value').on('change', function() {
-		const _this    = $(this);
-		const maxVal   = Number(_this.attr('max'))
-		let curVal   = Number(_this.val())
-		const qtyEl    = _this.parents('.purchase-form').find('input[name="qty"]')
-		const qtyOne   = Number(qtyEl.attr('data-one'))
-
-		console.log(qtyEl);
-
-		if (curVal <= 0) curVal = qtyOne
-		if (curVal > maxVal) curVal = maxVal
-
-		function calcQty() {
-			let calcVal = Math.ceil(curVal / qtyOne) * qtyOne
-
-			if (calcVal > maxVal) calcVal = maxVal
-
-			_this.val(calcVal.toFixed(3))
-			qtyEl.val(_this.val()).change()
-		}
-		calcQty(curVal)
+	$('.quantity-minus, .quantity-plus, .quantity-amount .value').on('click change', function() {
+		changeItemQty($(this).parents('form'), $(this).data('qty-action'))
 	})
+
+	function changeItemQty(parent, action) {
+		setTimeout(function () {
+			const amountEl = parent.find('.quantity-amount .value')
+			const qtyEl    = parent.find('input[name="qty"]')
+			const qtyCount = +qtyEl.attr('data-count')
+			const qtyOne   = +qtyEl.attr('data-one')
+			const qtyPrice = +qtyEl.attr('data-price')
+			const maxVal   = +amountEl.attr('max')
+
+			let curVal = +amountEl.val()
+			let count
+
+			if (curVal > maxVal) curVal = maxVal
+			if (action === 'minus') count = qtyCount - 1
+			if (action === 'plus') count = qtyCount + 1
+			if (action === 'input') count = Math.ceil((curVal / qtyOne).toFixed(1))
+			if (count <= 0) count = 1;
+
+			curVal = count * qtyOne;
+
+			if (curVal > maxVal) {
+				curVal = maxVal
+				amountEl.val(curVal)
+				parent.find('.quantity-plus').attr('disabled', true)
+			} else {
+				parent.find('.quantity-plus').attr('disabled', false)
+				amountEl.val(Math.round(curVal * 1000) / 1000)
+			}
+
+			qtyEl.attr('data-count', count)
+			qtyEl.val(curVal).change()
+			parent.find('.itemPrice').text((qtyPrice*curVal).toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1 "))
+		}, 100)
+	}
 
 
 	/**

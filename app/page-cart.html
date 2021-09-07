@@ -43,7 +43,7 @@
 				<div class="cart-body">
 
 					<!-- Cart item -->
-					<form class="cart-item purchase-form">
+					<form class="cart-item">
 						<div class="cart-item-body sku">4532452</div>
 						<div class="cart-item-body image">
 							<a href="page-product.html" class="image-wrapper zoom-photo img-cover">
@@ -61,13 +61,13 @@
 						<div class="cart-item-body sizes" data-title="Размеры"><span>60 х 119,5</span></div>
 						<div class="cart-item-body count" data-title="Количество">
 							<div class="quantity">
-								<button type="button" class="quantity-minus btn btn-primary">
+								<button type="button" class="quantity-minus btn btn-primary" data-qty-action="minus">
 									<svg class="icon icon-minus"><use xlink:href="./images/symbol-defs.svg#minus"></use></svg>
 								</button>
 								<div class="quantity-amount">
-									<input type="number" min="0" max="999" data-mask="999.999" class="value form-control" value="3.336">
+									<input type="number" min="0" max="999" class="value form-control" value="3.336" data-qty-action="input">
 								</div>
-								<button type="button" class="quantity-plus btn btn-primary">
+								<button type="button" class="quantity-plus btn btn-primary" data-qty-action="plus">
 									<svg class="icon icon-plus"><use xlink:href="./images/symbol-defs.svg#plus"></use></svg>
 								</button>
 								<input type="text" name="qty" class="changeQty itemQtyChanger" data-price="8950" data-count="1" data-one="3.336" value="3.336" hidden>
@@ -77,7 +77,7 @@
 						<div class="cart-item-body packages" data-title="Упаковок"><span>1</span></div>
 						<div class="cart-item-body tiles" data-title="Плиток"><span>3336</span></div>
 						<div class="cart-item-body cost" data-title="Цена"><span>8 950 ₽</span></div>
-						<div class="cart-item-body total" data-title="Сумма"><span>56 950 ₽</span></div>
+						<div class="cart-item-body total" data-title="Сумма"><span class="itemPrice">29 857</span> ₽</div>
 						<div class="delete">
 							<a href="#" class="delete-btn" role="button" rel="nofollow">
 								<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
@@ -104,11 +104,11 @@
 						<div class="cart-item-body sizes" data-title="Размеры"><span>41 X 41</span></div>
 						<div class="cart-item-body count" data-title="Количество">
 							<div class="quantity">
-								<button type="button" class="quantity-minus btn btn-primary">
+								<button type="button" class="quantity-minus btn btn-primary" data-qty-action="minus">
 									<svg class="icon icon-minus"><use xlink:href="./images/symbol-defs.svg#minus"></use></svg>
 								</button>
 								<div class="quantity-amount"><div class="value">1.194</div></div>
-								<button type="button" class="quantity-plus btn btn-primary">
+								<button type="button" class="quantity-plus btn btn-primary" data-qty-action="plus">
 									<svg class="icon icon-plus"><use xlink:href="./images/symbol-defs.svg#plus"></use></svg>
 								</button>
 								<input type="text" name="quantity" hidden>
@@ -145,11 +145,11 @@
 						<div class="cart-item-body sizes" data-title="Размеры"><span>60 х 120</span></div>
 						<div class="cart-item-body count" data-title="Количество">
 							<div class="quantity">
-								<button type="button" class="quantity-minus btn btn-primary">
+								<button type="button" class="quantity-minus btn btn-primary" data-qty-action="minus">
 									<svg class="icon icon-minus"><use xlink:href="./images/symbol-defs.svg#minus"></use></svg>
 								</button>
 								<div class="quantity-amount"><div class="value">1.688</div></div>
-								<button type="button" class="quantity-plus btn btn-primary">
+								<button type="button" class="quantity-plus btn btn-primary" data-qty-action="plus">
 									<svg class="icon icon-plus"><use xlink:href="./images/symbol-defs.svg#plus"></use></svg>
 								</button>
 								<input type="text" name="quantity" hidden>
