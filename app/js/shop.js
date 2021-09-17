@@ -5,43 +5,44 @@ $(document).ready(function() {
 	 * Calc product quantity
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
 	*/
-	$('.quantity-minus, .quantity-plus, .quantity-amount .value').on('click change', function() {
-		changeItemQty($(this).parents('form'), $(this).data('qty-action'))
+	$('.quantity-minus, .quantity-plus').on('click', function() {
+		const $this = $(this)
+
+		qtyOperator($this.parents('form').find('input[name="qty"]'), $this.data('qty-action'))
 	})
 
-	function changeItemQty(parent, action) {
-		setTimeout(function () {
-			const amountEl = parent.find('.quantity-amount .value')
-			const qtyEl    = parent.find('input[name="qty"]')
-			const qtyCount = +qtyEl.attr('data-count')
-			const qtyOne   = +qtyEl.attr('data-one')
-			const qtyPrice = +qtyEl.attr('data-price')
-			const maxVal   = +amountEl.attr('max')
+	$('.quantity-amount .value').on('change', function() {
+		const $this = $(this)
+		const qty = $this.data()
 
-			let curVal = +amountEl.val()
-			let count
+		if ($this.val() >= qty.max) $this.val(qty.max)
 
-			if (curVal > maxVal) curVal = maxVal
-			if (action === 'minus') count = qtyCount - 1
-			if (action === 'plus') count = qtyCount + 1
-			if (action === 'input') count = Math.ceil((curVal / qtyOne).toFixed(1))
-			if (count <= 0) count = 1;
+		qtyChangeValue($this, Math.ceil($this.val() / qty.one))
+	})
 
-			curVal = count * qtyOne;
+	function qtyOperator(qtyInput, action) {
+		const qty = qtyInput.data()
 
-			if (curVal > maxVal) {
-				curVal = maxVal
-				amountEl.val(curVal)
-				parent.find('.quantity-plus').attr('disabled', true)
-			} else {
-				parent.find('.quantity-plus').attr('disabled', false)
-				amountEl.val(Math.round(curVal * 1000) / 1000)
-			}
+		switch (action) {
+			case 'minus':
+				qty.count = qty.count <= 1 ? 1 : qty.count -= 1
+				break
+			case 'plus':
+				qty.count = qty.count += 1
+				break
+		}
 
-			qtyEl.attr('data-count', count)
-			qtyEl.val(curVal).change()
-			parent.find('.itemPrice').text((qtyPrice*curVal).toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1 "))
-		}, 100)
+		return qtyChangeValue(qtyInput, qty.count)
+	}
+
+	function qtyChangeValue(qtyInput, count) {
+		const qty = qtyInput.data()
+		qty.count = count <= 1 ? 1 : count
+		let qtyVal = Math.round((qty.count * qty.one) * 1000) / 1000
+
+		qtyInput.attr('data-count', qty.count).val(qtyVal)
+		qtyInput.parents('form').find('.quantity-minus').attr('disabled', qty.count > 1 ? false : true)
+		qtyInput.parents('form').find('.itemPrice').text((qty.price * qtyVal).toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1 "))
 	}
 
 

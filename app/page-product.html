@@ -220,17 +220,16 @@
 									</div>
 									<div class="price-quantity">
 										<div class="quantity">
-											<button type="button" class="quantity-minus btn btn-primary" data-qty-action="minus">
+											<button type="button" class="quantity-minus btn btn-primary" data-qty-action="minus" disabled>
 												<svg class="icon icon-minus"><use xlink:href="./images/symbol-defs.svg#minus"></use></svg>
 											</button>
 											<div class="quantity-amount">
-												<input type="number" step="0.001" min="0" max="999" class="value form-control" value="3.336" data-qty-action="input">
+												<input type="number" name="qty" class="value form-control changeQty itemQtyChanger" step="0.001" min="0" max="999" value="3.336" data-price="8950" data-max="999" data-count="1" data-one="3.336">
 											</div>
 											<button type="button" class="quantity-plus btn btn-primary" data-qty-action="plus">
 												<svg class="icon icon-plus"><use xlink:href="./images/symbol-defs.svg#plus"></use></svg>
 											</button>
 											<div class="quantity-size">м<sup>2</sup></div>
-											<input type="text" name="qty" class="changeQty itemQtyChanger" data-price="8950" data-count="1" data-one="3.336" value="3.336" hidden>
 										</div>
 									</div>
 								</div>
