@@ -61,16 +61,15 @@
 						<div class="cart-item-body sizes" data-title="Размеры"><span>60 х 119,5</span></div>
 						<div class="cart-item-body count" data-title="Количество">
 							<div class="quantity">
-								<button type="button" class="quantity-minus btn btn-primary" data-qty-action="minus">
+								<button type="button" class="quantity-minus btn btn-primary" data-qty-action="minus" disabled>
 									<svg class="icon icon-minus"><use xlink:href="./images/symbol-defs.svg#minus"></use></svg>
 								</button>
 								<div class="quantity-amount">
-									<input type="number" min="0" max="999" class="value form-control" value="3.336" data-qty-action="input">
+									<input type="number" name="qty" class="value form-control changeQty itemQtyChanger" step="0.001" min="0" value="3.336" data-price="8950" data-max="999" data-count="1" data-one="3.336">
 								</div>
 								<button type="button" class="quantity-plus btn btn-primary" data-qty-action="plus">
 									<svg class="icon icon-plus"><use xlink:href="./images/symbol-defs.svg#plus"></use></svg>
 								</button>
-								<input type="text" name="qty" class="changeQty itemQtyChanger" data-price="8950" data-count="1" data-one="3.336" value="3.336" hidden>
 							</div>
 						</div>
 						<div class="cart-item-body units" data-title="Ед. изм."><span>м<sup>2</sup></span></div>
@@ -104,21 +103,23 @@
 						<div class="cart-item-body sizes" data-title="Размеры"><span>41 X 41</span></div>
 						<div class="cart-item-body count" data-title="Количество">
 							<div class="quantity">
-								<button type="button" class="quantity-minus btn btn-primary" data-qty-action="minus">
+								<button type="button" class="quantity-minus btn btn-primary" data-qty-action="minus" disabled>
 									<svg class="icon icon-minus"><use xlink:href="./images/symbol-defs.svg#minus"></use></svg>
 								</button>
-								<div class="quantity-amount"><div class="value">1.194</div></div>
+								<div class="quantity-amount">
+									<input type="number" name="qty" class="value form-control changeQty itemQtyChanger" step="0.001" min="0" value="1" data-price="6900" data-max="999" data-count="1" data-one="1">
+								</div>
 								<button type="button" class="quantity-plus btn btn-primary" data-qty-action="plus">
 									<svg class="icon icon-plus"><use xlink:href="./images/symbol-defs.svg#plus"></use></svg>
 								</button>
 								<input type="text" name="quantity" hidden>
 							</div>
 						</div>
-						<div class="cart-item-body units" data-title="Ед. изм."><span>м<sup>2</sup></span></div>
+						<div class="cart-item-body units" data-title="Ед. изм."><span>шт.</span></div>
 						<div class="cart-item-body packages" data-title="Упаковок"><span>2</span></div>
 						<div class="cart-item-body tiles" data-title="Плиток"><span>1920</span></div>
 						<div class="cart-item-body cost" data-title="Цена"><span>6 900 ₽</span></div>
-						<div class="cart-item-body total" data-title="Сумма"><span>42 600 ₽</span></div>
+						<div class="cart-item-body total" data-title="Сумма"><span class="itemPrice">6 900</span> ₽</div>
 						<div class="delete">
 							<a href="#" class="delete-btn" role="button" rel="nofollow">
 								<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
@@ -145,21 +146,23 @@
 						<div class="cart-item-body sizes" data-title="Размеры"><span>60 х 120</span></div>
 						<div class="cart-item-body count" data-title="Количество">
 							<div class="quantity">
-								<button type="button" class="quantity-minus btn btn-primary" data-qty-action="minus">
+								<button type="button" class="quantity-minus btn btn-primary" data-qty-action="minus" disabled>
 									<svg class="icon icon-minus"><use xlink:href="./images/symbol-defs.svg#minus"></use></svg>
 								</button>
-								<div class="quantity-amount"><div class="value">1.688</div></div>
+								<div class="quantity-amount">
+									<input type="number" name="qty" class="value form-control changeQty itemQtyChanger" step="0.001" min="0" value="1.688" data-price="9720" data-max="999" data-count="1" data-one="1.688">
+								</div>
 								<button type="button" class="quantity-plus btn btn-primary" data-qty-action="plus">
 									<svg class="icon icon-plus"><use xlink:href="./images/symbol-defs.svg#plus"></use></svg>
 								</button>
 								<input type="text" name="quantity" hidden>
 							</div>
 						</div>
-						<div class="cart-item-body units" data-title="Ед. изм."><span>уп.</span></div>
+						<div class="cart-item-body units" data-title="Ед. изм."><span>м<sup>2</sup></span></div>
 						<div class="cart-item-body packages" data-title="Упаковок"><span>3</span></div>
 						<div class="cart-item-body tiles" data-title="Плиток"><span>2496</span></div>
 						<div class="cart-item-body cost" data-title="Цена"><span>9 720 ₽</span></div>
-						<div class="cart-item-body total" data-title="Сумма"><span>78 210 ₽</span></div>
+						<div class="cart-item-body total" data-title="Сумма"><span class="itemPrice">16 407</span> ₽</div>
 						<div class="delete">
 							<a href="#" class="delete-btn" role="button" rel="nofollow">
 								<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
