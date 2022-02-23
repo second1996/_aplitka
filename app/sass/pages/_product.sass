@@ -1,6 +1,6 @@
 /* ==========================================================================
- Product single page
- ========================================================================== */
+	Product single page
+	========================================================================== */
 .page-single-product
 
 	// Section: Heading
@@ -8,10 +8,9 @@
 		display: flex
 		flex-wrap: wrap
 		+mb(40)
-		.title
-			margin-right: 16px
 		.in-stock,
 		.out-of-stock
+			top: -20px
 			+font-size(xxs)
 			font-weight: $w-bold
 			text-transform: uppercase
@@ -100,11 +99,9 @@
 			&-form
 				.price
 					display: flex
-					align-items: flex-end
 					justify-content: space-between
 					+media-breakpoint-down(xs)
 						flex-wrap: wrap
-						align-items: flex-start
 					&-main
 						display: flex
 						flex-direction: column
@@ -123,15 +120,19 @@
 						.value
 							color: $text-300
 							+font-size(md)
-							> span
-								color: $text-200
-								font-size: 30px
-								line-height: 34px
-								word-break: break-all
+							del
+								white-space: nowrap
+							ins
+								text-decoration: none
+								white-space: nowrap
+								> span
+									color: $text-200
+									font-size: 30px
+									line-height: 34px
 					&-quantity
-						margin-left: 16px
-						margin-bottom: 24px
+						margin: 24px 0 24px 16px
 						+media-breakpoint-down(xs)
+							margin-top: 0
 							margin-left: 0
 							flex: 0 0 100%
 						.quantity-amount
