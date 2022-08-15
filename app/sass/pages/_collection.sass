@@ -8,17 +8,20 @@
 		display: flex
 		flex-wrap: wrap
 		+mb(40)
-		.title
-			margin-right: 16px
-		.in-stock,
-		.out-of-stock
-			+font-size(xxs)
-			font-weight: $w-bold
-			text-transform: uppercase
-		.in-stock
-			color: #509B5C
-		.out-of-stock
-			color: $text-400
+		.heading
+			&-title
+				display: inline
+				margin-right: 16px
+			.in-stock,
+			.out-of-stock
+				+font-size(xxs)
+				font-weight: $w-bold
+				text-transform: uppercase
+				white-space: nowrap
+			.in-stock
+				color: #509B5C
+			.out-of-stock
+				color: $text-400
 
 	// Section: Content (slider, description, attributes, price etc.)
 	.collection-content
