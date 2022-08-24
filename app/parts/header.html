@@ -20,7 +20,7 @@
 			<div class="container">
 				<div class="row align-items-center">
 
-					<div class="col hours">
+					<div class="col-auto hours">
 						<div class="hours-icon">
 							<svg class="icon icon-clock"><use xlink:href="./images/symbol-defs.svg#clock"></use></svg>
 						</div>
@@ -29,6 +29,13 @@
 							<p>Заказы через корзину принимаются круглосуточно</p>
 						</div>
 					</div><!-- /.hours -->
+
+					<div class="col-auto locations">
+						<button type="button" class="locations-btn btn" data-toggle="modal" data-target="#locationsModal">
+							<svg class="icon icon-location-2"><use xlink:href="./images/symbol-defs.svg#location-2"></use></svg>
+							<span>Москва</span>
+						</button>
+					</div><!-- /.locations -->
 
 					<div class="col-auto navigation">
 						<ul class="navigation-list">
@@ -47,8 +54,8 @@
 							<li class="has-dropdown">
 								<a href="#">Для клиента</a>
 								<ul>
-									<li><a href="#">Доставка и оплата</a></li>
-									<li><a href="#">Доставка и оплата</a></li>
+									<li><a href="#">Доставка</a></li>
+									<li><a href="#">Оплата</a></li>
 								</ul>
 							</li>
 							<li class="has-dropdown">
@@ -58,8 +65,6 @@
 									<li><a href="#">Доставка и оплата</a></li>
 								</ul>
 							</li>
-							<li><a href="#">Доставка</a></li>
-							<li><a href="#">Оплата</a></li>
 							<li><a href="#">Контакты</a></li>
 						</ul>
 					</div><!-- /.navigation -->

@@ -78,9 +78,31 @@
 				margin-left: 10px
 				p
 					margin-bottom: 0
+		// Locations
+		.locations
+			&-btn
+				display: flex
+				padding-left: 0
+				padding-right: 0
+				height: auto
+				&:hover
+					> span
+						color: $orange
+				> .icon
+					flex: 0 0 auto
+					width: 17px
+					height: 17px
+					fill: $orange
+				> span
+					margin-left: 6px
+					padding-bottom: 2px
+					border-bottom: 1px dashed $orange
+					font-size: 14px
+					transition: color $trs
 
 		// Navigation menu
 		.navigation
+			margin-left: auto
 			&-list
 				display: inline-flex
 				> li

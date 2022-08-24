@@ -20,6 +20,8 @@
 		max-width: 320px
 		margin-left: auto
 		margin-right: auto
+		+media-breakpoint-down(xxs)
+			max-width: 300px
 
 	.modal-content
 		padding: 24px 24px 32px
@@ -78,3 +80,115 @@
 		&-btn
 			width: 100%
 
+
+/* ==========================================================================
+	Locations modal
+	========================================================================== */
+.modal-locations
+	.modal-dialog
+		max-width: 1040px
+		+media-breakpoint-up(lg)
+			margin-top: 64px
+		+media-breakpoint-down(lg)
+			max-width: 920px
+		+media-breakpoint-down(md)
+			max-width: 640px
+		+media-breakpoint-down(sm)
+			max-width: 540px
+			display: flex
+			align-items: center
+			min-height: calc(100% - 1rem)
+		+media-breakpoint-down(xs)
+			max-width: 360px
+		+media-breakpoint-down(xxs)
+			max-width: 300px
+	.modal-content
+		padding: 32px
+		+media-breakpoint-down(lg)
+			padding: 24px
+		+media-breakpoint-down(xxs)
+			padding: 16px
+	.locations
+		&-search
+			position: relative
+			margin-bottom: 32px
+			&-field
+				padding-right: 48px
+				&::placeholder
+					color: $text-400
+			&-icon
+				pointer-events: none
+				position: absolute
+				top: 50%
+				right: 0
+				transform: translateY(-50%)
+				> .icon
+					width: 32px
+					height: 32px
+					fill: $text-200
+					+media-breakpoint-down(xxs)
+						width: 28px
+						height: 28px
+		&-wrapper
+			position: relative
+			+media-breakpoint-down(sm)
+				&::after
+					content: ''
+					position: absolute
+					left: 0
+					right: 0
+					bottom: 0
+					height: 32px
+					background: linear-gradient(to top, $white 0%, rgba($white, 0) 100%)
+		&-list
+			display: flex
+			flex-wrap: wrap
+			margin-left: -8px
+			margin-right: -8px
+			margin-bottom: -12px
+			+media-breakpoint-down(md)
+				margin-bottom: -8px
+			+media-breakpoint-down(sm)
+				overflow-y: scroll
+				max-height: 230px
+			+media-breakpoint-down(xxs)
+				margin-left: -4px
+				margin-right: -4px
+			> li
+				flex: 0 0 20%
+				max-width: 20%
+				padding-left: 8px
+				padding-right: 8px
+				margin-bottom: 12px
+				+media-breakpoint-down(md)
+					flex-basis: 33.33333%
+					max-width: 33.33333%
+					margin-bottom: 8px
+				+media-breakpoint-down(xs)
+					flex-basis: 50%
+					max-width: 50%
+					&:nth-last-child(-n+2)
+						margin-bottom: 24px
+				+media-breakpoint-down(xxs)
+					padding-left: 4px
+					padding-right: 4px
+				> a
+					display: inline-flex
+					align-items: center
+					> .icon
+						flex: 0 0 auto
+						width: 16px
+						height: 16px
+						fill: $orange
+					> span
+						margin-left: 8px
+						font-size: 14px
+						word-break: break-word
+						+media-breakpoint-down(sm)
+							font-size: 13px
+		&-empty
+			display: none
+			padding: 12px
+			background-color: $bg
+			margin-bottom: 0
+			+font-size(xs)

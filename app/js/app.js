@@ -415,4 +415,27 @@ $(document).ready(function () {
     });
   };
   readMoreButton();
+
+  /**
+   *-------------------------------------------------------------------------------------------------------------------------------------------
+   * Search locations
+   *-------------------------------------------------------------------------------------------------------------------------------------------
+   */
+  window.searchLocations = function () {
+		const locationsSearch = $('#locations-search');
+		const locationsList = $('#locations-list');
+		const locationsItems = locationsList.find('li');
+		const locationsEmpty = $('#locations-empty');
+
+		locationsSearch.on('input', function() {
+			let searchValue = this.value.toLowerCase().trim();
+
+			locationsItems.show().filter(function() {
+				return $(this).text().toLowerCase().trim().indexOf(searchValue) == -1;
+			}).hide();
+
+			!locationsList.innerHeight() ? locationsEmpty.show() : locationsEmpty.hide();
+		});
+	};
+  searchLocations();
 });
