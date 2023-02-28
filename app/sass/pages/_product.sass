@@ -1,12 +1,8 @@
-/* ==========================================================================
-	Product single page
-	========================================================================== */
+// Product single page 
 .page-single-product
 
 	// Section: Heading
 	.product-heading
-		display: flex
-		flex-wrap: wrap
 		+mb(40)
 		.heading
 			&-title
@@ -22,6 +18,19 @@
 				color: #509B5C
 			.out-of-stock
 				color: $text-400
+		.sold-off
+			margin-top: 24px
+			padding: 24px 48px
+			border: 2px solid $orange
+			background-color: $bg
+			color: $orange
+			font-weight: $w-bold
+			text-transform: uppercase
+			text-align: center
+			+media-breakpoint-down(md)
+				padding: 16px 24px
+			+media-breakpoint-down(sm)
+				padding: 12px 16px
 
 	// Section: Content (slider, description, attributes, price etc.)
 	.product-content

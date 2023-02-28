@@ -1,452 +1,729 @@
 @@include('parts/header.html', { title: 'Страница товара' })
 
 <main class="page-main">
+  <!-- Page heading -->
+  <div class="page-heading">
+    <div class="container">
+      <div class="breadcrumbs">
+        <ul
+          class="breadcrumbs-list"
+          itemscope
+          itemtype="https://schema.org/BreadcrumbList"
+        >
+          <li
+            itemscope
+            itemtype="https://schema.org/ListItem"
+            itemprop="itemListElement"
+          >
+            <a itemprop="item" href="page-home.html" rel="home"
+              ><span itemprop="name">Главная</span></a
+            >
+            <meta itemprop="position" content="0" />
+          </li>
+          <li
+            itemscope
+            itemtype="https://schema.org/ListItem"
+            itemprop="itemListElement"
+          >
+            <a itemprop="item" href="page-products.html"
+              ><span itemprop="name">Товары</span></a
+            >
+            <meta itemprop="position" content="1" />
+          </li>
+          <li
+            itemscope
+            itemtype="https://schema.org/ListItem"
+            itemprop="itemListElement"
+          >
+            <span itemprop="name">Керамогранит Kerama Marazzi 60х119,5</span>
+            <meta itemprop="position" content="2" />
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.page-heading -->
 
-	<!-- Page heading -->
-	<div class="page-heading">
-		<div class="container">
-			<div class="breadcrumbs">
-				<ul class="breadcrumbs-list" itemscope itemtype="https://schema.org/BreadcrumbList">
-					<li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement">
-						<a itemprop="item" href="page-home.html" rel="home"><span itemprop="name">Главная</span></a>
-						<meta itemprop="position" content="0">
-					</li>
-					<li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement">
-						<a itemprop="item" href="page-products.html"><span itemprop="name">Товары</span></a>
-						<meta itemprop="position" content="1">
-					</li>
-					<li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement">
-						<span itemprop="name">Керамогранит Kerama Marazzi 60х119,5</span>
-						<meta itemprop="position" content="2">
-					</li>
-				</ul>
-			</div>
-		</div><!-- /.container -->
-	</div><!-- /.page-heading -->
+  <!-- Page content -->
+  <div class="page-single-product">
+    <div class="container">
+      <!------- Microdata ------->
+      <div itemscope itemtype="http://schema.org/Product">
+        <!-- Код товара и название товара-->
+        <meta itemprop="mpn" content="20-1207471" />
+        <meta itemprop="name" content="Керамогранит Kerama Marazzi 60х119,5" />
 
-	<!-- Page content -->
-	<div class="page-single-product">
-		<div class="container">
+        <!-- Ссылка на главное изображение -->
+        <meta itemprop="image" content="./images/products/3.jpg" />
 
-			<!------- Microdata ------->
-			<div itemscope itemtype="http://schema.org/Product">
+        <!-- Код товара и описание -->
+        <meta itemprop="productID" content="20-1207471" />
+        <meta itemprop="description" content="" />
 
-				<!-- Код товара и название товара-->
-				<meta itemprop="mpn" content="20-1207471" />
-				<meta itemprop="name" content="Керамогранит Kerama Marazzi 60х119,5" />
+        <!-- Наличие и цена товара -->
+        <div itemprop="offers" itemtype="http://schema.org/Offer" itemscope>
+          <link itemprop="url" href="page-product.html" />
+          <meta itemprop="availability" content="https://schema.org/InStock" />
+          <meta itemprop="priceCurrency" content="RUB" />
+          <meta
+            itemprop="itemCondition"
+            content="https://schema.org/UsedCondition"
+          />
+          <meta itemprop="price" content="4500" />
+          <div
+            itemprop="seller"
+            itemtype="http://schema.org/Organization"
+            itemscope
+          >
+            <meta itemprop="name" content="aplitka.ru" />
+          </div>
+        </div>
 
-				<!-- Ссылка на главное изображение -->
-				<meta itemprop="image" content="./images/products/3.jpg">
+        <!-- Бренд/Производитель -->
+        <div itemprop="brand" itemtype="http://schema.org/Brand" itemscope>
+          <meta itemprop="name" content="Orinda" />
+        </div>
+      </div>
+      <!------- End Microdata ------->
 
-				<!-- Код товара и описание -->
-				<meta itemprop="productID" content="20-1207471" />
-				<meta itemprop="description" content="" />
+      <!-- Section: Heading -->
+      <section class="product-heading">
+        <div class="heading">
+          <h1 class="heading-title text-xxl">
+            Керамогранит Newcon Белый Матовый R10A 60Х60 (K945786R0001VTE0) От
+            Vitra (Турция)
+          </h1>
+          <sup class="in-stock">В наличии</sup>
+          <!-- <sup class="out-of-stock">Нет в наличии</sup> -->
+        </div>
+        <div class="sold-off">Снято с продажи</div>
+      </section>
 
-				<!-- Наличие и цена товара -->
-				<div itemprop="offers" itemtype="http://schema.org/Offer" itemscope>
-					<link itemprop="url" href="page-product.html" />
-					<meta itemprop="availability" content="https://schema.org/InStock" />
-					<meta itemprop="priceCurrency" content="RUB" />
-					<meta itemprop="itemCondition" content="https://schema.org/UsedCondition" />
-					<meta itemprop="price" content="4500" />
-					<div itemprop="seller" itemtype="http://schema.org/Organization" itemscope>
-						<meta itemprop="name" content="aplitka.ru" />
-					</div>
-				</div>
+      <!-- Section: Content -->
+      <section class="product-content">
+        <div class="row row-items-32">
+          <div class="col-lg-6 col-xl-7 col-xxl-5 order-0">
+            <!-- Gallery slideshow -->
+            <div class="gallery">
+              <!-- Main slider -->
+              <div class="gallery-slider swiper-slider">
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="gallery-photo img-scale">
+                        <a
+                          href="./images/products/3.jpg"
+                          data-fancybox="collection-gallery"
+                          class="gallery-photo-zoom"
+                        >
+                          <span
+                            ><svg class="icon icon-plus">
+                              <use
+                                xlink:href="./images/symbol-defs.svg#plus"
+                              ></use></svg
+                          ></span>
+                        </a>
+                        <img src="./images/products/3.jpg" alt="" />
+                      </div>
+                    </div>
+                    <!-- /.slide -->
+                    <div class="swiper-slide">
+                      <div class="gallery-photo img-scale">
+                        <a
+                          href="./images/products/1.jpg"
+                          data-fancybox="collection-gallery"
+                          class="gallery-photo-zoom"
+                        >
+                          <span
+                            ><svg class="icon icon-plus">
+                              <use
+                                xlink:href="./images/symbol-defs.svg#plus"
+                              ></use></svg
+                          ></span>
+                        </a>
+                        <img src="./images/products/1.jpg" alt="" />
+                      </div>
+                    </div>
+                    <!-- /.slide -->
+                    <div class="swiper-slide">
+                      <div class="gallery-photo img-scale">
+                        <a
+                          href="./images/products/2.jpg"
+                          data-fancybox="collection-gallery"
+                          class="gallery-photo-zoom"
+                        >
+                          <span
+                            ><svg class="icon icon-plus">
+                              <use
+                                xlink:href="./images/symbol-defs.svg#plus"
+                              ></use></svg
+                          ></span>
+                        </a>
+                        <img src="./images/products/2.jpg" alt="" />
+                      </div>
+                    </div>
+                    <!-- /.slide -->
+                    <div class="swiper-slide">
+                      <div class="gallery-photo img-scale">
+                        <a
+                          href="./images/products/4.jpg"
+                          data-fancybox="collection-gallery"
+                          class="gallery-photo-zoom"
+                        >
+                          <span
+                            ><svg class="icon icon-plus">
+                              <use
+                                xlink:href="./images/symbol-defs.svg#plus"
+                              ></use></svg
+                          ></span>
+                        </a>
+                        <img src="./images/products/4.jpg" alt="" />
+                      </div>
+                    </div>
+                    <!-- /.slide -->
+                  </div>
+                  <!-- /.swiper-wrapper -->
+                  <!-- Slider navigation -->
+                  <div
+                    class="gallery-slider-nav swiper-nav swiper-nav--secondary"
+                  >
+                    <button class="swiper-button-prev btn">
+                      <svg class="icon icon-arrow-long">
+                        <use
+                          xlink:href="./images/symbol-defs.svg#arrow-long"
+                        ></use>
+                      </svg>
+                    </button>
+                    <button class="swiper-button-next btn">
+                      <svg class="icon icon-arrow-long">
+                        <use
+                          xlink:href="./images/symbol-defs.svg#arrow-long"
+                        ></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <!-- /.swiper-nav -->
+                </div>
+                <!-- /.swiper-container -->
+              </div>
+              <!-- /.gallery-slider -->
 
-				<!-- Бренд/Производитель -->
-				<div itemprop="brand" itemtype="http://schema.org/Brand" itemscope>
-					<meta itemprop="name" content="Orinda" />
-				</div>
-			</div>
-			<!------- End Microdata ------->
+              <!-- Gallery thumbs -->
+              <div class="gallery-thumbs swiper-thumbs">
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./images/products/3.jpg" alt="" />
+                    </div>
+                    <!-- /.slide -->
+                    <div class="swiper-slide">
+                      <img src="./images/products/1.jpg" alt="" />
+                    </div>
+                    <!-- /.slide -->
+                    <div class="swiper-slide">
+                      <img src="./images/products/2.jpg" alt="" />
+                    </div>
+                    <!-- /.slide -->
+                    <div class="swiper-slide">
+                      <img src="./images/products/4.jpg" alt="" />
+                    </div>
+                    <!-- /.slide -->
+                  </div>
+                  <!-- /.swiper-wrapper -->
+                </div>
+                <!-- /.swiper-container -->
+              </div>
+              <!-- /.gallery-thumbs -->
+            </div>
+            <!-- /.gallery -->
+          </div>
+          <!-- /.col -->
 
-			<!-- Section: Heading -->
-			<section class="product-heading">
-				<div class="heading">
-					<h1 class="heading-title text-xxl">Керамогранит Newcon Белый Матовый R10A 60Х60 (K945786R0001VTE0) От Vitra (Турция)</h1>
-					<sup class="in-stock">В наличии</sup>
-					<!-- <sup class="out-of-stock">Нет в наличии</sup> -->
-				</div>
-			</section>
+          <div class="col-xxl-3 order-2 order-xxl-1">
+            <!-- Attributes -->
+            <div class="attributes">
+              <ul class="attributes-list">
+                <li>
+                  <div class="attr">Фабрика:</div>
+                  <div class="value"><a href="#">Concorde Russia</a></div>
+                </li>
+                <li>
+                  <div class="attr">Коллекция:</div>
+                  <div class="value">
+                    <a href="#">Mediterranea / Медитеррия</a>
+                  </div>
+                </li>
+                <li>
+                  <div class="attr">Код:</div>
+                  <div class="value">0534625</div>
+                </li>
+                <li>
+                  <div class="attr">Производитель:</div>
+                  <div class="value"><a href="#">Orinda</a></div>
+                </li>
+                <li>
+                  <div class="attr">Страна:</div>
+                  <div class="value"><a href="#">Индия</a></div>
+                </li>
+                <li>
+                  <div class="attr">Размер:</div>
+                  <div class="value">60 × 60, 80 × 80</div>
+                </li>
+                <li>
+                  <div class="attr">Поверхность:</div>
+                  <div class="value">Глянцевая</div>
+                </li>
+                <li>
+                  <div class="attr">Применение:</div>
+                  <div class="value">
+                    Для ванной, для гостинной, для общественных помещений
+                  </div>
+                </li>
+                <li>
+                  <div class="attr">Стиль:</div>
+                  <div class="value">Современный</div>
+                </li>
+                <li>
+                  <div class="attr">Рисунок:</div>
+                  <div class="value">Террацо</div>
+                </li>
+                <li>
+                  <div class="attr">Геометрическая форма:</div>
+                  <div class="value">Квадрат, Прямоугольник</div>
+                </li>
+                <li>
+                  <div class="attr">Материал:</div>
+                  <div class="value">Керамогранит</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- /.col -->
 
-			<!-- Section: Content -->
-			<section class="product-content">
-				<div class="row row-items-32">
+          <div class="col-lg-6 col-xl-5 col-xxl-4 order-1 order-xxl-2">
+            <!-- Purchase form -->
+            <div class="purchase">
+              <form class="purchase-form form addToCartForm">
+                <div class="price">
+                  <div class="price-main">
+                    <div class="label">Цена:</div>
+                    <div class="value">
+                      <del>1 897 руб.</del>
+                      <ins
+                        ><span class="itemPrice">8 950</span> ₽/м<sup
+                          >2</sup
+                        ></ins
+                      >
+                    </div>
+                  </div>
+                  <div class="price-quantity">
+                    <div class="quantity">
+                      <button
+                        type="button"
+                        class="quantity-minus btn btn-primary"
+                        data-qty-action="minus"
+                        disabled
+                      >
+                        <svg class="icon icon-minus">
+                          <use
+                            xlink:href="./images/symbol-defs.svg#minus"
+                          ></use>
+                        </svg>
+                      </button>
+                      <div class="quantity-amount">
+                        <input
+                          type="number"
+                          name="qty"
+                          class="value form-control changeQty itemQtyChanger"
+                          step="0.001"
+                          min="0"
+                          value="3.336"
+                          data-price="8950"
+                          data-max="999"
+                          data-count="1"
+                          data-one="3.336"
+                        />
+                      </div>
+                      <button
+                        type="button"
+                        class="quantity-plus btn btn-primary"
+                        data-qty-action="plus"
+                      >
+                        <svg class="icon icon-plus">
+                          <use xlink:href="./images/symbol-defs.svg#plus"></use>
+                        </svg>
+                      </button>
+                      <div class="quantity-size">м<sup>2</sup></div>
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-secondary btn-purchase">
+                  <div class="before-added">Заказать</div>
+                  <div class="after-added">
+                    <svg class="icon icon-checked">
+                      <use xlink:href="./images/symbol-defs.svg#checked"></use>
+                    </svg>
+                    <span>Товар добавлен в <a href="#">корзину</a></span>
+                  </div>
+                </button>
+              </form>
+            </div>
 
-					<div class="col-lg-6 col-xl-7 col-xxl-5 order-0">
+            <!-- Quick order -->
+            <div class="quickorder">
+              <form class="quickorder-form form">
+                <div class="quickorder-form-wrapper">
+                  <input
+                    type="tel"
+                    class="form-control"
+                    placeholder="+7 (___) ___ __ __"
+                    minlength="11"
+                    autocomplete="off"
+                    required
+                  />
+                  <button type="submit" class="btn btn-outline">
+                    Заказать в один клик
+                  </button>
+                </div>
+                <div class="form-checkbox form-checkbox-sm switch-input-mask">
+                  <input
+                    type="checkbox"
+                    id="callback-form-phone-mask"
+                    checked
+                  />
+                  <label
+                    for="callback-form-phone-mask"
+                    class="form-checkbox-label"
+                    >Показать маску ввода телефона</label
+                  >
+                </div>
+              </form>
+            </div>
 
-						<!-- Gallery slideshow -->
-						<div class="gallery">
+            <!-- Advantages -->
+            <div class="advantages">
+              <div
+                class="advantages-list row row-items-16 row-cols-1 row-cols-md-2"
+              >
+                <div class="advantages-item col">
+                  <div class="picture img-scale">
+                    <img
+                      src="./images/icons/delivery.svg"
+                      alt="Быстрая доставка"
+                    />
+                  </div>
+                  <div class="text">Быстрая доставка</div>
+                </div>
+                <!-- /.col -->
+                <div class="advantages-item col">
+                  <div class="picture img-scale">
+                    <img
+                      src="./images/icons/search.svg"
+                      alt="Широкий ассортимент"
+                    />
+                  </div>
+                  <div class="text">Широкий ассортимент</div>
+                </div>
+                <!-- /.col -->
+                <div class="advantages-item col">
+                  <div class="picture img-scale">
+                    <img
+                      src="./images/icons/cart.svg"
+                      alt="Без ограничений на объем покупки"
+                    />
+                  </div>
+                  <div class="text">
+                    Без ограничений<br />
+                    на объем покупки
+                  </div>
+                </div>
+                <!-- /.col -->
+                <div class="advantages-item col">
+                  <div class="picture img-scale">
+                    <img
+                      src="./images/icons/delivery.svg"
+                      alt="Без ограничений на объем покупки"
+                    />
+                  </div>
+                  <div class="text">
+                    Без ограничений<br />
+                    на объем покупки
+                  </div>
+                </div>
+                <!-- /.col -->
+              </div>
+              <!-- /.row -->
+            </div>
 
-							<!-- Main slider -->
-							<div class="gallery-slider swiper-slider">
-								<div class="swiper-container">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<div class="gallery-photo img-scale">
-												<a href="./images/products/3.jpg" data-fancybox="collection-gallery" class="gallery-photo-zoom">
-													<span><svg class="icon icon-plus"><use xlink:href="./images/symbol-defs.svg#plus"></use></svg></span>
-												</a>
-												<img src="./images/products/3.jpg" alt="">
-											</div>
-										</div><!-- /.slide -->
-										<div class="swiper-slide">
-											<div class="gallery-photo img-scale">
-												<a href="./images/products/1.jpg" data-fancybox="collection-gallery" class="gallery-photo-zoom">
-													<span><svg class="icon icon-plus"><use xlink:href="./images/symbol-defs.svg#plus"></use></svg></span>
-												</a>
-												<img src="./images/products/1.jpg" alt="">
-											</div>
-										</div><!-- /.slide -->
-										<div class="swiper-slide">
-											<div class="gallery-photo img-scale">
-												<a href="./images/products/2.jpg" data-fancybox="collection-gallery" class="gallery-photo-zoom">
-													<span><svg class="icon icon-plus"><use xlink:href="./images/symbol-defs.svg#plus"></use></svg></span>
-												</a>
-												<img src="./images/products/2.jpg" alt="">
-											</div>
-										</div><!-- /.slide -->
-										<div class="swiper-slide">
-											<div class="gallery-photo img-scale">
-												<a href="./images/products/4.jpg" data-fancybox="collection-gallery" class="gallery-photo-zoom">
-													<span><svg class="icon icon-plus"><use xlink:href="./images/symbol-defs.svg#plus"></use></svg></span>
-												</a>
-												<img src="./images/products/4.jpg" alt="">
-											</div>
-										</div><!-- /.slide -->
-									</div><!-- /.swiper-wrapper -->
-									<!-- Slider navigation -->
-									<div class="gallery-slider-nav swiper-nav swiper-nav--secondary">
-										<button class="swiper-button-prev btn">
-											<svg class="icon icon-arrow-long"><use xlink:href="./images/symbol-defs.svg#arrow-long"></use></svg>
-										</button>
-										<button class="swiper-button-next btn">
-											<svg class="icon icon-arrow-long"><use xlink:href="./images/symbol-defs.svg#arrow-long"></use></svg>
-										</button>
-									</div><!-- /.swiper-nav -->
-								</div><!-- /.swiper-container -->
-							</div><!-- /.gallery-slider -->
+            <!-- Social share -->
+            <div class="social-share">
+              <div class="social-share-label">Поделиться:</div>
+              <div class="social-share-list">
+                <button
+                  type="button"
+                  class="social-share-btn btn"
+                  data-social="vk"
+                  data-url="#"
+                  data-text="Коллекция Effecto"
+                >
+                  <img src="./images/icons/vk.svg" alt="ВКонтакте" />
+                </button>
+                <button
+                  type="button"
+                  class="social-share-btn btn"
+                  data-social="vk"
+                  data-url="#"
+                  data-text="Коллекция Effecto"
+                >
+                  <img src="./images/icons/facebook.svg" alt="Facebook" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- /.col -->
 
-							<!-- Gallery thumbs -->
-							<div class="gallery-thumbs swiper-thumbs">
-								<div class="swiper-container">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<img src="./images/products/3.jpg" alt="">
-										</div><!-- /.slide -->
-										<div class="swiper-slide">
-											<img src="./images/products/1.jpg" alt="">
-										</div><!-- /.slide -->
-										<div class="swiper-slide">
-											<img src="./images/products/2.jpg" alt="">
-										</div><!-- /.slide -->
-										<div class="swiper-slide">
-											<img src="./images/products/4.jpg" alt="">
-										</div><!-- /.slide -->
-									</div><!-- /.swiper-wrapper -->
-								</div><!-- /.swiper-container -->
-							</div><!-- /.gallery-thumbs -->
+          <div class="col-lg-9 col-xxl-8 order-3">
+            <!-- Description -->
+            <div class="description readmore">
+              <div class="description-text readmore-list">
+                <p>
+                  Название фабрики 41ZERO42 — не что иное, как почтовый индекс
+                  Фьорано-Моденезе — города в Италии, располагающимся в
+                  знаменитом керамическом регионе Эмилия-Романья (Модена).
+                  Молодая амбициозная команда, объединенная общими интересами,
+                  убеждена, что для того, чтобы сделать что-то стимулирующее,
+                  нам нужно искать вдохновение как внутри наших собственных
+                  границ, так и вне их.
+                </p>
+                <p>
+                  Название фабрики 41ZERO42 — не что иное, как почтовый индекс
+                  Фьорано-Моденезе — города в Италии, располагающимся в
+                  знаменитом керамическом регионе Эмилия-Романья (Модена).
+                  Молодая амбициозная команда, объединенная общими интересами,
+                  убеждена, что для того, чтобы сделать что-то стимулирующее,
+                  нам нужно искать вдохновение как внутри наших собственных
+                  границ, так и вне их. Большое значение при разработке
+                  керамической плитки 41zero42 придается концепции
+                  трансверсальности между коллекциями, чтобы подчеркнуть лучший
+                  способ выразить интегрированный проект.
+                </p>
+              </div>
+              <div class="mt-16">
+                <button class="btn btn-more btn-more--show">
+                  <span>Подробнее</span>
+                  <svg class="icon icon-arrow-dropdown">
+                    <use
+                      xlink:href="./images/symbol-defs.svg#arrow-dropdown"
+                    ></use>
+                  </svg>
+                </button>
+                <button class="btn btn-more btn-more--hide">
+                  <span>Скрыть</span>
+                  <svg class="icon icon-arrow-dropdown">
+                    <use
+                      xlink:href="./images/symbol-defs.svg#arrow-dropdown"
+                    ></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <!-- /.description -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </section>
+      <!-- /.collection-content -->
 
-						</div><!-- /.gallery -->
+      <!-- Section: Collection products -->
+      <section class="product-products mt-60">
+        <h2 class="mb-32 text-xl">Еще товары из коллекции</h2>
 
-					</div><!-- /.col -->
+        <!-- Tabs -->
+        <div class="product-products-tabs">
+          <div class="nav nav-tabs" role="tablist">
+            <a
+              href="#products-tab-1"
+              class="nav-link active"
+              data-toggle="tab"
+              role="tab"
+              >Вся плитка</a
+            >
+            <a
+              href="#products-tab-2"
+              class="nav-link"
+              data-toggle="tab"
+              role="tab"
+              >Плитка для ванной</a
+            >
+            <a
+              href="#products-tab-3"
+              class="nav-link"
+              data-toggle="tab"
+              role="tab"
+              >Настенная плитка</a
+            >
+            <a
+              href="#products-tab-4"
+              class="nav-link"
+              data-toggle="tab"
+              role="tab"
+              >Напольная плитка</a
+            >
+            <a
+              href="#products-tab-5"
+              class="nav-link"
+              data-toggle="tab"
+              role="tab"
+              >Керамогранит</a
+            >
+            <a
+              href="#products-tab-6"
+              class="nav-link"
+              data-toggle="tab"
+              role="tab"
+              >Мозаика</a
+            >
+          </div>
+        </div>
 
-					<div class="col-xxl-3 order-2 order-xxl-1">
+        <!-- Tabs content -->
+        <div class="tab-content" role="tablist">
+          <!-- Tab #1 -->
+          <div
+            id="products-tab-1"
+            class="tab-pane fade show active"
+            role="tabpanel"
+          >
+            <div
+              class="product-products-list row row-items-24 row-cols-2 row-cols-lg-4"
+            >
+              <div class="col">
+                @@include('parts/product-cards/product-1.html')
+              </div>
+              <!-- /.col -->
+              <div class="col">
+                @@include('parts/product-cards/product-2.html')
+              </div>
+              <!-- /.col -->
+              <div class="col">
+                @@include('parts/product-cards/product-1.html')
+              </div>
+              <!-- /.col -->
+              <div class="col">
+                @@include('parts/product-cards/product-2.html')
+              </div>
+              <!-- /.col -->
+              <div class="col-12">
+                <a href="#" class="shop-promo">
+                  <picture>
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="./images/promo-banner.png"
+                    />
+                    <source
+                      media="(min-width: 320px)"
+                      srcset="./images/promo-mobile-banner.png"
+                    />
+                    <img src="./images/promo-banner.png" alt="" />
+                  </picture>
+                </a>
+              </div>
+              <div class="col">
+                @@include('parts/product-cards/product-1.html')
+              </div>
+              <!-- /.col -->
+              <div class="col">
+                @@include('parts/product-cards/product-2.html')
+              </div>
+              <!-- /.col -->
+              <div class="col">
+                @@include('parts/product-cards/product-1.html')
+              </div>
+              <!-- /.col -->
+              <div class="col">
+                @@include('parts/product-cards/product-2.html')
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.tab-pane -->
 
-						<!-- Attributes -->
-						<div class="attributes">
-							<ul class="attributes-list">
-								<li>
-									<div class="attr">Фабрика:</div>
-									<div class="value"><a href="#">Concorde Russia</a></div>
-								</li>
-								<li>
-									<div class="attr">Коллекция:</div>
-									<div class="value"><a href="#">Mediterranea / Медитеррия</a></div>
-								</li>
-								<li>
-									<div class="attr">Код:</div>
-									<div class="value">0534625</div>
-								</li>
-								<li>
-									<div class="attr">Производитель:</div>
-									<div class="value"><a href="#">Orinda</a></div>
-								</li>
-								<li>
-									<div class="attr">Страна:</div>
-									<div class="value"><a href="#">Индия</a></div>
-								</li>
-								<li>
-									<div class="attr">Размер:</div>
-									<div class="value">60 × 60, 80 × 80</div>
-								</li>
-								<li>
-									<div class="attr">Поверхность:</div>
-									<div class="value">Глянцевая</div>
-								</li>
-								<li>
-									<div class="attr">Применение:</div>
-									<div class="value">Для ванной, для гостинной, для общественных помещений</div>
-								</li>
-								<li>
-									<div class="attr">Стиль:</div>
-									<div class="value">Современный</div>
-								</li>
-								<li>
-									<div class="attr">Рисунок:</div>
-									<div class="value">Террацо</div>
-								</li>
-								<li>
-									<div class="attr">Геометрическая форма:</div>
-									<div class="value">Квадрат, Прямоугольник</div>
-								</li>
-								<li>
-									<div class="attr">Материал:</div>
-									<div class="value">Керамогранит</div>
-								</li>
-							</ul>
-						</div>
+          <!-- Tab #2 -->
+          <div id="products-tab-2" class="tab-pane fade" role="tabpanel">
+            <div
+              class="product-products-list row row-items-24 row-cols-2 row-cols-lg-4"
+            >
+              <div class="col">
+                @@include('parts/product-cards/product-2.html')
+              </div>
+              <!-- /.col -->
+              <div class="col">
+                @@include('parts/product-cards/product-1.html')
+              </div>
+              <!-- /.col -->
+              <div class="col">
+                @@include('parts/product-cards/product-2.html')
+              </div>
+              <!-- /.col -->
+              <div class="col">
+                @@include('parts/product-cards/product-1.html')
+              </div>
+              <!-- /.col -->
+              <div class="col-12">
+                <a href="#" class="shop-promo">
+                  <picture>
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="./images/promo-banner.png"
+                    />
+                    <source
+                      media="(min-width: 320px)"
+                      srcset="./images/promo-mobile-banner.png"
+                    />
+                    <img src="./images/promo-banner.png" alt="" />
+                  </picture>
+                </a>
+              </div>
+              <div class="col">
+                @@include('parts/product-cards/product-2.html')
+              </div>
+              <!-- /.col -->
+              <div class="col">
+                @@include('parts/product-cards/product-1.html')
+              </div>
+              <!-- /.col -->
+              <div class="col">
+                @@include('parts/product-cards/product-2.html')
+              </div>
+              <!-- /.col -->
+              <div class="col">
+                @@include('parts/product-cards/product-1.html')
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.tab-pane -->
+        </div>
+        <!-- End Tabs content -->
+      </section>
+      <!-- /.collection-products -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.page-single-product -->
 
-					</div><!-- /.col -->
+  <!-- Calculation project form -->
+  @@include('parts/calculation-project.html')
 
-					<div class="col-lg-6 col-xl-5 col-xxl-4 order-1 order-xxl-2">
-
-						<!-- Purchase form -->
-						<div class="purchase">
-							<form class="purchase-form form addToCartForm">
-								<div class="price">
-									<div class="price-main">
-										<div class="label">Цена:</div>
-										<div class="value">
-											<del>1 897 руб.</del>
-											<ins><span class="itemPrice">8 950</span> ₽/м<sup>2</sup></ins>
-										</div>
-									</div>
-									<div class="price-quantity">
-										<div class="quantity">
-											<button type="button" class="quantity-minus btn btn-primary" data-qty-action="minus" disabled>
-												<svg class="icon icon-minus"><use xlink:href="./images/symbol-defs.svg#minus"></use></svg>
-											</button>
-											<div class="quantity-amount">
-												<input type="number" name="qty" class="value form-control changeQty itemQtyChanger" step="0.001" min="0" value="3.336" data-price="8950" data-max="999" data-count="1" data-one="3.336">
-											</div>
-											<button type="button" class="quantity-plus btn btn-primary" data-qty-action="plus">
-												<svg class="icon icon-plus"><use xlink:href="./images/symbol-defs.svg#plus"></use></svg>
-											</button>
-											<div class="quantity-size">м<sup>2</sup></div>
-										</div>
-									</div>
-								</div>
-								<button type="submit" class="btn btn-secondary btn-purchase">
-									<div class="before-added">Заказать</div>
-									<div class="after-added">
-										<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
-										<span>Товар добавлен в <a href="#">корзину</a></span>
-									</div>
-								</button>
-							</form>
-						</div>
-
-						<!-- Quick order -->
-						<div class="quickorder">
-							<form class="quickorder-form form">
-								<div class="quickorder-form-wrapper">
-									<input type="tel" class="form-control" placeholder="+7 (___) ___ __ __" minlength="11" autocomplete="off" required>
-									<button type="submit" class="btn btn-outline">Заказать в один клик</button>
-								</div>
-								<div class="form-checkbox form-checkbox-sm switch-input-mask">
-									<input type="checkbox" id="callback-form-phone-mask" checked>
-									<label for="callback-form-phone-mask" class="form-checkbox-label">Показать маску ввода телефона</label>
-								</div>
-							</form>
-						</div>
-
-						<!-- Advantages -->
-						<div class="advantages">
-							<div class="advantages-list row row-items-16 row-cols-1 row-cols-md-2">
-								<div class="advantages-item col">
-									<div class="picture img-scale">
-										<img src="./images/icons/delivery.svg" alt="Быстрая доставка">
-									</div>
-									<div class="text">Быстрая доставка</div>
-								</div><!-- /.col -->
-								<div class="advantages-item col">
-									<div class="picture img-scale">
-										<img src="./images/icons/search.svg" alt="Широкий ассортимент">
-									</div>
-									<div class="text">Широкий ассортимент</div>
-								</div><!-- /.col -->
-								<div class="advantages-item col">
-									<div class="picture img-scale">
-										<img src="./images/icons/cart.svg" alt="Без ограничений на объем покупки">
-									</div>
-									<div class="text">Без ограничений<br> на объем покупки</div>
-								</div><!-- /.col -->
-								<div class="advantages-item col">
-									<div class="picture img-scale">
-										<img src="./images/icons/delivery.svg" alt="Без ограничений на объем покупки">
-									</div>
-									<div class="text">Без ограничений<br> на объем покупки</div>
-								</div><!-- /.col -->
-							</div><!-- /.row -->
-						</div>
-
-						<!-- Social share -->
-						<div class="social-share">
-							<div class="social-share-label">Поделиться:</div>
-							<div class="social-share-list">
-								<button type="button" class="social-share-btn btn" data-social="vk" data-url="#" data-text="Коллекция Effecto">
-									<img src="./images/icons/vk.svg" alt="ВКонтакте">
-								</button>
-								<button type="button" class="social-share-btn btn" data-social="vk" data-url="#" data-text="Коллекция Effecto">
-									<img src="./images/icons/facebook.svg" alt="Facebook">
-								</button>
-							</div>
-						</div>
-
-					</div><!-- /.col -->
-
-					<div class="col-lg-9 col-xxl-8 order-3">
-
-						<!-- Description -->
-						<div class="description readmore">
-							<div class="description-text readmore-list">
-								<p>Название фабрики 41ZERO42 — не что иное, как почтовый индекс Фьорано-Моденезе — города в Италии, располагающимся в знаменитом керамическом регионе Эмилия-Романья (Модена). Молодая амбициозная команда, объединенная общими интересами, убеждена, что для того, чтобы сделать что-то стимулирующее, нам нужно искать вдохновение как внутри наших собственных границ, так и вне их.</p>
-								<p>Название фабрики 41ZERO42 — не что иное, как почтовый индекс Фьорано-Моденезе — города в Италии, располагающимся в знаменитом керамическом регионе Эмилия-Романья (Модена). Молодая амбициозная команда, объединенная общими интересами, убеждена, что для того, чтобы сделать что-то стимулирующее, нам нужно искать вдохновение как внутри наших собственных границ, так и вне их. Большое значение при разработке керамической плитки 41zero42 придается концепции трансверсальности между коллекциями, чтобы подчеркнуть лучший способ выразить интегрированный проект.</p>
-							</div>
-							<div class="mt-16">
-								<button class="btn btn-more btn-more--show">
-									<span>Подробнее</span>
-									<svg class="icon icon-arrow-dropdown"><use xlink:href="./images/symbol-defs.svg#arrow-dropdown"></use></svg>
-								</button>
-								<button class="btn btn-more btn-more--hide">
-									<span>Скрыть</span>
-									<svg class="icon icon-arrow-dropdown"><use xlink:href="./images/symbol-defs.svg#arrow-dropdown"></use></svg>
-								</button>
-							</div>
-						</div><!-- /.description -->
-
-					</div><!-- /.col -->
-
-				</div><!-- /.row -->
-			</section><!-- /.collection-content -->
-
-			<!-- Section: Collection products -->
-			<section class="product-products mt-60">
-				<h2 class="mb-32 text-xl">Еще товары из коллекции</h2>
-
-				<!-- Tabs -->
-				<div class="product-products-tabs">
-					<div class="nav nav-tabs" role="tablist">
-						<a href="#products-tab-1" class="nav-link active" data-toggle="tab" role="tab">Вся плитка</a>
-						<a href="#products-tab-2" class="nav-link" data-toggle="tab" role="tab">Плитка для ванной</a>
-						<a href="#products-tab-3" class="nav-link" data-toggle="tab" role="tab">Настенная плитка</a>
-						<a href="#products-tab-4" class="nav-link" data-toggle="tab" role="tab">Напольная плитка</a>
-						<a href="#products-tab-5" class="nav-link" data-toggle="tab" role="tab">Керамогранит</a>
-						<a href="#products-tab-6" class="nav-link" data-toggle="tab" role="tab">Мозаика</a>
-					</div>
-				</div>
-
-				<!-- Tabs content -->
-				<div class="tab-content" role="tablist">
-
-					<!-- Tab #1 -->
-					<div id="products-tab-1" class="tab-pane fade show active" role="tabpanel">
-						<div class="product-products-list row row-items-24 row-cols-2 row-cols-lg-4">
-							<div class="col">
-								@@include('parts/product-cards/product-1.html')
-							</div><!-- /.col -->
-							<div class="col">
-								@@include('parts/product-cards/product-2.html')
-							</div><!-- /.col -->
-							<div class="col">
-								@@include('parts/product-cards/product-1.html')
-							</div><!-- /.col -->
-							<div class="col">
-								@@include('parts/product-cards/product-2.html')
-							</div><!-- /.col -->
-							<div class="col-12">
-								<a href="#" class="shop-promo">
-									<picture>
-										<source media="(min-width: 768px)" srcset="./images/promo-banner.png" />
-										<source media="(min-width: 320px)" srcset="./images/promo-mobile-banner.png" />
-										<img src="./images/promo-banner.png" alt="">
-									</picture>
-								</a>
-							</div>
-							<div class="col">
-								@@include('parts/product-cards/product-1.html')
-							</div><!-- /.col -->
-							<div class="col">
-								@@include('parts/product-cards/product-2.html')
-							</div><!-- /.col -->
-							<div class="col">
-								@@include('parts/product-cards/product-1.html')
-							</div><!-- /.col -->
-							<div class="col">
-								@@include('parts/product-cards/product-2.html')
-							</div><!-- /.col -->
-						</div><!-- /.row -->
-					</div><!-- /.tab-pane -->
-
-					<!-- Tab #2 -->
-					<div id="products-tab-2" class="tab-pane fade" role="tabpanel">
-						<div class="product-products-list row row-items-24 row-cols-2 row-cols-lg-4">
-							<div class="col">
-								@@include('parts/product-cards/product-2.html')
-							</div><!-- /.col -->
-							<div class="col">
-								@@include('parts/product-cards/product-1.html')
-							</div><!-- /.col -->
-							<div class="col">
-								@@include('parts/product-cards/product-2.html')
-							</div><!-- /.col -->
-							<div class="col">
-								@@include('parts/product-cards/product-1.html')
-							</div><!-- /.col -->
-							<div class="col-12">
-								<a href="#" class="shop-promo">
-									<picture>
-										<source media="(min-width: 768px)" srcset="./images/promo-banner.png" />
-										<source media="(min-width: 320px)" srcset="./images/promo-mobile-banner.png" />
-										<img src="./images/promo-banner.png" alt="">
-									</picture>
-								</a>
-							</div>
-							<div class="col">
-								@@include('parts/product-cards/product-2.html')
-							</div><!-- /.col -->
-							<div class="col">
-								@@include('parts/product-cards/product-1.html')
-							</div><!-- /.col -->
-							<div class="col">
-								@@include('parts/product-cards/product-2.html')
-							</div><!-- /.col -->
-							<div class="col">
-								@@include('parts/product-cards/product-1.html')
-							</div><!-- /.col -->
-						</div><!-- /.row -->
-					</div><!-- /.tab-pane -->
-
-				</div>
-				<!-- End Tabs content -->
-
-			</section><!-- /.collection-products -->
-
-		</div><!-- /.container -->
-	</div><!-- /.page-single-product -->
-
-	<!-- Calculation project form -->
-	@@include('parts/calculation-project.html')
-
-	<!-- Section: SEO article -->
-	<section class="seo-article mt-80">
-		<div class="container">
-			@@include('parts/seo-article.html')
-		</div><!-- /.container -->
-	</section>
-
+  <!-- Section: SEO article -->
+  <section class="seo-article mt-80">
+    <div class="container">@@include('parts/seo-article.html')</div>
+    <!-- /.container -->
+  </section>
 </main>
 
 @@include('parts/footer.html')
